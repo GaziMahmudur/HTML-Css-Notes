@@ -1,0 +1,10 @@
+<html>
+    <font size = "50" color = "Green">
+    <head>
+        <title>marquee tool</title>
+    </head>
+    <body>
+        <marquee direction = "left"> G M R Shuvo </marquee>
+    </body>
+</font>
+</html>
