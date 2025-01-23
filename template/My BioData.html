@@ -14,16 +14,16 @@
                 line-height: 1.6;
             }
             .container {
-                width: 60%;
+                width: 80%;
                 margin: auto;
                 padding: 20px;
-                border: 1px solid #ccc;
+                border: 1px solid #333;
                 border-radius: 10px;
-                background-color: #f9f9f9;
+                background-color: #555;
             }
             h1 , h2 {
                 text-align: center;
-                color: #333;
+                color: #310808;
             }
             .section {
                 margin-bottom: 20px;
@@ -35,10 +35,14 @@
     </head>
     <body>
         <div class="container">
-            <h1>BioData</h1>
+            <marquee behavior="alternate" direction="down">
+                <h1>BioData</h1>
+            </marquee>
 
             <div class="section">
+                <marquee behavior="alternate" direction="right">
                 <h2>Personal Details</h2>
+            </marquee>
                 <p><span
                     Class="label">Name:</span> Gazi Mahmudur 
                     Rahman</p>
@@ -50,8 +54,10 @@
                     class="label">Marital Status:</span> Single
                 </p>
             </div>
-            <div class=""section">
+            <div class="section">
+                <marquee behavior="alternate" direction="up">
                 <h2>Contact information</h2>
+            </marquee>
                 <p><span
                     class="label">Address:</span> House no.22/
                     Road no.11/Rupnagar Avashik/Mirpur-2/Dhaka/
@@ -65,7 +71,9 @@
                             </div>
 
         <div class="section">
+            <marquee behavior="alternate" direction="left">
             <h2>Skills</h2>
+        </marquee>
             <p>I can ride a bike. I can swim. I can play carrom.
                 I know pretty much Python programming. I know HTML 
                 language. I can speak Bangla,Hindi and English.
@@ -73,7 +81,9 @@
         </div>
 
         <div class="section">
+            <marquee direction="auto">
             <h2>Declaration</h2>
+        </marquee>
             <p>I hereby declare that all the information provided 
                 above is true to the best of my knowledge.</p>
             <p><span class="label">Date:</span> 22/Jan/2025
