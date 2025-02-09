@@ -1,0 +1,138 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Container styles */
+.cv-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sidebar styles */
+.sidebar {
+    background: #212f3d;
+    padding: 2rem;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 2rem;
+    display: block;
+    border: 3px solid #00ff00;
+    animation: borderAnimation 5s infinite;
+}
+
+@keyframes borderAnimation {
+    0% { border-color: #00ff00; }
+    50% { border-color: #ff0000; }
+    100% { border-color: #00ff00; }
+}
+
+.contact-list {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.contact-list li {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-list i {
+    margin-right: 1rem;
+    color: #00ff00;
+    width: 20px;
+}
+
+/* Main content styles */
+.main-content {
+    padding: 3rem;
+    background: #000000;
+}
+
+.name {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #00ff00;
+}
+
+.position {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    color: #37ac92;
+    margin: 2rem 0 1rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.section-title span.my {
+    color: #ffffff;
+}
+
+.section-title span.experience {
+    color: #00ff00;
+}
+
+.experience-item {
+    margin-bottom: 2rem;
+}
+
+.experience-item h3 {
+    color: #00ff00;
+    margin-bottom: 0.5rem;
+}
+
+.experience-item ul {
+    list-style: none;
+    margin-left: 1rem;
+}
+
+.experience-item li {
+    margin: 0.5rem 0;
+}
+
+.skills-list {
+    list-style: none;
+}
+
+.skills-list li {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background: rgba(0, 255, 0, 0.1);
+    border-left: 3px solid #00ff00;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .cv-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        padding: 1rem;
+    }
+    
+    .main-content {
+        padding: 1rem;
+    }
+}
