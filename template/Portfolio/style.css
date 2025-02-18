@@ -252,7 +252,7 @@ section {
 }
 
 
-.social-media a:hover {
+social-media a:hover {
     background: linear-gradient(180deg, rgba(247, 1, 120, 1)0%,
             rgba(160, 8, 156, 1)51%,
             rgba(99, 13, 178, 1)100%);
@@ -531,6 +531,45 @@ section {
     .social-media {
         margin: 25px auto;
     }
+
+    .rotate-text {
+        top: 15%; /* Increased top spacing to avoid navbar overlap */
+        left: -20px;
+        padding: 0.5rem;
+        transform: scale(0.8); /* Smooth scaling for better appearance */
+    }
+
+    .rotate-text span {
+        width: 300px;
+        height: 300px;
+        border: 4px solid #eaeef0; /* Thinner border for mobile */
+        box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Soft shadow for smoother appearance */
+    }
+
+    .rotate-text .text {
+        width: 340px;
+        height: 340px;
+        filter: blur(0.2px); /* Slight blur for smoother text edges */
+    }
+
+    .rotate-text span {
+        width: 300px; /* Reduced size */
+        height: 300px;
+    }
+
+    .rotate-text .text {
+        width: 340px; /* Reduced size */
+        height: 340px;
+    }
+
+    .text b {
+        transform-origin: 0 170px; /* Adjusted origin point for smaller circle */
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    .img-hero img {
+        width: 300px; /* Reduced image size for mobile */
+    }
 }
 
 @media(max-width:530px) {
@@ -540,5 +579,57 @@ section {
 
     section {
         padding: 50px 3%;
+    }
+}
+
+@media(max-width: 480px) {
+    .rotate-text {
+        top: 20%; /* Further adjusted for smaller screens */
+        left: -15px;
+        transform: scale(0.7); /* Smaller scale for very small screens */
+    }
+
+    .rotate-text span {
+        width: 250px;
+        height: 250px;
+        border: 3px solid #eaeef0; /* Even thinner border */
+    }
+
+    .rotate-text .text {
+        width: 280px;
+        height: 280px;
+    }
+
+    .text b {
+        transform-origin: 0 140px;
+        font-size: 0.75rem; /* Slightly smaller font */
+        font-weight: 500; /* Better readability */
+    }
+
+    .img-hero {
+        margin-top: 2rem; /* Add space between circle and image */
+    }
+
+    .img-hero img {
+        width: 230px; /* Slightly smaller image */
+    }
+
+    .rotate-text span {
+        width: 250px; /* Further reduced size */
+        height: 250px;
+    }
+
+    .rotate-text .text {
+        width: 280px; /* Further reduced size */
+        height: 280px;
+    }
+
+    .text b {
+        transform-origin: 0 140px; /* Adjusted origin point for smaller circle */
+        font-size: 0.8rem;
+    }
+
+    .img-hero img {
+        width: 250px;
     }
 }
