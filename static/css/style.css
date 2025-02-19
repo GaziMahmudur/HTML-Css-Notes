@@ -1,0 +1,13 @@
+label {
+    font-weight: bold;
+    color: green;
+}
+
+input {
+    margin: 5px;
+    color: blue;
+}
+
+input[type="text"] {
+    color: red;
+}
