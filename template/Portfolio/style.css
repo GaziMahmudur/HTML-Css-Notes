@@ -461,12 +461,12 @@ social-media a:hover {
     }
 }
 
-@media(max-width:1000px) {
+@media(max-width:768px) {
 
     .menu-icon .bar,
     .menu-icon::after,
     .menu-icon::before {
-        display: block;
+        display: none;
     }
 
     ul.navlist {
