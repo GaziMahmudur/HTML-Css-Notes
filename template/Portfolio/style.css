@@ -311,7 +311,7 @@ social-media a:hover {
     height: 442px;
     background: red;
     border: 6px solid #eaeef0;
-    border-radius: 50%;
+    border-radius: 150%;
     z-index: 1;
     overflow: hidden;
 }
