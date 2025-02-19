@@ -613,13 +613,3 @@ social-media a:hover {
         width: 300px; /* Larger profile picture */
     }
 }
-
-@media screen and (max-width: 767px){
-
-	.__pf [data-pf-type="Section"] {
-
-	overflow-x: hidden! important;
-
-}
-
-}
