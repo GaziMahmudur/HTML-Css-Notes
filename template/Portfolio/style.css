@@ -533,7 +533,7 @@ social-media a:hover {
     }
 
     .rotate-text {
-        top: 15%; /* Increased top spacing to avoid navbar overlap */
+        top: 10%; /* Increased top spacing to avoid navbar overlap */
         left: -20px;
         padding: 0.5rem;
         transform: scale(0.8); /* Smooth scaling for better appearance */
@@ -568,7 +568,7 @@ social-media a:hover {
     }
 
     .img-hero img {
-        width: 300px; /* Reduced image size for mobile */
+        width: 275px; /* Reduced image size for mobile */
     }
 }
 
@@ -584,52 +584,33 @@ social-media a:hover {
 
 @media(max-width: 480px) {
     .rotate-text {
-        top: 20%; /* Further adjusted for smaller screens */
+        top: 20%; /* Adjusted to keep the circle below the navbar */
         left: -15px;
-        transform: scale(0.7); /* Smaller scale for very small screens */
+        transform: scale(0.9); /* Increased scale for a larger circle */
     }
 
     .rotate-text span {
-        width: 250px;
-        height: 250px;
-        border: 3px solid #eaeef0; /* Even thinner border */
+        width: 320px; /* Increased width */
+        height: 320px; /* Increased height */
+        border: 4px solid #eaeef0; /* Slightly thicker border for a smoother edge */
     }
 
     .rotate-text .text {
-        width: 280px;
-        height: 280px;
+        width: 360px; /* Increased width */
+        height: 360px; /* Increased height */
     }
 
     .text b {
-        transform-origin: 0 140px;
-        font-size: 0.75rem; /* Slightly smaller font */
-        font-weight: 500; /* Better readability */
+        transform-origin: 0 180px; /* Adjusted origin based on new circle size */
+        font-size: 1rem;          /* Increased font size for better legibility */
+        font-weight: 500;
     }
 
     .img-hero {
-        margin-top: 2rem; /* Add space between circle and image */
+        margin-top: 2rem; /* Maintain good spacing */
     }
 
     .img-hero img {
-        width: 230px; /* Slightly smaller image */
-    }
-
-    .rotate-text span {
-        width: 250px; /* Further reduced size */
-        height: 250px;
-    }
-
-    .rotate-text .text {
-        width: 280px; /* Further reduced size */
-        height: 280px;
-    }
-
-    .text b {
-        transform-origin: 0 140px; /* Adjusted origin point for smaller circle */
-        font-size: 0.8rem;
-    }
-
-    .img-hero img {
-        width: 250px;
+        width: 300px; /* Larger profile picture */
     }
 }
