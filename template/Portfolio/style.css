@@ -73,7 +73,7 @@ ul.navlist {
 .right-header {
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: space-between;
     grid-gap: .8rem;
 }
 
