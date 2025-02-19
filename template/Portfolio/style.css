@@ -466,7 +466,7 @@ social-media a:hover {
     .menu-icon .bar,
     .menu-icon::after,
     .menu-icon::before {
-        display: none;
+        display: block;
     }
 
     ul.navlist {
