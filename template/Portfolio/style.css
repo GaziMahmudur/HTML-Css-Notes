@@ -573,9 +573,10 @@ social-media a:hover {
         font-size: 0.9rem; /* Smaller font size */
     }
 
-    /* .img-hero img {
-        width: 275px; /* Reduced image size for mobile */
+    .img-hero img {
+        width: 400px; /* Reduced image size for mobile */
     }
+}
 
 @media(max-width:530px) {
     html {
