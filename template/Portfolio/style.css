@@ -591,8 +591,8 @@ social-media a:hover {
 
 @media(max-width: 480px) {
     .rotate-text {
-        top: 20%; /* Adjusted to keep the circle below the navbar */
-        left: -15px;
+        top: -16%; /* Adjusted to keep the circle below the navbar */
+        left: -41px;
         transform: scale(0.9); /* Increased scale for a larger circle */
     }
 
@@ -617,7 +617,8 @@ social-media a:hover {
         margin-top: 2rem; /* Maintain good spacing */
     }
 
-    .img-hero img {
-        width: 300px; /* Larger profile picture */
+    .img-hero img {  /* Larger profile picture */
+        width: 250px;
+         height: 250px;
     }
 }
