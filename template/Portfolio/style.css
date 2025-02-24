@@ -591,7 +591,7 @@ social-media a:hover {
 
 @media(max-width: 480px) {
     .rotate-text {
-        top: -16%; /* Adjusted to keep the circle below the navbar */
+        top: -17%; /* Adjusted to keep the circle below the navbar */
         left: -41px;
         transform: scale(0.9); /* Increased scale for a larger circle */
     }
