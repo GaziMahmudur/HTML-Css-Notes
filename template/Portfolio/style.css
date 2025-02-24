@@ -539,8 +539,7 @@ social-media a:hover {
     }
 
     .rotate-text {
-        top: 10%; /* Increased top spacing to avoid navbar overlap */
-        left: -20px;
+        top: -25.2%; /* Increased top spacing to avoid navbar overlap */
         padding: 0.5rem;
         transform: scale(0.8); /* Smooth scaling for better appearance */
     }
@@ -573,8 +572,10 @@ social-media a:hover {
         font-size: 0.9rem; /* Smaller font size */
     }
 
-    .img-hero img {
-        width: 275px; /* Reduced image size for mobile */
+    .img-hero img {  /* Reduced image size for mobile */
+        width: 210px;
+        height: 210px;
+         
     }
 }
 
