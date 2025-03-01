@@ -78,7 +78,7 @@ ul.navlist {
   display: flex;
   align-items: center;
   justify-content: end;
-  /* grid-gap: 0.8rem; */
+  grid-gap: 0.8rem;
 }
 
 .btn {
@@ -96,8 +96,8 @@ ul.navlist {
 
 .menu-icon {
   position: relative;
-  display: block;
-  /* width: 30px; */
+  display: none;
+  width: 30px;
   height: 36px;
   cursor: pointer;
 }
@@ -407,6 +407,14 @@ social-media a:hover {
   .menu-icon::after,
   .menu-icon::before {
     display: block;
+  }
+
+  .menu-icon {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 36px;
+    cursor: pointer;
   }
 
   ul.navlist {
