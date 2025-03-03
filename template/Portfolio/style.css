@@ -15,7 +15,7 @@ a {
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #000000;
+  background: #0b3954;
   overflow-x: hidden;
 }
 
@@ -524,3 +524,120 @@ social-media a:hover {
     left: 1px;
   }
 }
+
+/* Service Section Styles */
+.service-wrapper {
+  padding: 60px 0;
+}
+
+.service h1 {
+  font-size: 5rem;
+    margin-bottom: 3rem;
+    position: relative;
+    text-align: center; /* Add center alignment */
+    width: 100%; /* Ensure full width */
+    grid-column: 1 / -1; /* Make h1 span all grid columns */
+    color: #fff;
+}
+
+.service h1 span {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--main-color);
+}
+
+.service .cards {
+  background: var(--bg-color);
+  padding: 20px 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.service .cards:hover {
+  transform: translateY(-10px);
+}
+
+.service .cards i {
+  font-size: 3.5rem;
+  color: var(--main-color);
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.service .cards h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.service .cards p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* Grid Layout for Cards */
+.service {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  background-color: #0b3954;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service h1 {
+      font-size: 3.5rem;
+  }
+  
+  .service .cards {
+      padding: 30px 20px;
+  }
+  
+  .service .cards i {
+      font-size: 2.5rem;
+  }
+  
+  .service .cards h2 {
+      font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service h1 {
+      font-size: 2.5rem;
+  }
+  
+  .service .cards {
+      text-align: center;
+  }
+}
+
+/* Gradient Icons Styles */
+.service .cards i {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  display: inline-block;
+  background: linear-gradient(45deg, #2fbf71, #87f7d9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s ease;
+}
+
+.service .cards:hover i {
+  transform: scale(1.2) rotate(15deg);
+  background: linear-gradient(45deg, #87f7d9, #2fbf71);
+}
+
+/* Optional: Add this for smoother animation */
+.service .cards {
+  overflow: hidden;
+}
+
