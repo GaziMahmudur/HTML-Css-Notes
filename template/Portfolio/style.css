@@ -583,3 +583,58 @@ social-media a:hover {
     font-size: 40px;
     color: #fff;
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .services-container {
+      margin: 50px auto;
+      padding: 40px 5%;
+  }
+
+  .services-grid {
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+
+  .services-title {
+      font-size: 28px;
+      margin-bottom: 30px;
+  }
+
+  .service-card {
+      padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-container {
+      margin: 40px auto;
+      padding: 30px 5%;
+  }
+
+  .services-grid {
+      grid-template-columns: 1fr;
+      gap: 25px;
+  }
+
+  .services-title {
+      font-size: 24px;
+      margin-bottom: 25px;
+  }
+
+  .service-card h3 {
+      font-size: 18px;
+  }
+
+  .service-card p {
+      font-size: 13px;
+  }
+
+  .service-icon {
+      width: 40px;
+      height: 40px;
+  }
+
+  .fa-solid {
+      font-size: 32px;
+  }
+}
