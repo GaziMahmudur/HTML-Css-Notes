@@ -284,7 +284,7 @@ social-media a:hover {
   position: relative;
   /* animation: floatImage 4s ease-in-out infinite; */
   animation-delay: 3s;
-  top: -25px;
+  top: -26px;
   left: -25px;
 }
 
@@ -485,12 +485,14 @@ social-media a:hover {
 
   .hero-info {
     text-align: center;
+    margin-top: 1rem;
   }
 
   .text-animate,
   .btn-box,
   .social-media {
     margin: 25px auto;
+    height: 40px;
   }
 
   .text b {
@@ -525,6 +527,8 @@ social-media a:hover {
 
   .img-hero {
     margin-top: 7rem; /* Maintain good spacing */
+    left: -3px;
+    top: -40px;
   }
 
   .img-hero img {
