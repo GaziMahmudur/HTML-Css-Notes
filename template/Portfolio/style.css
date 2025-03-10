@@ -284,6 +284,7 @@ social-media a:hover {
   position: relative;
   /* animation: floatImage 4s ease-in-out infinite; */
   animation-delay: 3s;
+  top: -39px;
 }
 
 .img-hero img {
