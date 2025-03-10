@@ -78,7 +78,7 @@ ul.navlist {
   display: flex;
   align-items: center;
   justify-content: end;
-  grid-gap: 0.8rem;
+  grid-gap: 1.0rem;
 }
 
 .btn {
@@ -168,7 +168,7 @@ section {
 }
 
 .text-animate h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: transparent;
@@ -234,7 +234,7 @@ section {
   display: flex;
   justify-content: space-between;
   width: 220px;
-  height: 45px;
+  height: 0px;
 }
 
 .social-media a {
@@ -284,7 +284,13 @@ social-media a:hover {
   position: relative;
   /* animation: floatImage 4s ease-in-out infinite; */
   animation-delay: 3s;
-  top: -39px;
+  top: -25px;
+  left: -25px;
+}
+
+.lottie {
+  width: 415px;
+  height: 315px;
 }
 
 .img-hero img {
@@ -411,6 +417,10 @@ social-media a:hover {
   .menu-icon::after,
   .menu-icon::before {
     display: block;
+  }
+
+  .lottie {
+    width: 375px;
   }
 
   .menu-icon {
