@@ -25,6 +25,7 @@ let currentPage = window.location.pathname.split("/").pop();
 document.addEventListener("DOMContentLoaded", () => {
     navLink.forEach(link => {
         let href = link.getAttribute("href");
+        if(currentPage=="") currentPage="index.html"; // Handle case where current page is root
         // For home page, check explicitly for index.html since section id is "home"
         if (currentPage === "index.html") {
             href === "index.html" ? link.classList.add("active") : link.classList.remove("active");
