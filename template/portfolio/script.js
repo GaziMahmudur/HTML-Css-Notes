@@ -1,6 +1,8 @@
 // active hamburger menu 
 let menuIcon = document.querySelector(".menu-icon");
+
 let navlist = document.querySelector(".navlist");
+console.log(navlist);
 menuIcon.addEventListener("click", () => {
     menuIcon.classList.toggle("active");
     navlist.classList.toggle("active");
