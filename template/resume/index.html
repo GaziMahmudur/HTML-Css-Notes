@@ -1,84 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <style>
-            html, body {
-                height: 100%;
-                margin: 0;
-                padding: 0;
-                color: white; /* Set the default font color to white */
-                background-color: rgb(34, 32, 32); /* Set the background color to black */
-            }
-    
-            .cv-container {
-                display: grid;
-                grid-template-columns: 30% 70%;
-                height: 100%; /* Make the container take up the full height */
-            }
-    
-            .sidebar {
-                background: #212f3d;
-                color: white; /* Ensure text in the sidebar is white */
-                padding: 30px;
-            }
-    
-            .main-content {
-                padding: 40px;
-                color: white; /* Ensure text in the main content is white */
-                overflow-y: auto; /* Add scroll if content overflows */
-            }
-    
-            .profile-img {
-                width: 230px;
-                height: 230px;
-                border-radius: 50%;
-                margin: 0 auto 20px;
-                display: block;
-                border: 3px solid rgb(0, 255, 0);
-                animation: borderAnimation 5s infinite;
-            }
-    
-            @keyframes borderAnimation {
-                0% {
-                    border-color: rgb(0, 255, 0);
-                }
-                50% {
-                    border-color: rgb(255, 0, 0);
-                }
-                100% {
-                    border-color: rgb(0, 255, 0);
-                }
-            }
-    
-            .section-title span.my {
-                color: rgb(255, 255, 255);
-            }
-    
-            .section-title span.experience {
-                color: rgb(0, 255, 0);
-            }
-    
-            .section-title {
-                color: #37ac92;
-                margin: 20px 0;
-                text-transform: uppercase;
-                font-size: 1.2em;
-            }
-    
-            .contact-list i {
-                margin-right: 10px;
-                color: #00ff00;
-            }
-    
-            /* ...existing code... */
-        </style>
         <!-- Font Awesome for icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="cv-container">
             <aside class="sidebar">
-                <img src="../media/my_pic.png" alt="Profile Photo" class="profile-img">
+                <img src="my_pic.png" alt="Profile Photo" class="profile-img">
                 
                 <h2 class="section-title">Contact</h2>
                 <ul class="contact-list">
