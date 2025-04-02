@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'opensans-regular', sans-serif;
+    background: url('/media/background1.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    width: 110px;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+h2 {
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+h3 {
+    font: 22px / 1.9em "librebaskerville-regular", serif;
+    color: white;
+    margin: 0 auto;
+    width: 70%;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+    display: block;
+}
+.social-icons {
+    margin-top: 20px;
+    margin: 24px 0;
+    padding: 0;
+    font-size: 30px;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
+}
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 15px;
+    padding: 0;
+}
+nav {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    min-height: 48px;
+    width: auto;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    position: relative;
+    list-style: none;
+    height: 48px;
+    display: inline-block;
+}
+
+#nav-wrap {
+  font: 12px "opensans-bold", sans-serif;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin: 0 auto;
+  z-index: 100;
+  position: fixed;
+  left: 0;
+
+}
+nav a:hover {
+    color: orange;
+}
+
+.banner-text hr {
+  width: 60%;
+  margin: 18px auto 24px auto;
+  border-color: #2f2d2e;
+  border-color: rgba(150, 150, 150, 0.1);
+}
+
+hr {
+  border: solid #E3E3E3;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 11px 0 30px;
+  height: 0;
+  display: block;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    unicode-bidi: isolate;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
