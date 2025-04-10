@@ -127,6 +127,7 @@ hr {
     h1 { font-size: 28px; }
     h3 { font-size: 14px; }
     .social-icons { font-size: 20px; }
+    nav a { font-size: 14px; }
 }
 
 @media (max-width: 375px) {
