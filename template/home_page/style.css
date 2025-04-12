@@ -12,7 +12,7 @@ header {
   left: 0;
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: center;
   z-index: 100;
   transition: 0.3s;
 }
@@ -56,7 +56,9 @@ ul.navlist {
 }
 
 .menu-icon {
-  position: relative;
+  position: absolute;
+  top: 0px;
+  right: -1000%;
   display: none;
   width: 30px;
   height: 36px;
@@ -182,6 +184,9 @@ hr {
   }
   h3 {
     font-size: 42px;
+  }
+  .header {
+    font-size: 1px;
   }
 }
 
