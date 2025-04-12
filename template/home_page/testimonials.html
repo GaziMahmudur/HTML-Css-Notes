@@ -64,6 +64,58 @@
         z-index: -1;
         }
 
+        /* Responsive Design */
+
+        /* For large screens (e.g., desktops) */
+        @media (max-width: 1440px) {
+            .quote-container {
+                max-width: 700px;
+                padding: 25px;
+            }
+            .quote {
+                font-size: 21px;
+            }
+        }
+
+        /* For tablets */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+                text-align: center; /* Center-align text for smaller screens */
+            }
+            .quote-container {
+                max-width: 90%;
+                padding: 21px;
+            }
+            .quote {
+                font-size: 20px;
+            }
+        }
+
+        /* For mobile phones */
+        @media (max-width: 425px) {
+            .quote-container {
+                max-width: 100%;
+                padding: 15px;
+            }
+            .quote {
+                font-size: 18px;
+                line-height: 1.4;
+            }
+            .quote::before {
+                font-size: 60px; /* Reduce the size of the quotation mark */
+            }
+        }
+
+        /* For very small screens */
+        @media (max-width: 320px) {
+            .quote {
+                font-size: 16px;
+            }
+            .quote::before {
+                font-size: 50px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -76,4 +128,3 @@
     </div>
 </body>
 </html>
-             
