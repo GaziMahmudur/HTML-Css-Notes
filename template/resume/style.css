@@ -24,6 +24,7 @@ html, body {
     color: white; /* Ensure text in the main content is white */
 }
 
+/* Default styles for profile image in sidebar */
 .profile-img {
     width: 230px;
     height: 230px;
@@ -32,6 +33,36 @@ html, body {
     display: block;
     border: 3px solid rgb(0, 255, 0);
     animation: borderAnimation 5s infinite;
+    position: relative;
+    left: 0;
+}
+
+/* Default styles for desktop */
+/* Hide profile image in main content by default */
+.main-content .profile-img {
+    display: none;
+}
+
+/* Show profile image in sidebar by default */
+.sidebar .profile-img {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: block;
+    border: 3px solid rgb(0, 255, 0);
+    animation: borderAnimation 5s infinite;
+    position: relative;
+    left: 0;
+}
+
+/* Default styles for desktop */
+.mobile {
+    display: none; /* Hide mobile div by default */
+}
+
+.desktop {
+    display: block; /* Show desktop div by default */
 }
 
 @keyframes borderAnimation {
@@ -85,24 +116,120 @@ html, body {
         flex-direction: column-reverse;
     }
 
-    .profile-img {
+    /* Hide profile image in sidebar */
+    .sidebar .profile-img {
+        display: none;
+    }
+
+    /* Show and style profile image in main content */
+    .main-content .profile-img {
+        display: block;
         width: 180px;
         height: 180px;
-        margin: 0 auto 30px; /* Add margin bottom for spacing */
+        margin: 0 auto 30px;
+        position: relative;
+        order: -1;
+        border-radius: 50%;
+        border: 3px solid rgb(0, 255, 0);
+        animation: borderAnimation 5s infinite;
     }
 
     .sidebar {
         padding: 20px;
         display: flex;
-        flex-direction: column;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        gap: 30px; /* Increased gap between sections */
         background: #212f3d;
+        text-align: start;
+    }
+
+    /* Skills section styling */
+    .skills-section {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        order: 1; /* Place skills at top */
+    }
+
+    /* Contact section styling */
+    .contact-info {
+        width: 100%;
+        order: 2; /* Place contact below skills */
+    }
+
+    /* Contact list layout */
+    .contact-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .contact-list li {
+        flex: 0 1 auto;
+        margin: 5px;
+        min-width: 150px; /* Minimum width for contact items */
+    }
+
+    /* Skills list layout for mobile */
+    .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 0;
+        list-style: none;
+        width: 100%;
+    }
+
+    .skills-list li {
+        flex: 0 1 auto;
+        background: rgba(0, 255, 0, 0.1);
+        padding: 8px 16px;
+        border-radius: 20px;
+        border: 1px solid rgb(0, 255, 0);
+        margin: 5px;
+        min-width: 80px;
+        text-align: center;
     }
 
     .main-content {
         padding: 25px;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Center the profile image */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text content */
+    }
+
+    /* Center all direct children of main-content */
+    .main-content > * {
+        width: 100%;
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Ensure section titles are centered */
+    .section-title {
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Center any paragraphs or text elements */
+    .main-content p, 
+    .main-content h1,
+    .main-content h2,
+    .main-content h3,
+    .main-content h4,
+    .main-content h5,
+    .main-content h6 {
+        text-align: center;
+        width: 100%;
     }
 
     .name, .position {
@@ -112,6 +239,14 @@ html, body {
 
     .section-title {
         font-size: 1.1em;
+    }
+
+    .mobile {
+        display: block; /* Show mobile div */
+    }
+
+    .desktop {
+        display: none; /* Hide desktop div */
     }
 }
 
