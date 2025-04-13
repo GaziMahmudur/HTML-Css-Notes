@@ -56,9 +56,6 @@ ul.navlist {
 }
 
 .menu-icon {
-  position: absolute;
-  top: 0px;
-  right: -1000%;
   display: none;
   width: 30px;
   height: 36px;
@@ -219,7 +216,7 @@ hr {
     font-size: 20px;
   }
 
-  
+
   .menu-icon .bar,
   .menu-icon::after,
   .menu-icon::before {
@@ -255,6 +252,10 @@ hr {
   .navlist.active {
     top: 100%;
   }
+}
+
+.right-header {
+  width: 100%;
 }
 
 @media (max-width: 425px) {
