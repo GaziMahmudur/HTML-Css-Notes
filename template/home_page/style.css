@@ -149,11 +149,35 @@ social-icons {
 .social-icons a {
   color: white;
   font-size: 24px;
-  margin: 0 10px;
   text-decoration: none;
   display: inline-block;
   margin: 0 15px;
   padding: 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icons a:hover {
+  color: #ffeb3b; /* Same yellow as your nav hover */
+  transform: translateY(-5px); /* Slight upward movement */
+  /* text-shadow: 0 5px 15px rgba(255, 235, 59, 0.4); Glow effect */
+}
+
+.social-icons a i {
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover i {
+  animation: bounce 0.5s ease infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
 }
 
 .banner-text hr {
@@ -166,12 +190,42 @@ social-icons {
 hr {
   border: none;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #ffeb3b, transparent);
+  background: #ffffff;
   width: 80%;
   margin: 20px auto;
-  animation: glowingLine 3s ease-in-out infinite;
-  opacity: 0;
-  animation-delay: 3s; /* Start after typing animation */
+  position: relative;
+  overflow: hidden;
+}
+
+hr::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, currentColor, transparent);
+  animation: flowingLight 3s linear infinite;
+}
+
+@keyframes flowingLight {
+  0% {
+    left: -50%;
+    color: yellow;  /* Yellow */
+  }
+  25% {
+    color: green;  /* Green */
+  }
+  50% {
+    color: red;  /* Red */
+  }
+  75% {
+    color: blue;  /* Blue */
+  }
+  100% {
+    left: 100%;
+    color: #ffeb3b;  /* Back to Yellow */
+  }
 }
 
 @keyframes glowingLine {
