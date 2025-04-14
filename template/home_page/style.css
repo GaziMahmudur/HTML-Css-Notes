@@ -131,7 +131,7 @@ h3 {
   display: block;
   font-size: 22px;
 }
-.social-icons {
+social-icons {
   margin-top: 20px;
   margin: 24px 0;
   padding: 0;
@@ -230,6 +230,21 @@ hr {
   .navlist.active {
     top: 100%;
   }
+
+  .slide-in {
+    transform: translateX(-50px);
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 }
 
 .right-header {
@@ -243,7 +258,6 @@ hr {
   h3 {
     font-size: 12px;
   }
-}
 
   .menu-icon {
     width: 25px;
@@ -259,3 +273,61 @@ hr {
   ul.navlist a {
     font-size: 1.2rem;
   }
+}
+
+/* Add these animations to your existing CSS */
+
+/* Fade-in animation for Hi! */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Slide-in animation for name */
+.slide-in {
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slideIn 1.5s ease-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Typing effect for title */
+.typing {
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3.5s steps(30) forwards;
+    animation-delay: 2s;
+    width: 0;
+}
+
+@keyframes typing {
+    0% {
+        opacity: 1;
+        width: 0;
+    }
+    100% {
+        opacity: 1;
+        width: 100%;
+    }
+}
