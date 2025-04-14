@@ -164,20 +164,29 @@ social-icons {
 }
 
 hr {
-  border: solid #ffffff;
-  border-width: 1px 0 0;
-  clear: both;
-  margin: 11px 0 30px;
-  height: 0;
-  display: block;
-  margin-block-start: 0.5em;
-  margin-block-end: 0.5em;
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  unicode-bidi: isolate;
-  overflow: hidden;
-  border-style: inset;
-  border-width: 1px;
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ffeb3b, transparent);
+  width: 80%;
+  margin: 20px auto;
+  animation: glowingLine 3s ease-in-out infinite;
+  opacity: 0;
+  animation-delay: 3s; /* Start after typing animation */
+}
+
+@keyframes glowingLine {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
 }
 
 /* Responsive Design */
@@ -201,7 +210,6 @@ hr {
   h3 {
     font-size: 20px;
   }
-
 
   .menu-icon .bar,
   .menu-icon::after,
