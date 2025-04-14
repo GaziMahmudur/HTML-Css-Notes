@@ -1,0 +1,33 @@
+.firefly {
+    position: fixed;
+    width: 3px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: move var(--move-time) linear infinite, flash var(--flash-time) infinite;
+    opacity: 0;
+    z-index: 1;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(var(--x1)) translateY(var(--y1));
+    }
+    50% {
+        transform: translateX(var(--x2)) translateY(var(--y2));
+    }
+    100% {
+        transform: translateX(var(--x1)) translateY(var(--y1));
+    }
+}
+
+@keyframes flash {
+    0%, 30%, 100% {
+        opacity: 0;
+        box-shadow: none;
+    }
+    5% {
+        opacity: 0.6;
+        box-shadow: 0 0 20px #fff;
+    }
+}

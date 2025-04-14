@@ -55,3 +55,49 @@ window.onscroll = () => {
         }
     });
 };
+
+// Fireflies effect
+function createFirefly() {
+    const firefly = document.createElement('div');
+    firefly.className = 'firefly';
+    
+    // Random positions and timings
+    const x1 = Math.random() * window.innerWidth;
+    const y1 = Math.random() * window.innerHeight;
+    const x2 = Math.random() * window.innerWidth;
+    const y2 = Math.random() * window.innerHeight;
+    
+    firefly.style.setProperty('--x1', `${x1}px`);
+    firefly.style.setProperty('--y1', `${y1}px`);
+    firefly.style.setProperty('--x2', `${x2}px`);
+    firefly.style.setProperty('--y2', `${y2}px`);
+    firefly.style.setProperty('--move-time', `${15 + Math.random() * 15}s`);
+    firefly.style.setProperty('--flash-time', `${3 + Math.random() * 4}s`);
+    
+    return firefly;
+}
+
+function initFireflies(count = 20) {
+    const container = document.createElement('div');
+    container.className = 'fireflies-container';
+    container.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+    `;
+    
+    for (let i = 0; i < count; i++) {
+        container.appendChild(createFirefly());
+    }
+    
+    document.body.appendChild(container);
+}
+
+// Initialize fireflies after DOM content is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    initFireflies();
+});
