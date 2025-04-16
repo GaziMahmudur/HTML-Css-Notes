@@ -1,5 +1,7 @@
+/* Import fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
+/* Reset and base styles */
 * {
   padding: 0;
   margin: 0;
@@ -8,17 +10,19 @@
   scroll-behavior: smooth;
 }
 
-a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
+/* Global styles */
 body {
   font-family: "Poppins", sans-serif;
   background: #0b3954;
   overflow-x: hidden;
 }
 
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Header styles */
 header {
   padding: 15px 8%;
   width: 100%;
@@ -33,11 +37,13 @@ header {
   transition: 0.3s;
 }
 
+/* Logo styles */
 header .logo {
   font-size: 1.7rem;
   font-weight: 700;
 }
 
+/* Navigation styles */
 ul.navlist {
   display: flex;
 }
@@ -51,6 +57,7 @@ ul.navlist {
   font-weight: 600;
 }
 
+/* Navigation hover and active states */
 .navlist li a:hover,
 .navlist li a.active {
   background: linear-gradient(
@@ -63,6 +70,7 @@ ul.navlist {
   -webkit-background-clip: text;
 }
 
+/* Mobile menu icon */
 .menu-icon {
   display: none;
   width: 30px;
@@ -84,7 +92,7 @@ ul.navlist {
   transition: 0.4s;
 }
 
-/* ==== home ==== */
+/* Hero section */
 section {
   padding: 90px 8%;
 }
@@ -227,6 +235,7 @@ social-media a:hover {
   border: 1px solid #fff;
 }
 
+/* Profile image styles */
 .img-hero {
   position: relative;
   animation-delay: 3s;
@@ -256,83 +265,65 @@ social-media a:hover {
   color: #f8f8f0;
 }
 
-/*==== @keyframes ====*/
-
-@keyframes moveText {
-  0%,
-  10%,
-  100% {
-    background-position: -24rem 0;
-  }
-
-  65%,
-  85% {
-    background-position: 0rem 0;
-  }
+/* Service Section */
+.services-container {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 55px 8%;
 }
 
-@keyframes moveCursorText {
-  0%,
-  10%,
-  100% {
-    width: 0;
-  }
-
-  65%,
-  78%,
-  85% {
-    width: 100%;
-    opacity: 1;
-  }
-
-  75%,
-  85% {
-    opacity: 0;
-  }
+.services-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+  color: #fff;
 }
 
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
 }
 
-@keyframes rotateText {
-  0% {
-    transform: rotate(360deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
-  }
+.service-card {
+  background: #0b3954;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  border: 1px solid #fff;
 }
 
-@keyframes progress {
-  to {
-    stroke-dashoffset: var(--target);
-  }
+.service-card:hover {
+  transform: translateY(-5px);
 }
 
-@keyframes floatImage {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-22px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
+.service-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
-/*==== BrakPoints ==== */
+.service-card h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
 
+.service-card p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.6;
+} 
+
+.fa-solid {
+  font-size: 40px;
+  color: #fff;
+}
+
+/* Responsive Design */
 @media (min-width: 768px) {
   .menu-icon {
     display: none;
@@ -490,63 +481,7 @@ social-media a:hover {
   }
 }
 
-/* Service Section Styles */
-.services-container {
-    max-width: 1200px;
-    margin: 80px auto;
-    padding: 55px 8%;
-}
 
-.services-title {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 32px;
-    color: #fff;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-
-.service-card {
-    background: #0b3954;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    border: 1px solid #fff;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-}
-
-.service-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-.service-card h3 {
-    color: #fff;
-    margin-bottom: 15px;
-    font-size: 20px;
-    text-transform: uppercase;
-}
-
-.service-card p {
-    color: #fff;
-    font-size: 14px;
-    line-height: 1.6;
-} 
-
-.fa-solid {
-    font-size: 40px;
-    color: #fff;
-}
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -600,5 +535,79 @@ social-media a:hover {
 
   .fa-solid {
       font-size: 32px;
+  }
+}
+
+/* Animations */
+@keyframes moveText {
+  0%,
+  10%,
+  100% {
+    background-position: -24rem 0;
+  }
+
+  65%,
+  85% {
+    background-position: 0rem 0;
+  }
+}
+
+@keyframes moveCursorText {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+
+  65%,
+  78%,
+  85% {
+    width: 100%;
+    opacity: 1;
+  }
+
+  75%,
+  85% {
+    opacity: 0;
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateText {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes progress {
+  to {
+    stroke-dashoffset: var(--target);
+  }
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-22px);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
