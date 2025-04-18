@@ -43,6 +43,10 @@ header .logo {
   font-weight: 700;
 }
 
+header .logo span {
+  color: #ffeb3b;
+}
+
 /* Navigation styles */
 ul.navlist {
   display: flex;
@@ -183,6 +187,11 @@ section {
   color: #000;
 }
 
+.btn {
+  border: 1px solid #fff;
+  padding: 3px;
+}
+
 .btn-box .d-CV {
   padding: 10px;
   color: #fff;
@@ -213,7 +222,7 @@ section {
 }
 
 social-media a:hover {
-  color: #fff;
+  color: #ffffff;
 }
 
 .bg-icon {
@@ -232,7 +241,7 @@ social-media a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #fff;
+  border: 1px solid #ffffff;
 }
 
 /* Profile image styles */
@@ -268,8 +277,8 @@ social-media a:hover {
 /* Service Section */
 .services-container {
   max-width: 1200px;
-  margin: 80px auto;
-  padding: 55px 8%;
+  margin: 20px auto;
+  padding: 20px 8%;
 }
 
 .services-title {
@@ -447,16 +456,59 @@ social-media a:hover {
     padding: 10px;
     font-size: 0.8rem;
   }
+
+  /* services media query */
+  .services-container {
+    margin: 50px auto;
+    padding: 40px 5%;
 }
 
-@media (max-width: 530px) {
-  html {
-    font-size: 80%;
-  }
+.services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
 
-  section {
-    padding: 50px 3%;
-  }
+.services-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.service-card {
+    padding: 20px;
+}
+}
+
+@media (max-width: 480px) {
+.services-container {
+    margin: 40px auto;
+    padding: 30px 5%;
+}
+
+.services-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.services-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.service-card h3 {
+    font-size: 18px;
+}
+
+.service-card p {
+    font-size: 13px;
+}
+
+.service-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.fa-solid {
+    font-size: 32px;
+}
 }
 
 @media (max-width: 480px) {
@@ -478,63 +530,6 @@ social-media a:hover {
     height: 250px;
     top: -18px;
     left: 1px;
-  }
-}
-
-
-
-/* Media Queries */
-@media (max-width: 768px) {
-  .services-container {
-      margin: 50px auto;
-      padding: 40px 5%;
-  }
-
-  .services-grid {
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  }
-
-  .services-title {
-      font-size: 28px;
-      margin-bottom: 30px;
-  }
-
-  .service-card {
-      padding: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .services-container {
-      margin: 40px auto;
-      padding: 30px 5%;
-  }
-
-  .services-grid {
-      grid-template-columns: 1fr;
-      gap: 25px;
-  }
-
-  .services-title {
-      font-size: 24px;
-      margin-bottom: 25px;
-  }
-
-  .service-card h3 {
-      font-size: 18px;
-  }
-
-  .service-card p {
-      font-size: 13px;
-  }
-
-  .service-icon {
-      width: 40px;
-      height: 40px;
-  }
-
-  .fa-solid {
-      font-size: 32px;
   }
 }
 
