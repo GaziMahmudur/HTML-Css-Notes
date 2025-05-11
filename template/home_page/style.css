@@ -211,28 +211,23 @@ hr::after {
   0% {
     left: -50%;
     color: rgb(0, 0, 0);
-    /* Yellow */
   }
 
   25% {
     color: rgb(0, 0, 0);
-    /* Green */
   }
 
   50% {
     color: rgb(0, 0, 0);
-    /* Red */
   }
 
   75% {
     color: rgb(0, 0, 0);
-    /* Blue */
   }
 
   100% {
     left: 100%;
     color: #000000;
-    /* Back to Yellow */
   }
 }
 
