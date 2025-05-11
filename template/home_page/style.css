@@ -124,7 +124,6 @@ body::before {
   z-index: -1;
 }
 
-/* Add after your existing body styles */
 .fireflies-container {
   pointer-events: none;
 }
@@ -153,7 +152,7 @@ h3 {
   font-size: 22px;
 }
 
-social-icons {
+.social-icons {
   margin-top: 20px;
   margin: 24px 0;
   padding: 0;
@@ -187,17 +186,8 @@ social-icons {
   border-color: rgba(150, 150, 150, 0.1);
 }
 
-.lottie {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
 hr {
-  position: absolute;
-  bottom: 40px;
+  position: relative;
   border: none;
   height: 2px;
   background: #ffffff;

@@ -247,7 +247,7 @@ p {
   width: 42px;
   height: 42px;
   font-size: 1.5rem;
-  border: 2px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.8);
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -273,6 +273,19 @@ p {
 
 .img-hero {
   width: 50%;
+}
+
+/* Slide-in animation for name */
+.slide-in {
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideIn 1.5s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in forwards;
 }
 
 @media (min-width:1440px) {}
@@ -352,5 +365,27 @@ p {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

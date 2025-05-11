@@ -1,27 +1,37 @@
-html, body {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
-    color: white; /* Set the default font color to white */
-    background-color: rgb(34, 32, 32); /* Set the background color to black */
+    color: white;
+    /* Set the default font color to white */
+    background-color: rgb(34, 32, 32);
+    /* Set the background color to black */
+    font-family: sans-serif;
+    overflow-x: hidden;
 }
 
 .cv-container {
     display: grid;
     grid-template-columns: 30% 70%;
-    min-height: 100%; /* Changed from height to min-height */
+    min-height: 100%;
+    /* Changed from height to min-height */
 }
 
 .sidebar {
     background: #212f3d;
-    color: white; /* Ensure text in the sidebar is white */
+    color: white;
+    z-index: 1;
     padding: 30px;
-    position: relative; /* Remove any fixed positioning */
+    position: relative;
 }
 
 .main-content {
     padding: 40px;
-    color: white; /* Ensure text in the main content is white */
+    color: white;
+    /* Ensure text in the main content is white */
 }
 
 /* Default styles for profile image in sidebar */
@@ -56,32 +66,71 @@ html, body {
     left: 0;
 }
 
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+.slide-in {
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slideIn 1.5s ease-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
 /* Default styles for desktop */
 .mobile {
-    display: none; /* Hide mobile div by default */
+    display: none;
+    /* Hide mobile div by default */
 }
 
 .desktop {
-    display: block; /* Show desktop div by default */
+    display: block;
+    /* Show desktop div by default */
 }
 
 @keyframes borderAnimation {
     0% {
         border-color: rgb(0, 255, 0);
     }
+
     50% {
         border-color: rgb(255, 0, 0);
     }
+
     100% {
         border-color: rgb(0, 255, 0);
     }
 }
 
-.section-title span.my {
+.section-title div.my {
     color: rgb(255, 255, 255);
 }
 
-.section-title span.experience {
+.section-title div.experience {
     color: rgb(0, 255, 0);
 }
 
@@ -90,6 +139,8 @@ html, body {
     margin: 20px 0;
     text-transform: uppercase;
     font-size: 1.2em;
+    display: flex;
+    gap: 6px;
 }
 
 .contact-list i {
@@ -137,9 +188,11 @@ html, body {
     .sidebar {
         padding: 20px;
         display: flex;
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column;
+        /* Stack items vertically */
         align-items: center;
-        gap: 30px; /* Increased gap between sections */
+        gap: 30px;
+        /* Increased gap between sections */
         background: #212f3d;
         text-align: start;
     }
@@ -149,13 +202,15 @@ html, body {
         width: 100%;
         max-width: 600px;
         margin: 0 auto;
-        order: 1; /* Place skills at top */
+        order: 1;
+        /* Place skills at top */
     }
 
     /* Contact section styling */
     .contact-info {
         width: 100%;
-        order: 2; /* Place contact below skills */
+        order: 2;
+        /* Place contact below skills */
     }
 
     /* Contact list layout */
@@ -172,7 +227,8 @@ html, body {
     .contact-list li {
         flex: 0 1 auto;
         margin: 5px;
-        min-width: 150px; /* Minimum width for contact items */
+        min-width: 150px;
+        /* Minimum width for contact items */
     }
 
     /* Skills list layout for mobile */
@@ -201,12 +257,14 @@ html, body {
         padding: 25px;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Center items horizontally */
-        text-align: center; /* Center text content */
+        align-items: center;
+        /* Center items horizontally */
+        text-align: center;
+        /* Center text content */
     }
 
     /* Center all direct children of main-content */
-    .main-content > * {
+    .main-content>* {
         width: 100%;
         text-align: start;
         display: flex;
@@ -221,7 +279,7 @@ html, body {
     }
 
     /* Center any paragraphs or text elements */
-    .main-content p, 
+    .main-content p,
     .main-content h1,
     .main-content h2,
     .main-content h3,
@@ -232,7 +290,8 @@ html, body {
         width: 100%;
     }
 
-    .name, .position {
+    .name,
+    .position {
         width: 100%;
         text-align: center;
     }
@@ -242,11 +301,13 @@ html, body {
     }
 
     .mobile {
-        display: block; /* Show mobile div */
+        display: block;
+        /* Show mobile div */
     }
 
     .desktop {
-        display: none; /* Hide desktop div */
+        display: none;
+        /* Hide desktop div */
     }
 }
 
@@ -275,8 +336,29 @@ html, body {
         height: 120px;
     }
 
-    .sidebar, .main-content {
+    .sidebar,
+    .main-content {
         padding: 10px;
     }
 }
 
+.typing {
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3.5s steps(30) forwards;
+  animation-delay: 1s;
+  width: 0;
+}
+
+@keyframes typing {
+  0% {
+    opacity: 1;
+    width: 0;
+  }
+
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
