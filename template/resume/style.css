@@ -346,8 +346,8 @@ body {
   opacity: 0;
   overflow: hidden;
   white-space: nowrap;
-  animation: typing 3.5s steps(30) forwards;
-  animation-delay: 1s;
+  animation: typing 7s steps(200) forwards;
+  animation-delay: 2s;
   width: 0;
 }
 
