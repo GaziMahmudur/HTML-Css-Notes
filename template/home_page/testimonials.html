@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testimonial Section</title>
@@ -10,6 +12,275 @@
             padding: 0;
             box-sizing: border-box;
         }
+
+
+        /* Loader CSS */
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #272727;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        em {
+            font-size: 55px;
+            margin: 16px;
+            color: #F9C42F;
+        }
+
+        .container0 {
+            position: relative;
+            height: 120px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .center {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            width: 140px;
+            height: 140px;
+            border-radius: 100%;
+            background-color: #fff;
+            border: 9px solid #DEE1E4;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: "";
+            /* position: absolute; */
+            top: 210px;
+            left: 26px;
+            width: 100px;
+            height: 32px;
+            border-radius: 100%;
+            background-color: rgba(222, 225, 228, 0.4);
+        }
+
+        .wrap {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+        }
+
+        span::before {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 6px;
+            background-color: #DEE1E4;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        span::after {
+            content: "";
+            position: absolute;
+            left: 30px;
+            top: 20px;
+            width: 36px;
+            height: 12px;
+            background-color: #DEE1E4;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            border-radius: 0 4px 4px 0;
+        }
+
+        .box-1 {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+        }
+
+        .box-2 {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+        }
+
+        /* animation */
+
+        @-webkit-keyframes rowup-1 {
+            0% {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+
+            100% {
+                -webkit-transform: translate3d(50%, 0, 0);
+                transform: translate3d(50%, 0, 0);
+            }
+        }
+
+        @keyframes rowup-1 {
+            0% {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+
+            100% {
+                -webkit-transform: translate3d(50%, 0, 0);
+                transform: translate3d(50%, 0, 0);
+            }
+        }
+
+        @-webkit-keyframes rowup-2 {
+            0% {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+
+            100% {
+                -webkit-transform: translate3d(50%, 0, 0);
+                transform: translate3d(50%, 0, 0);
+            }
+        }
+
+        @keyframes rowup-2 {
+            0% {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+
+            100% {
+                -webkit-transform: translate3d(50%, 0, 0);
+                transform: translate3d(50%, 0, 0);
+            }
+        }
+
+        @-webkit-keyframes cloud-loop {
+            0% {
+                -webkit-transform: translate(0, 15px);
+                transform: translate(0, 15px);
+            }
+
+            100% {
+                -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+            }
+        }
+
+        @-webkit-keyframes shadow-loop {
+            0% {
+                -webkit-transform: translate(0, -35px) scale(1.15, 0.25);
+                transform: translate(0, -35px) scale(1.15, 0.25);
+            }
+
+            100% {
+                -webkit-transform: translate(0, -35px) scale(1, 0.25);
+                transform: translate(0, -35px) scale(1, 0.25);
+            }
+        }
+
+        @keyframes shadow-loop {
+            0% {
+                -webkit-transform: translate(0, -35px) scale(1.15, 0.25);
+                transform: translate(0, -35px) scale(1.15, 0.25);
+            }
+
+            100% {
+                -webkit-transform: translate(0, -35px) scale(1, 0.25);
+                transform: translate(0, -35px) scale(1, 0.25);
+            }
+        }
+
+        .box-1 {
+            -webkit-animation: 1s rowup-1 linear infinite normal;
+            animation: 1s rowup-1 linear infinite normal;
+        }
+
+        .box-2 {
+            -webkit-animation: 1s rowup-2 linear infinite normal;
+            animation: 1s rowup-2 linear infinite normal;
+        }
+
+        .center {
+            -webkit-animation-name: cloud-loop;
+            animation-name: cloud-loop;
+            -webkit-animation-duration: 0.7s;
+            animation-duration: 0.7s;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+            -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+        }
+
+        span {
+            position: relative;
+            left: 112px;
+            top: 60px;
+            -webkit-animation-name: cloud-loop;
+            animation-name: cloud-loop;
+            -webkit-animation-duration: 0.7s;
+            animation-duration: 0.7s;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+            -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+        }
+
+        .container::before {
+            -webkit-animation-name: shadow-loop;
+            animation-name: shadow-loop;
+            -webkit-animation-duration: 0.7s;
+            animation-duration: 0.7s;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+            -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+        }
+
+        .dr {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            width: 100px;
+        }
+
+        /* Hide loader after page loads */
+        body.loaded #loader {
+            display: none;
+        }
+
         body {
             font-family: 'Georgia', serif;
             background: url('background2.jpg') no-repeat center center/cover;
@@ -23,26 +294,30 @@
         }
 
         body::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: inherit;
-        filter: blur(2px); /* Blur intensity */
-        z-index: -1;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: inherit;
+            filter: blur(2px);
+            /* Blur intensity */
+            z-index: -1;
         }
+
         .quote-container {
             max-width: 800px;
             padding: 30px;
             border-radius: 10px;
         }
+
         .quote {
             font-size: 24px;
             font-style: italic;
             line-height: 1.6;
         }
+
         .quote::before {
             content: "\201C";
             font-size: 80px;
@@ -52,16 +327,16 @@
         }
 
         .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.4);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: -1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: -1;
         }
 
         /* Responsive Design */
@@ -72,6 +347,7 @@
                 max-width: 700px;
                 padding: 25px;
             }
+
             .quote {
                 font-size: 21px;
             }
@@ -81,12 +357,15 @@
         @media (max-width: 768px) {
             body {
                 padding: 20px;
-                text-align: center; /* Center-align text for smaller screens */
+                text-align: center;
+                /* Center-align text for smaller screens */
             }
+
             .quote-container {
                 max-width: 90%;
                 padding: 21px;
             }
+
             .quote {
                 font-size: 20px;
             }
@@ -98,12 +377,15 @@
                 max-width: 100%;
                 padding: 15px;
             }
+
             .quote {
                 font-size: 18px;
                 line-height: 1.4;
             }
+
             .quote::before {
-                font-size: 60px; /* Reduce the size of the quotation mark */
+                font-size: 60px;
+                /* Reduce the size of the quotation mark */
             }
         }
 
@@ -112,19 +394,57 @@
             .quote {
                 font-size: 16px;
             }
+
             .quote::before {
                 font-size: 50px;
             }
         }
     </style>
 </head>
+
 <body>
+
+    <!-- Loader HTML -->
+    <div id="loader">
+        <div class="spinner"></div>
+        <div class="container0">
+            <span></span>
+            <div class="center">
+                <div class="wrap">
+                    <div class="box-1 box">
+                        <em class="fas fa-file-code"></em>
+                        <em class="fas fa-file-code"></em>
+                    </div>
+                    <div class="box-2 box">
+                        <em class="fas fa-file-code"></em>
+                        <em class="fas fa-file-code"></em>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Wait for page to load completely
+            window.addEventListener("load", function () {
+                document.body.classList.add("loaded");
+                document.getElementById("content").style.display = "block";
+            });
+        </script>
+
+        <a href="https://dribbble.com/YancyMin" class="dr-url" target="_blank"><img class="dr"
+                src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png"
+                alt=""></a>
+    </div>
+
     <div class="quote-container">
         <p class="quote">
-            I have been learning programming since 2024. I am a self-taught developer. I have learned Html, Css, Javascript, Python. I have done some projects. Now I want to develop my skills in programming more and more by working with new technologies on different projects.<br><br>
+            I have been learning programming since 2024. I am a self-taught developer. I have learned Html, Css,
+            Javascript, Python. I have done some projects. Now I want to develop my skills in programming more and more
+            by working with new technologies on different projects.<br><br>
             I am very confident in this sector and hope I can reach my goal.<br><br>
             If you need more information about me, please contact me via email. Thank you!
         </p>
     </div>
 </body>
+
 </html>
