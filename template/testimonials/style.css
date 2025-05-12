@@ -1,0 +1,439 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Loader CSS */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #272727;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+em {
+    font-size: 55px;
+    margin: 16px;
+    color: #F9C42F;
+}
+
+.container0 {
+    position: relative;
+    height: 120px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+    background-color: #fff;
+    border: 9px solid #DEE1E4;
+    overflow: hidden;
+}
+
+/* .container0::before {
+    content: "";
+    position: absolute;
+    top: 210px;
+    left: 26px;
+    width: 100px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: rgba(222, 225, 228, 0.4);
+} */
+
+.wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+strong::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background-color: #DEE1E4;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+strong::after {
+    content: "";
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    width: 36px;
+    height: 12px;
+    background-color: #DEE1E4;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-radius: 0 4px 4px 0;
+}
+
+.box-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.box-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+/* animation */
+
+@-webkit-keyframes rowup-1 {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        -webkit-transform: translate3d(50%, 0, 0);
+        transform: translate3d(50%, 0, 0);
+    }
+}
+
+@keyframes rowup-1 {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        -webkit-transform: translate3d(50%, 0, 0);
+        transform: translate3d(50%, 0, 0);
+    }
+}
+
+@-webkit-keyframes rowup-2 {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        -webkit-transform: translate3d(50%, 0, 0);
+        transform: translate3d(50%, 0, 0);
+    }
+}
+
+@keyframes rowup-2 {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        -webkit-transform: translate3d(50%, 0, 0);
+        transform: translate3d(50%, 0, 0);
+    }
+}
+
+@-webkit-keyframes cloud-loop {
+    0% {
+        -webkit-transform: translate(0, 15px);
+        transform: translate(0, 15px);
+    }
+
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes cloud-loop {
+    0% {
+        transform: translate(0, 15px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@-webkit-keyframes shadow-loop {
+    0% {
+        -webkit-transform: translate(0, -35px) scale(1.15, 0.25);
+        transform: translate(0, -35px) scale(1.15, 0.25);
+    }
+
+    100% {
+        -webkit-transform: translate(0, -35px) scale(1, 0.25);
+        transform: translate(0, -35px) scale(1, 0.25);
+    }
+}
+
+@keyframes shadow-loop {
+    0% {
+        -webkit-transform: translate(0, -35px) scale(1.15, 0.25);
+        transform: translate(0, -35px) scale(1.15, 0.25);
+    }
+
+    100% {
+        -webkit-transform: translate(0, -35px) scale(1, 0.25);
+        transform: translate(0, -35px) scale(1, 0.25);
+    }
+}
+
+.box-1 {
+    -webkit-animation: 1s rowup-1 linear infinite normal;
+    animation: 1s rowup-1 linear infinite normal;
+}
+
+.box-2 {
+    -webkit-animation: 1s rowup-2 linear infinite normal;
+    animation: 1s rowup-2 linear infinite normal;
+}
+
+.center {
+    -webkit-animation-name: cloud-loop;
+    animation-name: cloud-loop;
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+strong {
+    position: relative;
+    left: 112px;
+    top: 60px;
+    -webkit-animation-name: cloud-loop;
+    animation-name: cloud-loop;
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+.container0::before {
+    -webkit-animation-name: shadow-loop;
+    animation-name: shadow-loop;
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+.dr {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    width: 100px;
+}
+
+/* Hide loader after page loads */
+body.loaded #loader {
+    display: none;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: url('background2.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color: white;
+    padding: 50px;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: inherit;
+    filter: blur(2px);
+    /* Blur intensity */
+    z-index: -1;
+}
+
+.container {
+    max-width: 800px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+/* Responsive Design */
+
+/* For large screens (e.g., desktops) */
+@media (max-width: 1440px) {
+    .container {
+        max-width: 700px;
+        padding: 25px;
+    }
+
+    .typedText {
+        font-size: 21px;
+    }
+    .typedText::before {
+        font-size: 60px;
+        /* Reduce the size of the quotation mark */
+    }
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+        /* Center-align text for smaller screens */
+    }
+
+    .container {
+        max-width: 90%;
+        padding: 21px;
+    }
+
+    .typedText {
+        font-size: 20px;
+    }
+
+    .typedText::before {
+        font-size: 40px;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 425px) {
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    body {
+        padding: 10px;
+        /* Center-align text for smaller screens */
+    }
+
+    .typedText {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .typedText::before {
+        font-size: 50px;
+        /* Reduce the size of the quotation mark */
+    }
+}
+
+/* For very small screens */
+@media (max-width: 320px) {
+    .typedText {
+        font-size: 16px;
+    }
+
+    .typedText::before {
+        font-size: 50px;
+    }
+}
+
+.typedText {
+    font-style: italic;
+}
+
+.typedText::before {
+    content: "\201C";
+    /* font-size: 80px; */
+    font-weight: bold;
+    color: white;
+    display: block;
+}
+
+.line {
+    display: block;
+    line-height: 1.6;
+    min-height: 1em;
+    /* Ensures even blank lines have height */
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    background-color: #0f0;
+    animation: blink 0.8s steps(2, start) infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
