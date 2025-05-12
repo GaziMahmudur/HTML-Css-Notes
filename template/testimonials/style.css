@@ -57,17 +57,6 @@ em {
     overflow: hidden;
 }
 
-/* .container0::before {
-    content: "";
-    position: absolute;
-    top: 210px;
-    left: 26px;
-    width: 100px;
-    height: 32px;
-    border-radius: 100%;
-    background-color: rgba(222, 225, 228, 0.4);
-} */
-
 .wrap {
     display: -webkit-box;
     display: -ms-flexbox;
