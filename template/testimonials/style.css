@@ -1,11 +1,47 @@
+/* ===================================
+   1. CSS Reset & Base Styles
+   =================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ===================================
+   2. Body & Core Layout
+   =================================== */
+body {
+    font-family: 'Georgia', serif;
+    background: url('background2.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    text-align: left;
+    color: white;
+    padding: 50px;
+}
 
-/* Loader CSS */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: inherit;
+    filter: blur(2px);
+    /* Blur intensity */
+    z-index: -1;
+}
+
+body.loaded #loader {
+    display: none;
+}
+
+/* ===================================
+   3. Loader Components
+   =================================== */
 #loader {
     position: fixed;
     top: 0;
@@ -17,12 +53,6 @@
     justify-content: center;
     align-items: center;
     z-index: 9999;
-}
-
-em {
-    font-size: 55px;
-    margin: 16px;
-    color: #F9C42F;
 }
 
 .container0 {
@@ -70,6 +100,15 @@ em {
     flex-direction: row;
 }
 
+/* ===================================
+   4. Loader Elements
+   =================================== */
+em {
+    font-size: 55px;
+    margin: 16px;
+    color: #F9C42F;
+}
+
 strong::before {
     content: "";
     position: absolute;
@@ -93,15 +132,7 @@ strong::after {
     border-radius: 0 4px 4px 0;
 }
 
-.box-1 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-}
-
+.box-1,
 .box-2 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -111,8 +142,58 @@ strong::after {
     justify-content: space-between;
 }
 
-/* animation */
+/* ===================================
+   5. Main Content
+   =================================== */
+.container {
+    max-width: 800px;
+    padding: 30px;
+    border-radius: 10px;
+}
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+.typedText {
+    font-style: italic;
+}
+
+.typedText::before {
+    content: "\201C";
+    /* font-size: 80px; */
+    font-weight: bold;
+    color: white;
+    display: block;
+}
+
+.line {
+    display: block;
+    line-height: 1.6;
+    min-height: 1em;
+    /* Ensures even blank lines have height */
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    background-color: #0f0;
+    animation: blink 0.8s steps(2, start) infinite;
+    margin-left: 2px;
+}
+
+/* ===================================
+   6. Animations
+   =================================== */
 @-webkit-keyframes rowup-1 {
     0% {
         -webkit-transform: translate3d(0, 0, 0);
@@ -207,6 +288,21 @@ strong::after {
     }
 }
 
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* ===================================
+   7. Animation Implementations
+   =================================== */
 .box-1 {
     -webkit-animation: 1s rowup-1 linear infinite normal;
     animation: 1s rowup-1 linear infinite normal;
@@ -259,64 +355,9 @@ strong {
     animation-direction: alternate;
 }
 
-.dr {
-    position: absolute;
-    bottom: 16px;
-    right: 16px;
-    width: 100px;
-}
-
-/* Hide loader after page loads */
-body.loaded #loader {
-    display: none;
-}
-
-body {
-    font-family: 'Georgia', serif;
-    background: url('background2.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    color: white;
-    padding: 50px;
-}
-
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: inherit;
-    filter: blur(2px);
-    /* Blur intensity */
-    z-index: -1;
-}
-
-.container {
-    max-width: 800px;
-    padding: 30px;
-    border-radius: 10px;
-}
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: -1;
-}
-
-/* Responsive Design */
-
+/* ===================================
+   8. Responsive Design
+   =================================== */
 /* For large screens (e.g., desktops) */
 @media (max-width: 1440px) {
     .container {
@@ -327,6 +368,7 @@ body::before {
     .typedText {
         font-size: 21px;
     }
+
     .typedText::before {
         font-size: 60px;
         /* Reduce the size of the quotation mark */
@@ -337,7 +379,7 @@ body::before {
 @media (max-width: 768px) {
     body {
         padding: 20px;
-        /* Center-align text for smaller screens */
+
     }
 
     .container {
@@ -385,44 +427,5 @@ body::before {
 
     .typedText::before {
         font-size: 50px;
-    }
-}
-
-.typedText {
-    font-style: italic;
-}
-
-.typedText::before {
-    content: "\201C";
-    /* font-size: 80px; */
-    font-weight: bold;
-    color: white;
-    display: block;
-}
-
-.line {
-    display: block;
-    line-height: 1.6;
-    min-height: 1em;
-    /* Ensures even blank lines have height */
-}
-
-.cursor {
-    display: inline-block;
-    width: 10px;
-    background-color: #0f0;
-    animation: blink 0.8s steps(2, start) infinite;
-    margin-left: 2px;
-}
-
-@keyframes blink {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
     }
 }
