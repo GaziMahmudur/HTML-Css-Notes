@@ -455,7 +455,7 @@ h1 {
   letter-spacing: 2px;
   animation: moveText 5s linear infinite;
   animation-delay: 2s;
-  opacity: 1;
+  opacity: 0;
 }
 
 .text-animate h2::before {
@@ -562,16 +562,18 @@ p {
 
 /* Animations */
 @keyframes moveText {
-  
+
   0%,
   10%,
   100% {
     background-position: -24rem 0;
+    opacity: 1;
   }
 
   65%,
   85% {
     background-position: 0rem 0;
+    opacity: 1;
   }
 }
 
@@ -590,8 +592,7 @@ p {
   }
 
   75%,
-  85% {
-  }
+  85% {}
 }
 
 @keyframes animate {
