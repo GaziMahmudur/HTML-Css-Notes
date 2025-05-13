@@ -15,7 +15,7 @@ body {
     background: url('background2.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: start;
     text-align: left;
     color: white;
@@ -170,7 +170,6 @@ strong::after {
 
 .typedText::before {
     content: "\201C";
-    /* font-size: 80px; */
     font-weight: bold;
     color: white;
     display: block;
@@ -370,8 +369,7 @@ strong {
     }
 
     .typedText::before {
-        font-size: 60px;
-        /* Reduce the size of the quotation mark */
+        font-size: 84px;
     }
 }
 
@@ -392,7 +390,7 @@ strong {
     }
 
     .typedText::before {
-        font-size: 40px;
+        font-size: 54px;
     }
 }
 
@@ -405,7 +403,6 @@ strong {
 
     body {
         padding: 10px;
-        /* Center-align text for smaller screens */
     }
 
     .typedText {
@@ -414,8 +411,7 @@ strong {
     }
 
     .typedText::before {
-        font-size: 50px;
-        /* Reduce the size of the quotation mark */
+        font-size: 44px;
     }
 }
 
