@@ -324,11 +324,6 @@ span {
   -wedkit-background-clip: text;
 }
 
-a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
 ul {
   display: flex;
 }
@@ -556,9 +551,6 @@ p {
   animation: fadeIn 1.5s ease-in forwards;
 }
 
-@media (min-width:1440px) {}
-
-@media (max-width: 767px) {}
 
 /* Animations */
 @keyframes moveText {
@@ -654,5 +646,101 @@ p {
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+/* ===================================
+   9. Services Section Styles
+   =================================== */
+.services {
+  background: #0b3954;
+  padding: 120px 8%;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services-title {
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 20px;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  background: yellow;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.service-icon i {
+  font-size: 1.8rem;
+  color: #0b3954;
+}
+
+.service-card h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.service-card p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+/* Services Section Responsive Styles */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 80px 4%;
+  }
+  
+  .services-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-card {
+    padding: 1.5rem;
   }
 }
