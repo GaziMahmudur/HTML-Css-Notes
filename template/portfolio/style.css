@@ -1,7 +1,24 @@
-/* Import fonts */
+/*=============================================
+=            Table of Contents            =
+=============================================
+
+1. Imports and Fonts
+2. CSS Reset & Base Styles
+3. Loader & Animations
+4. Layout & Structure
+5. Header & Navigation
+6. Hero Section
+7. Buttons & Interactive Elements
+8. Text Animations
+9. Services Section
+10. Media Queries
+
+=============================================*/
+
+/* 1. Imports and Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
-/* Reset and base styles */
+/* 2. CSS Reset & Base Styles */
 * {
   padding: 0;
   margin: 0;
@@ -10,7 +27,7 @@
   scroll-behavior: smooth;
 }
 
-/* Loader CSS */
+/* 3. Loader & Animations */
 #loader {
   position: fixed;
   top: 0;
@@ -29,105 +46,6 @@ em {
   margin: 16px;
   color: #F9C42F;
 }
-
-.container0 {
-  position: relative;
-  height: 120px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 140px;
-  height: 140px;
-  border-radius: 100%;
-  background-color: #fff;
-  border: 9px solid #DEE1E4;
-  overflow: hidden;
-}
-
-.container::before {
-  content: "";
-  /* position: absolute; */
-  top: 210px;
-  left: 26px;
-  width: 100px;
-  height: 32px;
-  border-radius: 100%;
-  background-color: rgba(222, 225, 228, 0.4);
-}
-
-.wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-abbr::before {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 6px;
-  background-color: #DEE1E4;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-abbr::after {
-  content: "";
-  position: absolute;
-  left: 30px;
-  top: 20px;
-  width: 36px;
-  height: 12px;
-  background-color: #DEE1E4;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  border-radius: 0 4px 4px 0;
-}
-
-.box-1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.box-2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-/* animation */
 
 @-webkit-keyframes rowup-1 {
   0% {
@@ -213,6 +131,199 @@ abbr::after {
   }
 }
 
+@keyframes moveText {
+
+  0%,
+  10%,
+  100% {
+    background-position: -24rem 0;
+    opacity: 1;
+  }
+
+  65%,
+  85% {
+    background-position: 0rem 0;
+    opacity: 1;
+  }
+}
+
+@keyframes moveCursorText {
+
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+
+  65%,
+  78%,
+  85% {
+    width: 100%;
+  }
+
+  75%,
+  85% {}
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateText {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes progress {
+  to {
+    stroke-dashoffset: var(--target);
+  }
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-22px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 4. Layout & Structure */
+.container0 {
+  position: relative;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+  border-radius: 100%;
+  background-color: #fff;
+  border: 9px solid #DEE1E4;
+  overflow: hidden;
+}
+
+.container::before {
+  content: "";
+  top: 210px;
+  left: 26px;
+  width: 100px;
+  height: 32px;
+  border-radius: 100%;
+  background-color: rgba(222, 225, 228, 0.4);
+}
+
+.wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+abbr::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  background-color: #DEE1E4;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+abbr::after {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  width: 36px;
+  height: 12px;
+  background-color: #DEE1E4;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-radius: 0 4px 4px 0;
+}
+
+.box-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.box-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
 .box-1 {
   -webkit-animation: 1s rowup-1 linear infinite normal;
   animation: 1s rowup-1 linear infinite normal;
@@ -272,12 +383,11 @@ abbr {
   width: 100px;
 }
 
-/* Hide loader after page loads */
+/* 5. Header & Navigation */
 body.loaded #loader {
   display: none;
 }
 
-/* Global styles */
 body {
   font-family: "Poppins", sans-serif;
   background: #0b3954;
@@ -401,6 +511,7 @@ li {
   margin: 5px 0;
 }
 
+/* 6. Hero Section */
 section {
   padding: 90px 8%;
 }
@@ -551,8 +662,13 @@ p {
   animation: fadeIn 1.5s ease-in forwards;
 }
 
+/* 7. Buttons & Interactive Elements */
+.btn:hover,
+.btn-box .d-CV:hover {
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+}
 
-/* Animations */
+/* 8. Text Animations */
 @keyframes moveText {
 
   0%,
@@ -587,71 +703,7 @@ p {
   85% {}
 }
 
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes rotateText {
-  0% {
-    transform: rotate(360deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-@keyframes progress {
-  to {
-    stroke-dashoffset: var(--target);
-  }
-}
-
-@keyframes floatImage {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-22px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* ===================================
-   9. Services Section Styles
-   =================================== */
+/* 9. Services Section */
 .services {
   background: #0b3954;
   padding: 120px 8%;
@@ -719,6 +771,33 @@ p {
 }
 
 /* Services Section Responsive Styles */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 80px 4%;
+  }
+  
+  .services-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-card {
+    padding: 1.5rem;
+  }
+}
+
+/* 10. Media Queries */
 @media (max-width: 1024px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
