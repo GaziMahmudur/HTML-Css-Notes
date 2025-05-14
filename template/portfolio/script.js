@@ -1,39 +1,32 @@
-// Wait for page to load completely
+/*=============================================
+=            Table of Contents            =
+=============================================
+
+1. Global Variables & Selectors
+2. Page Load Handlers
+3. Navigation & Menu Handlers
+4. Scroll Handlers
+5. Utility Functions
+
+=============================================*/
+
+/* 1. Global Variables & Selectors */
+let menuIcon = document.querySelector(".menu-icon");
+let navlist = document.querySelector(".navlist");
+let section = document.querySelectorAll("section");
+let navLink = document.querySelectorAll("header ul.navlist a");
+let currentPage = window.location.pathname.split("/").pop();
+
+/* 2. Page Load Handlers */
 window.addEventListener("load", function () {
     document.body.classList.add("loaded");
     document.getElementById("content").style.display = "block";
 });
 
-// active hamburger menu 
-let menuIcon = document.querySelector(".menu-icon");
-
-let navlist = document.querySelector(".navlist");
-console.log(navlist);
-menuIcon.addEventListener("click", () => {
-    menuIcon.classList.toggle("active");
-    navlist.classList.toggle("active");
-    document.body.classList.toggle("open");
-});
-
-// remove navlist
-navlist.addEventListener("click", () => {
-    navlist.classList.remove("active");
-    menuIcon.classList.remove("active");
-    document.body.classList.remove("open");
-});
-
-let section = document.querySelectorAll("section");
-// Updated to select links inside the navlist
-let navLink = document.querySelectorAll("header ul.navlist a");
-
-// Get current page filename
-let currentPage = window.location.pathname.split("/").pop();
-
-// On DOM load, activate the nav link based on the current file
 document.addEventListener("DOMContentLoaded", () => {
     navLink.forEach(link => {
         let href = link.getAttribute("href");
-        if(currentPage=="") currentPage="index.html"; // Handle case where current page is root
+        if (currentPage == "") currentPage = "index.html"; // Handle case where current page is root
         // For home page, check explicitly for index.html since section id is "home"
         if (currentPage === "index.html") {
             href === "index.html" ? link.classList.add("active") : link.classList.remove("active");
@@ -43,6 +36,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+/* 3. Navigation & Menu Handlers */
+// Hamburger menu toggle
+menuIcon.addEventListener("click", () => {
+    menuIcon.classList.toggle("active");
+    navlist.classList.toggle("active");
+    document.body.classList.toggle("open");
+});
+
+// Navigation list click handler
+navlist.addEventListener("click", () => {
+    navlist.classList.remove("active");
+    menuIcon.classList.remove("active");
+    document.body.classList.remove("open");
+});
+
+/* 4. Scroll Handlers */
 window.onscroll = () => {
     section.forEach(sec => {
         let top = window.scrollY;
@@ -61,3 +70,6 @@ window.onscroll = () => {
         }
     });
 };
+
+/* 5. Utility Functions */
+// Add any utility functions here
