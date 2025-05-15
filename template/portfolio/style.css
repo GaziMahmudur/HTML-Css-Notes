@@ -409,42 +409,104 @@ a {
   z-index: -1;
 }
 
+/* Default styles (mobile first) */
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(11, 57, 84, 0.9);
+  background-color: rgba(11, 57, 84, 1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 8%;
+  padding: 15px 4%;
   z-index: 100;
   transition: .3s;
 }
 
 .logo {
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  color: #ffffff;
+  color: rgb(255, 255, 255);
 }
 
 span {
   color: yellow;
-  -wedkit-background-clip: text;
 }
 
-ul {
+.menu-icon {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.menu-icon .bar,
+.menu-icon::before,
+.menu-icon::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  transition: transform 0.3s ease-in-out;
+  left: 0;
+}
+
+.menu-icon::before {
+  top: 0;
+}
+
+.menu-icon .bar {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu-icon::after {
+  bottom: 0;
+}
+
+.menu-icon.active::before {
+  transform: translateY(11px) rotate(45deg);
+}
+
+.menu-icon.active .bar {
+  opacity: 0;
+}
+
+.menu-icon.active::after {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.navlist {
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  width: 100%;
+  background: rgba(11, 57, 84, 0.98);
+  padding: 2rem;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s ease;
 }
 
-li {
-  margin: 0 1rem;
+.navlist.active {
+  top: 0%;
+}
+
+.navlist li {
+  margin: 0.5rem;
+  width: 100%;
+  text-align: center;
 }
 
 .navlist li a {
-  display: inline-flex;
+  font-size: 1.1rem;
   font-weight: 600;
+  display: block;
+  padding: 0.8rem;
 }
 
 .navlist li a:hover,
@@ -457,65 +519,16 @@ li {
 .right-header {
   display: flex;
   align-items: center;
-  justify-content: end;
-  gap: .8rem;
+  gap: 1rem;
 }
 
-.btn {
+.right-header .btn {
   border: 1px solid #fff;
-  padding: 5px 20px;
-  color: #ffffff;
   border-radius: 0px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.btn:hover,
-.btn-box .d-CV:hover {
-  box-shadow: 0 0 10px rgb(0, 0, 0);
-}
-
-.menu-icon {
-  position: relative;
-  display: none;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-}
-
-.menu-icon .bar,
-.menu-icon::after,
-.menu-icon::before {
-  content: "";
-  display: none;
-  width: 100%;
-  height: 4px;
-  border-radius: 3px;
-  background: #000;
-  margin: 6px 0;
-  transition: .4s;
-}
-
-.menu-icon.active::before {
-  transform: rotate(45deg);
-}
-
-.menu-icon.active::after {
-  transform: rotate(-45deg);
-}
-
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: #ffffff;
-  margin: 5px 0;
+  padding: 0px 15px;
 }
 
 /* 6. Hero Section */
-section {
-  padding: 90px 8%;
-}
-
 .home {
   min-height: 100vh;
   height: 100%;
@@ -523,12 +536,27 @@ section {
   display: flex;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  grid-gap: 4em;
+  flex-direction: column-reverse;
+  grid-gap: 3em;
   background: linear-gradient(90deg, #0b3954, #0b3954);
 }
 
+.img-hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-hero .lottie {
+  width: 400px;
+  height: 400px;
+  margin-top: 1rem;
+}
+
 .hero-info {
-  margin-top: 3rem;
+  margin-top: 0rem;
+  justify-items: center;
 }
 
 h3 {
@@ -567,8 +595,7 @@ h1 {
 .text-animate h2::before {
   content: "";
   position: absolute;
-  top: 7px;
-  left: -3px;
+  top: 8px;
   width: 0;
   height: 70%;
   border-right: 2px solid #ffffff;
@@ -580,6 +607,7 @@ p {
   font-size: .9rem;
   color: #ffffff;
   line-height: 1.5rem;
+  text-align: center;
 }
 
 .btn-box {
@@ -615,6 +643,8 @@ p {
   justify-content: space-between;
   width: 220px;
   height: 50px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .social-media a {
@@ -643,10 +673,6 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.img-hero {
-  width: 50%;
 }
 
 /* Slide-in animation for name */
@@ -706,7 +732,7 @@ p {
 /* 9. Services Section */
 .services {
   background: #0b3954;
-  padding: 120px 8%;
+  padding: 85px 8%;
 }
 
 .services-container {
@@ -725,7 +751,7 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  padding: 20px;
+  padding: 0px;
 }
 
 .service-card {
@@ -770,56 +796,155 @@ p {
   line-height: 1.6;
 }
 
-/* Services Section Responsive Styles */
-@media (max-width: 1024px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .services {
-    padding: 80px 4%;
-  }
-  
-  .services-title {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .service-card {
-    padding: 1.5rem;
-  }
-}
-
 /* 10. Media Queries */
-@media (max-width: 1024px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  .home {
+    flex-direction: column-reverse;
+  }
+
+  header {
+    padding: 20px 10%;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .navlist {
+    padding-top: 1.5rem;
+  }
+
+  .navlist li a {
+    font-size: 1.3rem;
+  }
+
+  .right-header .btn {
+    display: block;
+    font-size: 0.9rem;
+    padding: 2px 15px;
+    border: 1px solid #fff;
+    color: #ffffff;
+    border-radius: 0;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  section {
+    padding: 72px 10%;
+  }
+
+  .img-hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-hero .lottie {
+    width: 450px;
+    height: 450px;
+  }
+
+  .hero-info {
+    justify-items: center;
+  }
+
+  .hero-info h1 {
+    font-size: 3rem;
+  }
+
+  .hero-info h3 {
+    font-size: 1rem;
+  }
+
+  .hero-info p {
+    line-height: 1.6;
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+
+  .text-animate {
+    width: 25rem;
+  }
+
+  .text-animate h2 {
+    font-size: 2.2rem;
+  }
+
+  .btn-box {
+    gap: 30px;
+    margin-top: 2.5rem;
+  }
+
+  .social-media {
+    width: 240px;
+    margin-top: 2rem;
   }
 }
 
-@media (max-width: 768px) {
-  .services {
-    padding: 80px 4%;
+/* Desktop styles */
+@media (min-width: 1440px) {
+  header {
+    padding: 25px 10%;
   }
-  
-  .services-title {
+
+  .logo {
     font-size: 2rem;
   }
-}
 
-@media (max-width: 480px) {
-  .services-grid {
-    grid-template-columns: 1fr;
+  .menu-icon {
+    display: none;
   }
-  
-  .service-card {
-    padding: 1.5rem;
+
+  .navlist {
+    position: static;
+    width: auto;
+    background: none;
+    padding: 0;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .navlist li {
+    margin: 0 1.5rem;
+    width: auto;
+  }
+
+  .navlist li a {
+    font-size: 1.1rem;
+    padding: 0;
+    display: inline-flex;
+  }
+
+  .right-header .btn {
+    display: block;
+    border: 1px solid #fff;
+    padding: 5px 20px;
+    color: #ffffff;
+    border-radius: 0;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .right-header .btn:hover {
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+  }
+
+  .img-hero {
+    width: 45%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .img-hero .lottie {
+    width: 500px;
+    height: 500px;
+  }
+
+  section {
+    padding: 90px 10%;
   }
 }

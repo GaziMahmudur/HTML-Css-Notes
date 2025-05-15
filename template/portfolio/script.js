@@ -37,14 +37,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* 3. Navigation & Menu Handlers */
-// Hamburger menu toggle
+// active hamburger menu 
 menuIcon.addEventListener("click", () => {
     menuIcon.classList.toggle("active");
     navlist.classList.toggle("active");
     document.body.classList.toggle("open");
 });
 
-// Navigation list click handler
+// remove navlist
 navlist.addEventListener("click", () => {
     navlist.classList.remove("active");
     menuIcon.classList.remove("active");
