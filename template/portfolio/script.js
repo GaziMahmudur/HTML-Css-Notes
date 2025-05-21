@@ -34,6 +34,18 @@ document.addEventListener("DOMContentLoaded", () => {
             href.includes(currentPage) ? link.classList.add("active") : link.classList.remove("active");
         }
     });
+
+    const menuIcon = document.querySelector(".menu-icon");
+    const headerContainer = document.querySelector(".header-container");
+    // increase headerContainer's height when menuIcon is clicked
+    menuIcon.addEventListener("click", () => {
+        if (menuIcon.classList.contains("active")) {
+            headerContainer.style.height = "430px"; // Adjust this value as needed
+        } else {
+            headerContainer.style.height = "58px"; // Adjust this value as needed
+        }
+    });
+
 });
 
 /* 3. Navigation & Menu Handlers */
