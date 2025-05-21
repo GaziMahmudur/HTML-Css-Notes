@@ -259,33 +259,9 @@ em {
   }
 }
 
-@keyframes rotateText {
-  0% {
-    transform: rotate(360deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
 @keyframes progress {
   to {
     stroke-dashoffset: var(--target);
-  }
-}
-
-@keyframes floatImage {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-22px);
-  }
-
-  100% {
-    transform: translateY(0);
   }
 }
 
@@ -650,13 +626,16 @@ span {
 .home {
   min-height: 100vh;
   height: 100%;
-  width: 100%;
   display: flex;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   flex-direction: column-reverse;
   grid-gap: 3em;
   background: linear-gradient(90deg, var(--eerie-black-2), var(--eerie-black-2));
+  border: 1px solid var(--jet);
+  border-radius: 20px;
+  margin: 15px 12px;
+  padding: 15px;
 }
 
 .img-hero {
@@ -669,7 +648,7 @@ span {
 .img-hero .lottie {
   width: 400px;
   height: 400px;
-  margin-top: 1rem;
+  margin-top: -2rem;
 }
 
 .hero-info {
@@ -685,13 +664,14 @@ h3 {
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: #fff;
 }
 
 .text-animate {
   width: 22.8rem;
   position: relative;
+  text-align: center;
 }
 
 .text-animate h2 {
@@ -726,6 +706,7 @@ p {
   color: #ffffff;
   line-height: 1.5rem;
   text-align: center;
+  width: 90%;
 }
 
 .btn-box {
@@ -1003,6 +984,9 @@ p {
 @media (min-width: 768px) {
   .home {
     flex-direction: column-reverse;
+    padding: 0px 3%;
+    margin: -27px 5%;
+    margin-bottom: 35px;
   }
 
   header {
@@ -1053,11 +1037,11 @@ p {
   }
 
   .hero-info h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   .hero-info h3 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .hero-info p {
@@ -1118,6 +1102,15 @@ p {
 }
 
 @media (min-width: 1024px) {
+  .home {
+    margin-bottom: 60px;
+  }
+
+  .img-hero .lottie {
+    width: 470px;
+    height: 470px;
+  }
+
   .services-grid {
     grid-template-columns: 1fr 1fr;
     gap: 20px 25px;
@@ -1132,6 +1125,10 @@ p {
 @media (min-width: 1440px) {
   header {
     padding: 45px 9%;
+  }
+
+  .home {
+    margin: 0px 130px;
   }
 
   .logo {
@@ -1186,6 +1183,54 @@ p {
   .img-hero .lottie {
     width: 500px;
     height: 500px;
+  }
+
+  .hero-info h1 {
+    font-size: 5rem;
+  }
+
+  .hero-info h3 {
+    font-size: 2rem;
+  }
+
+  .text-animate h2 {
+    font-size: 3.5rem;
+    width: 142%;
+  }
+
+  .text-animate {
+    width: 35rem;
+  }
+
+  .hero-info p {
+    line-height: 1.6;
+    margin: 1.5rem 0;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .btn-box .d-CV {
+    padding: 20px 50px;
+    font-size: 1.2rem;
+  }
+
+  .btn-box .btn {
+    padding: 20px 50px;
+    font-size: 1.2rem;
+  }
+
+  .btn-box {
+    gap: 75px;
+  }
+
+  .social-media {
+    gap: 20px;
+  }
+
+  .social-media a {
+    width: 70px;
+    height: 70px;
+    font-size: 3rem;
   }
 
   section {
