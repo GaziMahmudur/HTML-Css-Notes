@@ -18,11 +18,6 @@ let navLink = document.querySelectorAll("header ul.navlist a");
 let currentPage = window.location.pathname.split("/").pop();
 
 /* 2. Page Load Handlers */
-window.addEventListener("load", function () {
-    document.body.classList.add("loaded");
-    document.getElementById("content").style.display = "block";
-});
-
 document.addEventListener("DOMContentLoaded", () => {
     navLink.forEach(link => {
         let href = link.getAttribute("href");
