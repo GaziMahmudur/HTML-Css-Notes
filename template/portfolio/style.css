@@ -297,6 +297,48 @@ em {
   }
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-200%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(200%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
 /* 4. Layout & Structure */
 .container0 {
   position: relative;
@@ -844,7 +886,7 @@ p {
   padding-bottom: 45px;
   opacity: 0;
   transform: translateY(50px);
-  animation: fadeInUp 1.5s ease forwards;
+  animation: fadeInUp 2s ease forwards;
 }
 
 .services-title {
@@ -927,48 +969,6 @@ p {
 
 .service-card:hover::after {
   opacity: 1;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 1;
-    transform: translateY(15px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
-@keyframes slide-in-left {
-  0% {
-    transform: translateX(-200%);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes slide-in-right {
-  0% {
-    transform: translateX(200%);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
 }
 
 /* Add animation to service icons */
