@@ -1,9 +1,3 @@
-// Wait for page to load completely
-window.addEventListener("load", function () {
-    document.body.classList.add("loaded");
-    document.getElementById("content").style.display = "block";
-});
-
 // active hamburger menu 
 let menuIcon = document.querySelector(".menu-icon");
 
