@@ -309,7 +309,7 @@ em {
 
 @keyframes fadeInUp {
   from {
-    opacity: 0;
+    opacity: 1;
     transform: translateY(15px);
   }
 
@@ -1009,7 +1009,7 @@ p {
   text-align: center;
   opacity: 0;
   transform: translateX(-20px);
-  animation: fadeInLeft 0.5s ease forwards;
+  animation: fadeInLeft 1s ease forwards;
   animation-delay: calc(0.3s * var(--i));
 }
 
@@ -1021,7 +1021,7 @@ p {
   text-align: center;
   opacity: 0;
   transform: translateX(-20px);
-  animation: fadeInLeft 0.5s ease forwards;
+  animation: fadeInLeft 1s ease forwards;
   animation-delay: calc(0.3s * var(--i));
 }
 
