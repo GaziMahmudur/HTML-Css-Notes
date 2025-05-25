@@ -109,6 +109,7 @@
   box-sizing: border-box;
   list-style: none;
   scroll-behavior: smooth;
+  user-select: none;
 }
 
 @keyframes moveText {
@@ -909,6 +910,7 @@ p {
   transform: translateX(-20px);
   animation: fadeInLeft 1s ease forwards;
   animation-delay: calc(0.3s * var(--i));
+  width: 100%;
 }
 
 /* 10. Media Queries */
@@ -1059,10 +1061,10 @@ p {
 @media (min-width: 1440px) {
   header {
     padding: 45px 9%;
-  }
 
-  .header-container {
-    padding: 10px 4%;
+    .header-container {
+      padding: 10px 4%;
+    }
   }
 
   .home {
