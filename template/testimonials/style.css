@@ -78,21 +78,8 @@ body::before {
 .cursor {
     display: inline-block;
     width: 10px;
-    background-color: #0f0;
-    animation: blink 0.8s steps(2, start) infinite;
+    background-color: rgb(255, 255, 255);
     margin-left: 2px;
-}
-
-@keyframes blink {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
 }
 
 /* ===================================

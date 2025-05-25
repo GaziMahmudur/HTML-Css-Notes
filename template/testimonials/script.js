@@ -11,7 +11,7 @@ function startTyping({
     let currentSpan = null;
     const cursor = document.createElement('span');
     cursor.classList.add('cursor');
-    cursor.textContent = ' ';
+    cursor.textContent = ' | ';
 
     element.textContent = ''; // Clear existing content
 
