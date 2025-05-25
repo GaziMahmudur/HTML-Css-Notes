@@ -995,18 +995,29 @@ p {
   opacity: 1;
 }
 
-.experience-card-h4 {}
+.experience-card h4 {
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-3);
+}
+
+.company-name {
+  color: var(--orange-yellow-crayola);
+  font-weight: 500;
+  margin: 4px 0;
+}
 
 .experience-card h3 {
   color: #fff;
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 7px;
   text-align: center;
   opacity: 0;
   transform: translateX(-20px);
   animation: fadeInLeft 1s ease forwards;
   animation-delay: calc(0.3s * var(--i));
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 .experience-card p {
@@ -1020,6 +1031,7 @@ p {
   animation: fadeInLeft 1s ease forwards;
   animation-delay: calc(0.3s * var(--i));
   width: 100%;
+  margin-top: 10px;
 }
 
 /* 11. Media Queries */
