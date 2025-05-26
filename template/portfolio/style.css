@@ -207,7 +207,7 @@
 @keyframes fadeInUp {
   from {
     opacity: 1;
-    transform: translateY(15px);
+    transform: translateY(50px);
   }
 
   to {
@@ -240,6 +240,18 @@
   from {
     opacity: 0;
     transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
   }
 
   to {
@@ -785,7 +797,7 @@ p {
   padding-bottom: 45px;
   opacity: 0;
   transform: translateY(50px);
-  animation: fadeInUp 2s ease forwards;
+  animation: fadeInUp 1s ease forwards;
 }
 
 .services-title {
@@ -802,7 +814,7 @@ p {
   display: inline-block;
   position: relative;
   transform: translateX(0);
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
@@ -908,7 +920,7 @@ p {
   text-align: center;
   opacity: 0;
   transform: translateX(-20px);
-  animation: fadeInLeft 1s ease forwards;
+  animation: fadeInRight 1s ease forwards;
   animation-delay: calc(0.3s * var(--i));
   width: 100%;
 }
@@ -929,7 +941,8 @@ p {
   padding-bottom: 45px;
   opacity: 0;
   transform: translateY(50px);
-  animation: fadeInUp 2s ease forwards;
+  animation: fadeInUp 1s ease forwards;
+  text-align: center;
 }
 
 .experience-title {
@@ -937,10 +950,22 @@ p {
   font-size: 2.1rem;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   text-transform: uppercase;
   overflow: hidden;
 }
+
+.experience-intro {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+  text-align: center;
+  max-width: 700px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: calc(0.3s * var(--i));
+}
+
 
 .experience-grid {
   display: grid;
@@ -999,12 +1024,30 @@ p {
   color: var(--orange-yellow-crayola);
   font-size: var(--fs-6);
   font-weight: var(--fw-3);
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeInRight 1s ease forwards;
+  animation-delay: calc(0.3s * var(--i));
 }
 
 .company-name {
-  color: var(--orange-yellow-crayola);
+  color: var(--light-gray);
   font-weight: 500;
-  margin: 4px 0;
+  opacity: 0;
+  transform: translateX(20px);
+  animation: fadeInRight 1s ease forwards;
+  animation-delay: calc(0.3s * var(--i));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.company-name::before {
+  content: '•';
+  color: var(--orange-yellow-crayola);
+  font-weight: bold;
+  font-size: 2rem;
 }
 
 .experience-card h3 {
@@ -1016,8 +1059,7 @@ p {
   transform: translateX(-20px);
   animation: fadeInLeft 1s ease forwards;
   animation-delay: calc(0.3s * var(--i));
-  margin-bottom: 5px;
-  margin-top: 5px;
+  margin-top: 7px;
 }
 
 .experience-card p {
@@ -1179,12 +1221,18 @@ p {
     padding: 30px;
     margin: auto;
     padding-bottom: 60px;
+    text-align: -webkit-center;
   }
 
   .experience-card p {
     text-align: left;
   }
+
+  .company-name {
+    justify-content: left;
+  }
 }
+
 
 @media (min-width: 1024px) {
   .home {
