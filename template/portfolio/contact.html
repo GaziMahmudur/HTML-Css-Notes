@@ -36,23 +36,44 @@
   </header>
 
   <section class="contact" id="contact">
-    <h2>Let's Work Together</h2>
-    <div class="contact-grid">
-      <div class="contact-info">
-        <p>Phone: (492) 368420477</p>
-        <p>Email: donty@fusaeohindelternet24@gmail.com</p>
-        <p>Address: Houaibao2-843 Block-20 Outcupp Town TB Area</p>
+    <div class="contact-container">
+      <h2 class="contact-title">
+        <y class="text-part left">Let's</y>
+        <z class="text-part middle">Work</z>
+        <x class="text-part right">Together</x>
+      </h2>
+
+      <div class="contact-grid">
+
+        <!-- LEFT SIDE: contact info with heading -->
+        <div class="contact-info-block">
+          <h2 class="contact-head">Contact</h2> <!-- Move this inside -->
+          <div class="contact-ul">
+            <ul class="contact-list">
+              <li><i class="fas fa-phone"></i>+880 1822-474540</li>
+              <li><i class="fas fa-envelope"></i>g.mahmudur.r@gmail.com</li>
+              <li><i class="fas fa-map-marker-alt"></i>Mirpur-2, Dhaka, Bangladesh</li>
+              <li><i class="fab fa-facebook"></i>g.mahmudur</li>
+              <li><i class="fab fa-github"></i>github.com/GaziMahmudur</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE: contact form -->
+        <form>
+          <input type="text" placeholder="Full Name">
+          <input type="email" placeholder="Email Address">
+          <input type="tel" placeholder="Phone Number">
+          <input type="text" placeholder="Email Subject">
+          <textarea rows="5" placeholder="Your Message"></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+
       </div>
-      <form>
-        <input type="text" placeholder="Full Name">
-        <input type="email" placeholder="Email Address">
-        <input type="tel" placeholder="Phone Number">
-        <input type="text" placeholder="Email Subject">
-        <textarea rows="5" placeholder="Your Message"></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+
     </div>
   </section>
+
   <script src="script.js"></script>
   <script src="../loader.js"></script>
 </body>

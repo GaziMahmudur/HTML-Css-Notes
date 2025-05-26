@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // increase headerContainer's height when menuIcon is clicked
     menuIcon.addEventListener("click", () => {
         if (menuIcon.classList.contains("active")) {
-            headerContainer.style.height = "400px"; // Adjust this value as needed
+            headerContainer.style.height = "360px"; // Adjust this value as needed
         } else {
             headerContainer.style.height = "58px"; // Adjust this value as needed
         }
