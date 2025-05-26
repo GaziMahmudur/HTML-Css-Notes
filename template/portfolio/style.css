@@ -1147,18 +1147,6 @@ p {
   margin-bottom: 20px;
 }
 
-.fas {
-  opacity: 0;
-  animation: fadeInLeft 2s ease forwards;
-  animation-delay: calc(0.3s * var(--i));
-}
-
-.fab {
-  opacity: 0;
-  animation: fadeInLeft 2s ease forwards;
-  animation-delay: calc(0.3s * var(--i));
-}
-
 .contact-list {
   display: flex;
   flex-direction: column;
@@ -1172,6 +1160,9 @@ p {
 .contact-list i {
   margin-right: 10px;
   color: var(--orange-yellow-crayola);
+  opacity: 0;
+  animation: fadeInLeft 2s ease forwards;
+  animation-delay: calc(0.3s * var(--i));
 }
 
 .contact-info p {
