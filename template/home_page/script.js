@@ -101,3 +101,33 @@ function initFireflies(count = 20) {
 document.addEventListener('DOMContentLoaded', () => {
     initFireflies();
 });
+
+const bg = document.getElementById('bg');
+
+// সব ইমেজ এখানে লিস্ট করো
+const images = [
+    './pexels-harold-vasquez-853421-2653362.jpg', // ব্লার ইমেজ (যদি এটি সিলেক্ট হয়)
+    './emmanuel-phaeton--fBaQFX7q8U-unsplash.jpg',
+];
+
+const blurImage = './pexels-harold-vasquez-853421-2653362.jpg'; // ব্লার হওয়া ইমেজটি
+
+function changeBackground() {
+    // র‍্যান্ডম ইমেজ নির্বাচন
+    const randomIndex = Math.floor(Math.random() * images.length);
+    const selectedImage = images[randomIndex];
+
+    // ব্যাকগ্রাউন্ড বদল
+    bg.style.backgroundImage = `url('${selectedImage}')`;
+
+    // নির্দিষ্ট ইমেজ হলে ব্লার এফেক্ট অ্যাপ্লাই করা
+    if (selectedImage === blurImage) {
+        bg.style.filter = 'blur(4px)'; // ব্লার এফেক্ট
+    } else {
+        bg.style.filter = 'blur(0px)'; // স্বাভাবিক
+    }
+}
+
+// পেজ লোডে ইমেজ চেঞ্জ করা
+window.onload = changeBackground;
+
