@@ -85,23 +85,6 @@
 
 }
 
-/*=============================================
-=            Table of Contents            =
-=============================================
-
-1. Imports and Fonts
-2. CSS Reset & Base Styles
-3. Loader & Animations
-4. Layout & Structure
-5. Header & Navigation
-6. Hero Section
-7. Buttons & Interactive Elements
-8. Text Animations
-9. Services Section
-10. Media Queries
-
-=============================================*/
-
 /* 2. CSS Reset & Base Styles */
 * {
   padding: 0;
@@ -128,50 +111,6 @@
   }
 }
 
-@keyframes moveCursorText {
-
-  0%,
-  10%,
-  100% {
-    width: 0;
-  }
-
-  65%,
-  78%,
-  85% {
-    width: 100%;
-  }
-
-  75%,
-  85% {}
-}
-
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes progress {
-  to {
-    stroke-dashoffset: var(--target);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
 @keyframes slideIn {
   0% {
     opacity: 0;
@@ -184,26 +123,6 @@
   }
 }
 
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes fadeInUp {
   from {
     opacity: 1;
@@ -213,6 +132,16 @@
   to {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 
@@ -258,157 +187,6 @@
     opacity: 1;
     transform: translateX(0);
   }
-}
-
-/* 4. Layout & Structure */
-.container0 {
-  position: relative;
-  height: 120px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 140px;
-  height: 140px;
-  border-radius: 100%;
-  background-color: #fff;
-  border: 9px solid #DEE1E4;
-  overflow: hidden;
-}
-
-.container::before {
-  content: "";
-  top: 210px;
-  left: 26px;
-  width: 100px;
-  height: 32px;
-  border-radius: 100%;
-  background-color: rgba(222, 225, 228, 0.4);
-}
-
-.wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-abbr::before {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 6px;
-  background-color: #DEE1E4;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-abbr::after {
-  content: "";
-  position: absolute;
-  left: 30px;
-  top: 20px;
-  width: 36px;
-  height: 12px;
-  background-color: #DEE1E4;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  border-radius: 0 4px 4px 0;
-}
-
-.box-1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.box-2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.center {
-  -webkit-animation-name: cloud-loop;
-  animation-name: cloud-loop;
-  -webkit-animation-duration: 0.7s;
-  animation-duration: 0.7s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease;
-  animation-timing-function: ease;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-
-abbr {
-  position: relative;
-  left: 112px;
-  top: 60px;
-  -webkit-animation-name: cloud-loop;
-  animation-name: cloud-loop;
-  -webkit-animation-duration: 0.7s;
-  animation-duration: 0.7s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease;
-  animation-timing-function: ease;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-
-.container::before {
-  -webkit-animation-name: shadow-loop;
-  animation-name: shadow-loop;
-  -webkit-animation-duration: 0.7s;
-  animation-duration: 0.7s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease;
-  animation-timing-function: ease;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-
-.dr {
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
-  width: 100px;
-}
-
-/* 5. Header & Navigation */
-body.loaded #loader {
-  display: none;
 }
 
 body {
@@ -525,7 +303,6 @@ span {
   top: -100vh;
   left: 0;
   width: 100%;
-  /* background: var(--eerie-black-2); */
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -533,7 +310,6 @@ span {
   transition: 0.3s ease;
   transition: var(--transition-2);
   z-index: 1;
-  /* backdrop-filter: blur(5px); */
 }
 
 .navlist.active {
