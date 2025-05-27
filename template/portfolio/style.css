@@ -231,7 +231,7 @@ header {
 
   .header-container {
     height: 58px;
-    background: var(--eerie-black-2);
+    backdrop-filter: blur(10px);
     padding: 11px 4%;
     border-radius: 20px;
     border: 1px solid var(--jet);
@@ -252,7 +252,7 @@ header {
     align-items: center;
     position: relative;
     z-index: 2;
-    background: var(--eerie-black-2);
+    backdrop-filter: blur(10px);
   }
 
 }
@@ -375,7 +375,7 @@ span {
   align-items: center;
   flex-direction: column-reverse;
   grid-gap: 3em;
-  background: linear-gradient(90deg, var(--eerie-black-2), var(--eerie-black-2));
+  backdrop-filter: blur(10px);
   border: 1px solid var(--jet);
   border-radius: 20px;
   margin: 15px 12px;
@@ -383,6 +383,16 @@ span {
   opacity: 0;
   animation: fadeInUp 1.1s ease forwards;
   animation-delay: calc(0.3s * var(--i));
+}
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
 }
 
 .img-hero {
@@ -558,7 +568,7 @@ p {
 .services-container {
   max-width: 1200px;
   margin: 0 auto;
-  background: var(--eerie-black-2);
+  backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 15px;
   border: 1px solid var(--jet);
@@ -702,7 +712,7 @@ p {
 .experience-container {
   max-width: 1200px;
   margin: 0 auto;
-  background: var(--eerie-black-2);
+  backdrop-filter: blur(10px); 
   border-radius: 20px;
   padding: 15px;
   border: 1px solid var(--jet);
@@ -854,7 +864,7 @@ p {
 .contact-container {
   max-width: 1200px;
   margin: 0 auto;
-  background: var(--eerie-black-2);
+  backdrop-filter: blur(10px); 
   border-radius: 20px;
   padding: 15px;
   border: 1px solid var(--jet);
