@@ -442,7 +442,7 @@ header {
   .header-container {
     height: 58px;
     background: var(--eerie-black-2);
-    padding: 15px 4%;
+    padding: 10px 4%;
     border-radius: 20px;
     border: 1px solid var(--jet);
     box-shadow: var(--shadow-1);
@@ -1461,7 +1461,7 @@ form button {
     padding: 45px 9%;
 
     .header-container {
-      padding: 10px 4%;
+      padding: 5px 4%;
     }
   }
 
