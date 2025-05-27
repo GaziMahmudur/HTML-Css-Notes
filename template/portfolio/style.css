@@ -1431,6 +1431,7 @@ form button {
 
   .home {
     margin: 0px 130px;
+    margin-bottom: 50px;
   }
 
   .logo {
@@ -1527,6 +1528,7 @@ form button {
 
   .social-media {
     gap: 20px;
+    margin-bottom: 55px;
   }
 
   .social-media a {
