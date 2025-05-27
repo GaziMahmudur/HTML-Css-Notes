@@ -48,25 +48,55 @@ function startTyping({
 
 // Automatically scan and animate elements with data-typed
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll('[data-typed]').forEach(el => {
-    // Replace <br> with a unique placeholder for empty lines
-    let htmlContent = el.innerHTML;
+    document.querySelectorAll('[data-typed]').forEach(el => {
+        // Replace <br> with a unique placeholder for empty lines
+        let htmlContent = el.innerHTML;
 
-    // Replace <br> tags with a unique placeholder string for empty lines
-    const brPlaceholder = '[[BR]]';
-    htmlContent = htmlContent.replace(/<br\s*\/?>/g, brPlaceholder);
+        // Replace <br> tags with a unique placeholder string for empty lines
+        const brPlaceholder = '[[BR]]';
+        htmlContent = htmlContent.replace(/<br\s*\/?>/g, brPlaceholder);
 
-    // Split content into lines
-    const lines = htmlContent.split(brPlaceholder).map(line => line.trim());
+        // Split content into lines
+        const lines = htmlContent.split(brPlaceholder).map(line => line.trim());
 
-    const speed = parseInt(el.dataset.speed) || 50;
-    const delay = parseInt(el.dataset.delay) || 500;
+        const speed = parseInt(el.dataset.speed) || 50;
+        const delay = parseInt(el.dataset.delay) || 500;
 
-    startTyping({
-      element: el,
-      lines,
-      charDelay: speed,
-      lineDelay: delay
+        startTyping({
+            element: el,
+            lines,
+            charDelay: speed,
+            lineDelay: delay
+        });
     });
-  });
 });
+
+
+const bg = document.getElementById('bg');
+
+// সব ইমেজ এখানে লিস্ট করো
+const images = [
+    './pexels-harold-vasquez-853421-2653362.jpg', // ব্লার ইমেজ (যদি এটি সিলেক্ট হয়)
+    './emmanuel-phaeton--fBaQFX7q8U-unsplash.jpg',
+];
+
+const blurImage = './pexels-harold-vasquez-853421-2653362.jpg'; // ব্লার হওয়া ইমেজটি
+
+function changeBackground() {
+    // র‍্যান্ডম ইমেজ নির্বাচন
+    const randomIndex = Math.floor(Math.random() * images.length);
+    const selectedImage = images[randomIndex];
+
+    // ব্যাকগ্রাউন্ড বদল
+    bg.style.backgroundImage = `url('${selectedImage}')`;
+
+    // নির্দিষ্ট ইমেজ হলে ব্লার এফেক্ট অ্যাপ্লাই করা
+    if (selectedImage === blurImage) {
+        bg.style.filter = 'blur(4px)'; // ব্লার এফেক্ট
+    } else {
+        bg.style.filter = 'blur(0px)'; // স্বাভাবিক
+    }
+}
+
+// পেজ লোডে ইমেজ চেঞ্জ করা
+window.onload = changeBackground;
