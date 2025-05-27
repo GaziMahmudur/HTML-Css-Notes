@@ -605,9 +605,12 @@ span {
 }
 
 .hero-info {
-  margin-top: 0rem;
-  justify-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 
 h3 {
   color: #fff;
@@ -617,7 +620,7 @@ h3 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.6rem;
   color: #fff;
 }
 
@@ -628,7 +631,7 @@ h1 {
 }
 
 .text-animate h2 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: transparent;
@@ -641,17 +644,6 @@ h1 {
   animation: moveText 5s linear infinite;
   animation-delay: 2s;
   opacity: 0;
-}
-
-.text-animate h2::before {
-  content: "";
-  position: absolute;
-  top: 8px;
-  width: 0;
-  height: 70%;
-  border-right: 2px solid #ffffff;
-  animation: moveCursorText 5s linear infinite;
-  animation-delay: 2s;
 }
 
 p {
@@ -667,6 +659,7 @@ p {
   gap: 24px;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  flex-direction: column;
 }
 
 .btn-box .btn {
@@ -693,10 +686,10 @@ p {
 .social-media {
   display: flex;
   justify-content: space-between;
-  width: 220px;
   height: 50px;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  gap: 8px;
 }
 
 .social-media a {
@@ -746,42 +739,7 @@ p {
   box-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
-/* 8. Text Animations */
-@keyframes moveText {
-
-  0%,
-  10%,
-  100% {
-    background-position: -24rem 0;
-    opacity: 1;
-  }
-
-  65%,
-  85% {
-    background-position: 0rem 0;
-    opacity: 1;
-  }
-}
-
-@keyframes moveCursorText {
-
-  0%,
-  10%,
-  100% {
-    width: 0;
-  }
-
-  65%,
-  78%,
-  85% {
-    width: 100%;
-  }
-
-  75%,
-  85% {}
-}
-
-/* 9. Services Section */
+/* 8. Services Section */
 .services {
   background: var(--smoky-black);
   margin: 15px 12px;
@@ -925,7 +883,7 @@ p {
   width: 100%;
 }
 
-/* 10. Experience Section */
+/* 9. Experience Section */
 .experience {
   background: var(--smoky-black);
   margin: 15px 12px;
@@ -1076,7 +1034,7 @@ p {
   margin-top: 10px;
 }
 
-/* 11. Contact Section */
+/* 10. Contact Section */
 /* General Section Styling */
 .contact {
   background: var(--smoky-black);
@@ -1223,7 +1181,17 @@ form button {
 }
 
 
-/* 12. Media Queries */
+/* 11. Media Queries */
+
+@media (max-width: 360px) {
+  .text-animate {
+    width: 18rem;
+  }
+
+  .text-animate h2 {
+    font-size: 1.4rem;
+  }
+}
 
 /* Tablet styles */
 @media (min-width: 768px) {
@@ -1277,10 +1245,6 @@ form button {
     height: 450px;
   }
 
-  .hero-info {
-    justify-items: center;
-  }
-
   .hero-info h1 {
     font-size: 3.5rem;
   }
@@ -1306,10 +1270,10 @@ form button {
   .btn-box {
     gap: 30px;
     margin-top: 2.5rem;
+    flex-direction: row;
   }
 
   .social-media {
-    width: 240px;
     margin-top: 2rem;
   }
 
@@ -1533,7 +1497,7 @@ form button {
 
   .text-animate h2 {
     font-size: 3.5rem;
-    width: 142%;
+    width: 108%;
   }
 
   .text-animate {
