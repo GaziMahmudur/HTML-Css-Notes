@@ -1,3 +1,6 @@
+/* 1. Imports and Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
 :root {
 
   /**
@@ -98,9 +101,6 @@
 10. Media Queries
 
 =============================================*/
-
-/* 1. Imports and Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
 /* 2. CSS Reset & Base Styles */
 * {
@@ -1207,6 +1207,21 @@ form button {
   animation: fadeInUp 1.5s ease forwards;
   animation-delay: calc(0.3s * var(--i));
 }
+
+.popup-notification {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  z-index: 1000;
+  font-size: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
 
 /* 12. Media Queries */
 

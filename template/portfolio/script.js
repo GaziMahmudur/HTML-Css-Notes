@@ -78,5 +78,33 @@ window.onscroll = () => {
     });
 };
 
-/* 5. Utility Functions */
-// Add any utility functions here
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contact-form");
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch(form.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    Accept: "application/json"
+                }
+            });
+
+            if (response.ok) {
+                alert("✅ Your message has been sent successfully, Thank you!");
+                form.reset();
+            } else {
+                alert("❌ There was a problem sending the message. Please try again later.");
+            }
+        } catch (error) {
+            alert("❌ An error occurred. Please try again later.");
+        }
+    });
+});
+
+

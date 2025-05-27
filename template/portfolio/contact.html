@@ -60,14 +60,20 @@
         </div>
 
         <!-- RIGHT SIDE: contact form -->
-        <form>
-          <input class="anim" type="text" placeholder="Full Name">
-          <input class="anim" type="email" placeholder="Email Address">
-          <input class="anim" type="tel" placeholder="Phone Number">
-          <input class="anim" type="text" placeholder="Email Subject">
-          <textarea class="anim" rows="5" placeholder="Your Message"></textarea>
+        <form id="contact-form" action="https://formspree.io/f/xkgrlyle" method="POST">
+          <input type="text" name="name" placeholder="Full Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <input type="tel" name="phone" placeholder="Phone Number" required>
+          <input type="text" name="subject" placeholder="Email Subject" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
           <button type="submit">Send Message</button>
         </form>
+
+
+
+        <!-- Popup Notification -->
+        <div id="popup" class="popup-notification">Message sent successfully!</div>
+
 
       </div>
 
