@@ -12,15 +12,18 @@
    =================================== */
 body {
     font-family: 'Georgia', serif;
-    min-height: 100vh;  /* Change height to min-height */
+    min-height: 100vh;
+    /* Change height to min-height */
     display: flex;
     justify-content: center;
     align-items: start;
     text-align: left;
     color: white;
     padding: 50px;
-    overflow-x: hidden;  /* Only hide horizontal overflow */
-    position: relative;  /* Add this */
+    overflow-x: hidden;
+    /* Only hide horizontal overflow */
+    position: relative;
+    /* Add this */
 }
 
 body::before {
@@ -31,7 +34,8 @@ body::before {
     width: 100vw;
     height: 100vh;
     background: inherit;
-    z-index: -1;  /* This puts the background behind content */
+    z-index: -1;
+    /* This puts the background behind content */
 }
 
 .background-container {
@@ -44,6 +48,14 @@ body::before {
     background-position: center;
 }
 
+.content.visible {
+    opacity: 1;
+}
+
+.hidden {
+    display: none;
+}
+
 /* ===================================
    5. Main Content
    =================================== */
@@ -51,8 +63,10 @@ body::before {
     max-width: 800px;
     padding: 30px;
     border-radius: 10px;
-    position: relative;  /* Add this */
-    z-index: 1;  /* Add this to ensure content stays on top */
+    position: relative;
+    /* Add this */
+    z-index: 1;
+    /* Add this to ensure content stays on top */
 }
 
 .overlay {
@@ -65,7 +79,8 @@ body::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 0;  /* Change to 0 or higher */
+    z-index: 0;
+    /* Change to 0 or higher */
 }
 
 .typedText {

@@ -395,6 +395,14 @@ span {
   background-position: center;
 }
 
+.content.visible {
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
 .img-hero {
   width: 100%;
   display: flex;
@@ -712,7 +720,7 @@ p {
 .experience-container {
   max-width: 1200px;
   margin: 0 auto;
-  backdrop-filter: blur(10px); 
+  backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 15px;
   border: 1px solid var(--jet);
@@ -864,7 +872,7 @@ p {
 .contact-container {
   max-width: 1200px;
   margin: 0 auto;
-  backdrop-filter: blur(10px); 
+  backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 15px;
   border: 1px solid var(--jet);

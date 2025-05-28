@@ -70,6 +70,14 @@ body::before {
   background-position: center;
 }
 
+.content.visible {
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
 .container {
   position: absolute;
   top: 58%;

@@ -108,31 +108,34 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-const bg = document.getElementById('bg');
+const bgDiv = document.getElementById('bg');
+const content = document.getElementById('content');
 
-// সব ইমেজ এখানে লিস্ট করো
 const images = [
-    './img/pexels-harold-vasquez-853421-2653362.jpg', // ব্লার ইমেজ (যদি এটি সিলেক্ট হয়)
-    './img/emmanuel-phaeton--fBaQFX7q8U-unsplash.jpg',
+    './img/pexels-harold-vasquez-853421-2653362.jpg',
+    './img/emmanuel-phaeton--fBaQFX7q8U-unsplash.jpg'
 ];
 
-const blurImage = './img/pexels-harold-vasquez-853421-2653362.jpg'; // ব্লার হওয়া ইমেজটি
+const blurImage = './img/pexels-harold-vasquez-853421-2653362.jpg'; // যদি ব্লার প্রয়োজন হয়
+const selectedImage = images[Math.floor(Math.random() * images.length)];
 
-function changeBackground() {
-    // র‍্যান্ডম ইমেজ নির্বাচন
-    const randomIndex = Math.floor(Math.random() * images.length);
-    const selectedImage = images[randomIndex];
+// Preload image before showing content
+const img = new Image();
+img.src = selectedImage;
+img.onload = () => {
+    // When image is fully loaded
+    bgDiv.style.backgroundImage = `url('${selectedImage}')`;
 
-    // ব্যাকগ্রাউন্ড বদল
-    bg.style.backgroundImage = `url('${selectedImage}')`;
-
-    // নির্দিষ্ট ইমেজ হলে ব্লার এফেক্ট অ্যাপ্লাই করা
+    // Optional: Apply blur if it's the blurImage
     if (selectedImage === blurImage) {
-        bg.style.filter = 'blur(4px)'; // ব্লার এফেক্ট
+        bgDiv.style.filter = 'blur(4px)';
     } else {
-        bg.style.filter = 'blur(0px)'; // স্বাভাবিক
+        bgDiv.style.filter = 'blur(0px)';
     }
-}
 
-// পেজ লোডে ইমেজ চেঞ্জ করা
-window.onload = changeBackground;
+    // Show content after image is ready
+    content.classList.remove('hidden');
+    setTimeout(() => {
+        content.classList.add('visible');
+    }, 50); // Small delay to allow transition
+};
