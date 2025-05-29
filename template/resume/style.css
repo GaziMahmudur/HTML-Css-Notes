@@ -5,9 +5,7 @@ body {
     margin: 0;
     padding: 0;
     color: white;
-    /* Set the default font color to white */
     background-color: rgb(34, 32, 32);
-    /* Set the background color to black */
     font-family: sans-serif;
     overflow-x: hidden;
 }
@@ -30,7 +28,6 @@ body {
 .main-content {
     padding: 40px;
     color: white;
-    /* Ensure text in the main content is white */
 }
 
 /* Default styles for profile image in sidebar */
