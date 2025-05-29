@@ -1,77 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
-html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    color: white;
-    background-color: rgb(34, 32, 32);
-    font-family: sans-serif;
-    overflow-x: hidden;
-}
 
-.cv-container {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    min-height: 100%;
-    /* Changed from height to min-height */
-}
+@keyframes typing {
+    0% {
+        opacity: 1;
+        width: 0;
+    }
 
-.sidebar {
-    background: #212f3d;
-    color: white;
-    z-index: 1;
-    padding: 30px;
-    position: relative;
-}
-
-.main-content {
-    padding: 40px;
-    color: white;
-}
-
-/* Default styles for profile image in sidebar */
-.profile-img {
-    width: 230px;
-    height: 230px;
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    display: block;
-    border: 3px solid rgb(0, 255, 0);
-    animation: borderAnimation 5s infinite;
-    position: relative;
-    left: 0;
-}
-
-/* Default styles for desktop */
-/* Hide profile image in main content by default */
-.main-content .profile-img {
-    display: none;
-}
-
-/* Show profile image in sidebar by default */
-.sidebar .profile-img {
-    width: 230px;
-    height: 230px;
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    display: block;
-    border: 3px solid rgb(0, 255, 0);
-    animation: borderAnimation 5s infinite;
-    position: relative;
-    left: 0;
-}
-
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 1.5s ease-in forwards;
-}
-
-.slide-in {
-    opacity: 0;
-    transform: translateX(-100px);
-    animation: slideIn 1.5s ease-out forwards;
-    animation-delay: 1s;
+    100% {
+        opacity: 1;
+        width: 100%;
+    }
 }
 
 @keyframes slideIn {
@@ -96,18 +34,6 @@ body {
     }
 }
 
-
-/* Default styles for desktop */
-.mobile {
-    display: none;
-    /* Hide mobile div by default */
-}
-
-.desktop {
-    display: block;
-    /* Show desktop div by default */
-}
-
 @keyframes borderAnimation {
     0% {
         border-color: rgb(0, 255, 0);
@@ -122,12 +48,82 @@ body {
     }
 }
 
-.section-title div.my {
-    color: rgb(255, 255, 255);
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-.section-title div.experience {
-    color: rgb(0, 255, 0);
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: rgb(34, 32, 32);
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+.cv-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    min-height: 100%;
+}
+
+.sidebar {
+    background: #212f3d;
+    color: white;
+    z-index: 1;
+    padding: 30px;
+    position: relative;
+}
+
+.sidebar .profile-img {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: block;
+    border: 3px solid rgb(0, 255, 0);
+    animation: borderAnimation 5s infinite;
+    position: relative;
+    left: 0;
+}
+
+.profile-img {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: block;
+    border: 3px solid rgb(0, 255, 0);
+    animation: borderAnimation 5s infinite;
+    position: relative;
+    left: 0;
+}
+
+.desktop {
+    display: block;
+    /* Show desktop div by default */
 }
 
 .section-title {
@@ -142,6 +138,116 @@ body {
 .contact-list i {
     margin-right: 10px;
     color: #00ff00;
+}
+
+.mobile {
+    display: none;
+    /* Hide mobile div by default */
+}
+
+.main-content {
+    padding: 40px;
+    color: white;
+}
+
+.main-content .profile-img {
+    display: none;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 1s;
+}
+
+.slide-in {
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slideIn 1s ease-out forwards;
+    animation-delay: 1.2s;
+}
+
+.PS {
+    opacity: 0;
+    animation: fadeInRight 1s ease forwards;
+    animation-delay: 1.4s;
+}
+
+.typing_1 {
+    opacity: 0;
+    animation: fadeIn 1s steps(200) forwards;
+    animation-delay: 1.6s;
+}
+
+.section-title div.my {
+    color: rgb(255, 255, 255);
+}
+
+.my {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1.8s;
+}
+
+.section-title div.experience {
+    color: rgb(0, 255, 0);
+}
+
+.typing {
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 7s steps(200) forwards;
+    animation-delay: 2s;
+    width: 0;
+}
+
+.pm {
+    opacity: 0;
+    animation: fadeInLeft 1s ease forwards;
+    animation-delay: 2.2s;
+}
+
+.li_1 {
+    opacity: 0;
+    animation: fadeInRight 1s ease forwards;
+    animation-delay: 2.4s;
+}
+
+.li_2 {
+    opacity: 0;
+    animation: fadeInLeft 1s ease forwards;
+    animation-delay: 2.6s;
+}
+
+.Et {
+    opacity: 0;
+    animation: fadeInRight 1s ease forwards;
+    animation-delay: 2.8s;
+}
+
+.SS {
+    opacity: 0;
+    animation: fadeInLeft 1s ease forwards;
+    animation-delay: 3s;
+}
+
+.mubc {
+    opacity: 0;
+    animation: typing 5s ease forwards;
+    animation-delay: 3.2s;
+}
+
+.Am {
+    opacity: 0;
+    animation: fadeInRight 1s ease forwards;
+    animation-delay: 3.4s;
+}
+
+.about {
+    opacity: 0;
+    animation: slideIn 1s ease forwards;
+    animation-delay: 3.6s;
 }
 
 /* Media Queries for Responsive Design */
@@ -336,25 +442,4 @@ body {
     .main-content {
         padding: 10px;
     }
-}
-
-.typing {
-  opacity: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 7s steps(200) forwards;
-  animation-delay: 2s;
-  width: 0;
-}
-
-@keyframes typing {
-  0% {
-    opacity: 1;
-    width: 0;
-  }
-
-  100% {
-    opacity: 1;
-    width: 100%;
-  }
 }
