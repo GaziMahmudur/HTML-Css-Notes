@@ -222,7 +222,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(./img/emmanuel-phaeton--fBaQFX7q8U-unsplash.jpg);
+  background-image: url(./img/pexels-harold-vasquez-853421-2653362.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -593,12 +593,12 @@ p {
   animation-fill-mode: forwards;
 }
 
-.text-part.left {
+.text-part.services-left {
   transform: translateX(-200%);
   animation-name: slide-in-left;
 }
 
-.text-part.right {
+.text-part.services-right {
   transform: translateX(200%);
   animation-name: slide-in-right;
 }
@@ -705,8 +705,6 @@ p {
   padding: 15px;
   border: 1px solid var(--jet);
   padding-bottom: 45px;
-  opacity: 0;
-  transform: translateY(50px);
   animation: fadeInUp 1s ease forwards;
   text-align: center;
 }
@@ -721,6 +719,18 @@ p {
   overflow: hidden;
 }
 
+.text-part.experience-left {
+  animation-name: slide-in-left;
+  opacity: 0;
+  animation-delay: 0.5s;
+}
+
+.text-part.experience-right {
+  animation-name: slide-in-right;
+  opacity: 0;
+  animation-delay: 1.3s;
+}
+
 .experience-intro {
   font-size: 1rem;
   color: #ccc;
@@ -728,8 +738,8 @@ p {
   text-align: center;
   max-width: 700px;
   opacity: 0;
-  animation: fadeIn 1.1s ease forwards;
-  animation-delay: calc(0.3s * var(--i));
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 2.4s;
 }
 
 
@@ -748,6 +758,9 @@ p {
   z-index: 1;
   transform: translateY(15px);
   overflow: hidden;
+  opacity: 0;
+  animation: fadeInDown 1s ease forwards;
+  animation-delay: 3s;
 }
 
 .experience-card::before {
@@ -785,8 +798,20 @@ p {
   font-weight: var(--fw-3);
   opacity: 0;
   transform: translateX(-20px);
-  animation: fadeInRight 1.2s ease forwards;
-  animation-delay: calc(0.3s * var(--i));
+  animation: fadeInRight 1s ease forwards;
+  animation-delay: 4s;
+}
+
+.experience-card h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeInLeft 1s ease forwards;
+  animation-delay: 4.2s;
+  margin-top: 7px;
 }
 
 .company-name {
@@ -795,7 +820,7 @@ p {
   opacity: 0;
   transform: translateX(20px);
   animation: fadeInRight 1.3s ease forwards;
-  animation-delay: calc(0.3s * var(--i));
+  animation-delay: 4.4s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -809,18 +834,6 @@ p {
   font-size: 2rem;
 }
 
-.experience-card h3 {
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-align: center;
-  opacity: 0;
-  transform: translateX(-20px);
-  animation: fadeInLeft 1.4s ease forwards;
-  animation-delay: calc(0.3s * var(--i));
-  margin-top: 7px;
-}
-
 .experience-card p {
   color: var(--light-gray);
   font-size: var(--fs-6);
@@ -829,8 +842,8 @@ p {
   text-align: center;
   opacity: 0;
   transform: translateX(-20px);
-  animation: fadeInLeft 1.5s ease forwards;
-  animation-delay: calc(0.3s * var(--i));
+  animation: fadeInLeft 1s ease forwards;
+  animation-delay: 4.6s;
   width: 100%;
   margin-top: 10px;
 }
@@ -865,20 +878,24 @@ p {
   overflow: hidden;
 }
 
-.text-part.left {
+.text-part.contact-left {
   opacity: 0;
   animation-delay: 0.5s;
+  transform: translateX(-200%);
+  animation-name: slide-in-left;
 }
 
-.text-part.middle {
+.text-part.contact-middle {
   opacity: 0;
   animation: fadeIn 1s ease forwards;
   animation-delay: 1.3s;
 }
 
-.text-part.right {
+.text-part.contact-right {
   opacity: 0;
   animation-delay: 1.8s;
+  transform: translateX(200%);
+  animation-name: slide-in-right;
 }
 
 .contact-grid {
