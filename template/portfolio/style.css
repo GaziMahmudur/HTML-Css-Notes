@@ -569,8 +569,6 @@ p {
   padding: 15px;
   border: 1px solid var(--jet);
   padding-bottom: 45px;
-  opacity: 0;
-  transform: translateY(50px);
   animation: fadeInUp 1s ease forwards;
 }
 
@@ -596,11 +594,15 @@ p {
 .text-part.services-left {
   transform: translateX(-200%);
   animation-name: slide-in-left;
+  opacity: 0;
+  animation-delay: 0.5s;
 }
 
 .text-part.services-right {
   transform: translateX(200%);
   animation-name: slide-in-right;
+  opacity: 0;
+  animation-delay: 1.3s;
 }
 
 .services-grid {
@@ -618,6 +620,10 @@ p {
   z-index: 1;
   transform: translateY(15px);
   overflow: hidden;
+  opacity: 0;
+  animation: fadeInDown 1s ease forwards;
+  animation-delay: 2.3s;
+
 }
 
 .service-card::before {
@@ -660,7 +666,7 @@ p {
   justify-content: center;
   margin-bottom: 1.5rem;
   justify-self: center;
-  transition: transform 0.5s ease;
+  transition: transform 5s ease;
 }
 
 .service-icon img {
@@ -675,8 +681,8 @@ p {
   text-align: center;
   opacity: 0;
   transform: translateX(-20px);
-  animation: fadeInLeft 1.1s ease forwards;
-  animation-delay: calc(0.3s * var(--i));
+  animation: fadeInLeft 1s ease forwards;
+  animation-delay: 3.3s;
 }
 
 .service-card p {
@@ -687,8 +693,8 @@ p {
   text-align: center;
   opacity: 0;
   transform: translateX(-20px);
-  animation: fadeInRight 1.2s ease forwards;
-  animation-delay: calc(0.3s * var(--i));
+  animation: fadeInRight 1s ease forwards;
+  animation-delay: 3.5s;
   width: 100%;
 }
 
