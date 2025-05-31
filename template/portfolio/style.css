@@ -226,6 +226,7 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: scroll;
   z-index: -1;
 }
 

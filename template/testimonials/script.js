@@ -70,36 +70,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
-
-const bgDiv = document.getElementById('bg');
-const content = document.getElementById('content');
-
-const images = [
-    './pexels-harold-vasquez-853421-2653362.jpg',
-    './emmanuel-phaeton--fBaQFX7q8U-unsplash.jpg',
-];
-
-const blurImage = './pexels-harold-vasquez-853421-2653362.jpg'; // যদি ব্লার প্রয়োজন হয়
-const selectedImage = images[Math.floor(Math.random() * images.length)];
-
-// Preload image before showing content
-const img = new Image();
-img.src = selectedImage;
-img.onload = () => {
-    // When image is fully loaded
-    bgDiv.style.backgroundImage = `url('${selectedImage}')`;
-
-    // Optional: Apply blur if it's the blurImage
-    if (selectedImage === blurImage) {
-        bgDiv.style.filter = 'blur(4px)';
-    } else {
-        bgDiv.style.filter = 'blur(0px)';
-    }
-
-    // Show content after image is ready
-    content.classList.remove('hidden');
-    setTimeout(() => {
-        content.classList.add('visible');
-    }, 50); // Small delay to allow transition
-};

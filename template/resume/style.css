@@ -253,6 +253,30 @@ body {
     animation-delay: 14.5s;
 }
 
+.ct {
+    opacity: 0;
+    animation: fadeInLeft 1s ease forwards;
+    animation-delay: 15.5s;
+}
+
+.c-l {
+    opacity: 0;
+    animation: fadeInRight 1s ease forwards;
+    animation-delay: 16.5s;
+}
+
+.sl {
+    opacity: 0;
+    animation: fadeInLeft 1s ease forwards;
+    animation-delay: 17.5s;
+}
+
+.s-l {
+    opacity: 0;
+    animation: fadeInRight 1s ease forwards;
+    animation-delay: 18.5s;
+}
+
 /* Media Queries for Responsive Design */
 @media screen and (max-width: 1024px) {
     .cv-container {
