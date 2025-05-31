@@ -469,7 +469,7 @@ p {
   flex-direction: column;
 }
 
-.btn {
+.h-m-n {
   opacity: 0;
   animation: fadeInLeft 1s ease forwards;
   animation-delay: 10.5s;
@@ -901,7 +901,9 @@ p {
   padding-bottom: 45px;
   opacity: 0;
   transform: translateY(50px);
+  opacity: 0;
   animation: fadeInUp 1s ease forwards;
+  animation-delay: 2s;
   text-align: center;
 }
 
@@ -917,22 +919,21 @@ p {
 
 .text-part.contact-left {
   opacity: 0;
-  animation-delay: 0.5s;
-  transform: translateX(-200%);
   animation-name: slide-in-left;
+  animation-delay: 3s;
 }
 
 .text-part.contact-middle {
   opacity: 0;
   animation: fadeIn 1s ease forwards;
-  animation-delay: 1.3s;
+  animation-delay: 4s;
 }
 
 .text-part.contact-right {
   opacity: 0;
-  animation-delay: 1.8s;
   transform: translateX(200%);
   animation-name: slide-in-right;
+  animation-delay: 5s;
 }
 
 .contact-grid {
@@ -952,7 +953,7 @@ p {
   justify-content: center;
   opacity: 0;
   animation: fadeIn 1s ease forwards;
-  animation-delay: 2.6s;
+  animation-delay: 6s;
 }
 
 .contact-info-block {
@@ -981,13 +982,13 @@ p {
   color: var(--orange-yellow-crayola);
   opacity: 0;
   animation: fadeInLeft 1s ease forwards;
-  animation-delay: 3s;
+  animation-delay: 7s;
 }
 
 .lt {
   opacity: 0;
   animation: fadeInRight 1s ease forwards;
-  animation-delay: 3.6s;
+  animation-delay: 8s;
 }
 
 form {
@@ -998,7 +999,7 @@ form {
 .anim {
   opacity: 0;
   animation: fadeInRight 1.4s ease forwards;
-  animation-delay: 4s;
+  animation-delay: 9s;
 }
 
 form input,
@@ -1030,7 +1031,7 @@ form button {
   transition: background-color 0.3s ease;
   opacity: 0;
   animation: fadeInUp 1.5s ease forwards;
-  animation-delay: 4.6s;
+  animation-delay: 10s;
 }
 
 .popup-notification {
