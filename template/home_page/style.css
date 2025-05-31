@@ -1,292 +1,3 @@
-/* ==========================================================================
-   1. Reset & Base Styles
-   ========================================================================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* ==========================================================================
-   2. Typography & Links
-   ========================================================================== */
-a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-h1 {
-  font-size: 57px;
-  font-weight: bold;
-  letter-spacing: -1px;
-}
-
-h3 {
-  font: 22px / 1.9em "librebaskerville-regular", serif;
-  color: rgb(255, 255, 255);
-  margin: 0 auto;
-  width: 70%;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
-  display: block;
-  font-size: 22px;
-}
-
-/* ==========================================================================
-   3. Layout & Grid
-   ========================================================================== */
-body {
-  font-family: "opensans-regular", sans-serif;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  z-index: -1;
-}
-
-.background-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
-.content.visible {
-  opacity: 1;
-}
-
-.hidden {
-  display: none;
-}
-
-.container {
-  position: absolute;
-  top: 58%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-}
-
-.container::before {
-  content: "";
-  top: 210px;
-  left: 26px;
-  width: 100px;
-  height: 32px;
-  border-radius: 100%;
-  background-color: rgba(222, 225, 228, 0.4);
-}
-
-.container::before {
-  -webkit-animation-name: shadow-loop;
-  animation-name: shadow-loop;
-  -webkit-animation-duration: 0.7s;
-  animation-duration: 0.7s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease;
-  animation-timing-function: ease;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-
-span {
-  position: relative;
-  left: 112px;
-  top: 60px;
-  -webkit-animation-name: cloud-loop;
-  animation-name: cloud-loop;
-  -webkit-animation-duration: 0.7s;
-  animation-duration: 0.7s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease;
-  animation-timing-function: ease;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-
-span::before {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 6px;
-  background-color: #DEE1E4;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-span::after {
-  content: "";
-  position: absolute;
-  left: 30px;
-  top: 20px;
-  width: 36px;
-  height: 12px;
-  background-color: #DEE1E4;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  border-radius: 0 4px 4px 0;
-}
-
-/* ==========================================================================
-   4. Header & Navigation
-   ========================================================================== */
-header {
-  padding: 15px 8%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  z-index: 100;
-  transition: 0.3s;
-}
-
-ul.navlist {
-  position: fixed;
-  top: -100%;
-  left: 0;
-  width: 100%;
-  padding: 2rem 0;
-  text-align: center;
-  backdrop-filter: blur(4px);
-  transition: 0.3s ease;
-  z-index: 100;
-  opacity: 0;
-  animation: fadeInDown 1s ease forwards;
-  animation-delay: 1s;
-}
-
-ul.navlist.active {
-  top: 0;
-}
-
-.navlist li {
-  margin: 0 1rem;
-  list-style: none;
-}
-
-.navlist li a {
-  display: inline-flex;
-  font-weight: 700;
-}
-
-.navlist li a:hover,
-.navlist li a.active {
-  background: linear-gradient(180deg,
-      rgb(255, 219, 112) 0%,
-      rgb(255, 219, 112) 51%,
-      rgb(255, 219, 112) 100%);
-  color: transparent;
-  -webkit-background-clip: text;
-}
-
-.right-header {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  grid-gap: 1rem;
-}
-
-.menu-icon {
-  display: block;
-  width: 30px;
-  height: 36px;
-  cursor: pointer;
-  position: relative;
-  z-index: 101;
-  opacity: 0;
-  animation: fadeInRight 1s ease forwards;
-  animation-delay: 1s;
-}
-
-.menu-icon .bar,
-.menu-icon::after,
-.menu-icon::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 3px;
-  background: #fff;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-
-.menu-icon.active::before {
-  transform: rotate(-45deg) translate(-6px, 6px);
-}
-
-.menu-icon.active::after {
-  transform: rotate(45deg) translate(-8px, -8px);
-}
-
-.menu-icon.active .bar {
-  opacity: 0;
-}
-
-body.loaded #loader {
-  display: none;
-}
-
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
-  animation-delay: 2s;
-}
-
-.slide-in {
-  opacity: 0;
-  transform: translateX(-100px);
-  animation: slideIn 1s ease-out forwards;
-  animation-delay: 3s;
-}
-
-.typing {
-  opacity: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3.5s steps(30) forwards;
-  animation-delay: 4s;
-  width: 0;
-}
-
-.banner-text hr {
-  width: 60%;
-  margin: 18px auto 24px auto;
-  border-color: #2f2d2e;
-  border-color: rgba(150, 150, 150, 0.1);
-}
-
-.fireflies-container {
-  pointer-events: none;
-}
-
-/* ==========================================================================
-   6. Animations & Keyframes
-   ========================================================================== */
 @keyframes flowingLight {
   0% {
     left: -50%;
@@ -393,9 +104,277 @@ body.loaded #loader {
   }
 }
 
-/* ==========================================================================
-   7. Components
-   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "opensans-regular", sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  z-index: -1;
+}
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.content.visible {
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+header {
+  padding: 15px 8%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  z-index: 100;
+  transition: 0.3s;
+}
+
+.right-header {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  grid-gap: 1rem;
+}
+
+.menu-icon {
+  display: block;
+  width: 30px;
+  height: 36px;
+  cursor: pointer;
+  position: relative;
+  z-index: 101;
+  opacity: 0;
+  animation: fadeInRight 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.menu-icon .bar,
+.menu-icon::after,
+.menu-icon::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 3px;
+  background: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+ul.navlist {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  padding: 2rem 0;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  transition: 0.3s ease;
+  z-index: 100;
+  opacity: 0;
+  animation: fadeInDown 1s ease forwards;
+  animation-delay: 1s;
+}
+
+ul.navlist a {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+ul.navlist.active {
+  top: 0;
+}
+
+.navlist li {
+  margin: 0 1rem;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.navlist li a {
+  display: inline-flex;
+  font-weight: 700;
+}
+
+.navlist li a:hover,
+.navlist li a.active {
+  background: linear-gradient(180deg,
+      rgb(255, 219, 112) 0%,
+      rgb(255, 219, 112) 51%,
+      rgb(255, 219, 112) 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+
+.menu-icon.active::before {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.menu-icon.active::after {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.menu-icon.active .bar {
+  opacity: 0;
+}
+
+.container {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.container::before {
+  content: "";
+  top: 210px;
+  left: 26px;
+  width: 100px;
+  height: 32px;
+  border-radius: 100%;
+  background-color: rgba(222, 225, 228, 0.4);
+}
+
+.container::before {
+  -webkit-animation-name: shadow-loop;
+  animation-name: shadow-loop;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  top: 85%;
+}
+
+h1 {
+  font-size: 57px;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+h3 {
+  font: 22px / 1.9em "librebaskerville-regular", serif;
+  color: rgb(255, 255, 255);
+  margin: 0 auto;
+  width: 70%;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+  display: block;
+  font-size: 22px;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 2s;
+}
+
+.slide-in {
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideIn 1s ease-out forwards;
+  animation-delay: 3s;
+}
+
+.typing {
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3.5s steps(30) forwards;
+  animation-delay: 4s;
+  width: 0;
+}
+
+h1 {
+  font-size: 34px;
+}
+
+h3 {
+  font-size: 15px;
+}
+
+.banner-text hr {
+  width: 60%;
+  margin: 18px auto 24px auto;
+  border-color: #2f2d2e;
+  border-color: rgba(150, 150, 150, 0.1);
+}
+
+hr {
+  position: relative;
+  border: none;
+  height: 2px;
+  background: #ffffff;
+  width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 6.5s;
+}
+
+hr::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, currentColor, transparent);
+  animation: flowingLight 3s linear infinite;
+}
+
 .social-icons {
   margin-top: 20px;
   margin: 24px 0;
@@ -447,57 +426,53 @@ body.loaded #loader {
   animation-delay: 10.5s;
 }
 
-hr {
+span {
   position: relative;
-  border: none;
-  height: 2px;
-  background: #ffffff;
-  width: 80%;
-  margin: 20px auto;
-  overflow: hidden;
-  opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
-  animation-delay: 6.5s;
+  left: 112px;
+  top: 60px;
+  -webkit-animation-name: cloud-loop;
+  animation-name: cloud-loop;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
 }
 
-hr::after {
-  content: '';
+span::before {
+  content: "";
   position: absolute;
-  top: 0;
-  left: -50%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, currentColor, transparent);
-  animation: flowingLight 3s linear infinite;
+  width: 50px;
+  height: 6px;
+  background-color: #DEE1E4;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
-/* ==========================================================================
-   8. Utilities & Helper Classes
-   ========================================================================== */
-/* Base styles for mobile phones (below 768px) */
-.container {
-  width: 100%;
-  height: 100vh;
-  top: 85%;
+span::after {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  width: 36px;
+  height: 12px;
+  background-color: #DEE1E4;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-radius: 0 4px 4px 0;
 }
 
-h1 {
-  font-size: 34px;
+body.loaded #loader {
+  display: none;
 }
 
-h3 {
-  font-size: 15px;
+.fireflies-container {
+  pointer-events: none;
 }
 
-ul.navlist a {
-  font-size: 1.2rem;
-  margin: 1rem 0;
-}
-
-/* ==========================================================================
-   9. Media Queries
-   ========================================================================== */
-/* Laptop screens (768px to 1439px) */
 @media (min-width: 768px) {
   .container {
     max-width: 406px;
