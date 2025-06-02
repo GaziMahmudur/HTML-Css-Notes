@@ -212,8 +212,8 @@ ul.navlist {
   transition: 0.3s ease;
   z-index: 100;
   opacity: 0;
-  animation: fadeInDown 1s ease forwards;
-  animation-delay: 1s;
+  animation: fadeInDown 0.5s ease forwards;
+  animation-delay: 0.5s;
 }
 
 ul.navlist a {
@@ -318,23 +318,23 @@ h3 {
 
 .fade-in {
   opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
-  animation-delay: 2s;
+  animation: fadeIn 0.5s ease-in forwards;
+  animation-delay: 1s;
 }
 
 .slide-in {
   opacity: 0;
   transform: translateX(-100px);
-  animation: slideIn 1s ease-out forwards;
-  animation-delay: 3s;
+  animation: slideIn 0.5s ease-out forwards;
+  animation-delay: 1.5s;
 }
 
 .typing {
   opacity: 0;
   overflow: hidden;
   white-space: nowrap;
-  animation: typing 3.5s steps(30) forwards;
-  animation-delay: 4s;
+  animation: typing 3s steps(100) forwards;
+  animation-delay: 2s;
   width: 0;
 }
 
@@ -362,8 +362,8 @@ hr {
   margin: 20px auto;
   overflow: hidden;
   opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
-  animation-delay: 6.5s;
+  animation: fadeIn 0.5s ease-in forwards;
+  animation-delay: 4.5s;
 }
 
 hr::after {
@@ -406,26 +406,26 @@ hr::after {
 
 .a-1 {
   opacity: 0;
-  animation: fadeInLeft 1s ease forwards;
-  animation-delay: 7.5s;
+  animation: fadeInLeft 0.5s ease forwards;
+  animation-delay: 5s;
 }
 
 .a-2 {
   opacity: 0;
-  animation: fadeInUp 1s ease forwards;
-  animation-delay: 8.5s;
+  animation: fadeInUp 0.5s ease forwards;
+  animation-delay: 5.5s;
 }
 
 .a-3 {
   opacity: 0;
-  animation: fadeInDown 1s ease forwards;
-  animation-delay: 9.5s;
+  animation: fadeInDown 0.5s ease forwards;
+  animation-delay: 6s;
 }
 
 .a-4 {
   opacity: 0;
-  animation: fadeInRight 1s ease forwards;
-  animation-delay: 10.5s;
+  animation: fadeInRight 0.5s ease forwards;
+  animation-delay: 6.5s;
 }
 
 span {
