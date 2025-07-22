@@ -111,100 +111,6 @@
   }
 }
 
-@keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slide-in-left {
-  0% {
-    opacity: 0;
-    transform: translateX(-200%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slide-in-right {
-  0% {
-    opacity: 0;
-    transform: translateX(200%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 body {
   font-family: var(--ff-poppins);
   background: var(--smoky-black);
@@ -248,9 +154,6 @@ header {
     overflow: hidden;
     z-index: 2;
     position: relative;
-    opacity: 0;
-    animation: fadeInDown 0.5s ease forwards;
-    animation-delay: 0.5s;
   }
 
   .nav-container {
@@ -388,9 +291,6 @@ span {
   border-radius: 20px;
   margin: 15px 12px;
   padding: 15px;
-  opacity: 0;
-  animation: fadeInUp 0.5s ease forwards;
-  animation-delay: 1s;
 }
 
 .img-hero {
@@ -398,9 +298,6 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  animation: fadeIn 0.5s ease forwards;
-  animation-delay: 1.5s;
 }
 
 .img-hero .lottie {
@@ -457,9 +354,6 @@ p {
   line-height: 1.5rem;
   text-align: center;
   width: 90%;
-  opacity: 0;
-  animation: fadeIn 0.5s ease forwards;
-  animation-delay: 6s;
 }
 
 .btn-box {
@@ -468,18 +362,6 @@ p {
   margin-top: 2rem;
   margin-bottom: 2rem;
   flex-direction: column;
-}
-
-.h-m-n {
-  opacity: 0;
-  animation: fadeInLeft 0.5s ease forwards;
-  animation-delay: 6.5s;
-}
-
-.d-CV {
-  opacity: 0;
-  animation: fadeInRight 0.5s ease forwards;
-  animation-delay: 7s;
 }
 
 .btn-box .btn {
@@ -540,44 +422,6 @@ p {
   align-items: center;
 }
 
-.a-1 {
-  opacity: 0;
-  animation: fadeInLeft 0.5s ease forwards;
-  animation-delay: 7.5s;
-}
-
-.a-2 {
-  opacity: 0;
-  animation: fadeInUp 0.5s ease forwards;
-  animation-delay: 8s;
-}
-
-.a-3 {
-  opacity: 0;
-  animation: fadeInDown 0.5s ease forwards;
-  animation-delay: 8.5s;
-}
-
-.a-4 {
-  opacity: 0;
-  animation: fadeInRight 0.5s ease forwards;
-  animation-delay: 9s;
-}
-
-/* Slide-in animation for name */
-.slide-in {
-  opacity: 0;
-  transform: translateX(-100px);
-  animation: slideIn 0.5s ease-out forwards;
-  animation-delay: 2.5s;
-}
-
-.fade-in-right {
-  opacity: 0;
-  animation: fadeInRight 0.5s ease forwards;
-  animation-delay: 2s;
-}
-
 /* 7. Buttons & Interactive Elements */
 .btn:hover,
 .btn-box .d-CV:hover {
@@ -597,9 +441,6 @@ p {
   padding: 15px;
   border: 1px solid var(--jet);
   padding-bottom: 45px;
-  opacity: 0;
-  animation: fadeInUp 0.5s ease forwards;
-  animation-delay: 1s;
 }
 
 .services-title {
@@ -621,20 +462,6 @@ p {
   animation-fill-mode: forwards;
 }
 
-.text-part.services-left {
-  transform: translateX(-200%);
-  animation-name: slide-in-left;
-  opacity: 0;
-  animation-delay: 1.5s;
-}
-
-.text-part.services-right {
-  transform: translateX(200%);
-  animation-name: slide-in-right;
-  opacity: 0;
-  animation-delay: 2s;
-}
-
 .services-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -650,10 +477,6 @@ p {
   z-index: 1;
   transform: translateY(15px);
   overflow: hidden;
-  opacity: 0;
-  animation: fadeInDown 0.5s ease forwards;
-  animation-delay: 2.5s;
-
 }
 
 .service-card::before {
@@ -703,28 +526,12 @@ p {
   margin: auto;
 }
 
-.service-card h3 {
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 7px;
-  text-align: center;
-  opacity: 0;
-  transform: translateX(-20px);
-  animation: fadeInLeft 0.5s ease forwards;
-  animation-delay: 3s;
-}
-
 .service-card p {
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-3);
   line-height: 1.6;
   text-align: center;
-  opacity: 0;
-  transform: translateX(-20px);
-  animation: fadeInRight 0.5s ease forwards;
-  animation-delay: 3.5s;
   width: 100%;
 }
 
@@ -741,9 +548,6 @@ p {
   padding: 15px;
   border: 1px solid var(--jet);
   padding-bottom: 45px;
-  opacity: 0;
-  animation: fadeInUp 0.5s ease forwards;
-  animation-delay: 1s;
   text-align: center;
 }
 
@@ -757,27 +561,12 @@ p {
   overflow: hidden;
 }
 
-.text-part.experience-left {
-  animation-name: slide-in-left;
-  opacity: 0;
-  animation-delay: 1.5s;
-}
-
-.text-part.experience-right {
-  animation-name: slide-in-right;
-  opacity: 0;
-  animation-delay: 2s;
-}
-
 .experience-intro {
   font-size: 1rem;
   color: #ccc;
   margin-bottom: 2rem;
   text-align: center;
   max-width: 700px;
-  opacity: 0;
-  animation: fadeIn 0.5s ease forwards;
-  animation-delay: 2.5s;
 }
 
 
@@ -796,9 +585,6 @@ p {
   z-index: 1;
   transform: translateY(15px);
   overflow: hidden;
-  opacity: 0;
-  animation: fadeInDown 0.5s ease forwards;
-  animation-delay: 3s;
 }
 
 .experience-card::before {
@@ -834,10 +620,6 @@ p {
   color: var(--orange-yellow-crayola);
   font-size: var(--fs-6);
   font-weight: var(--fw-3);
-  opacity: 0;
-  transform: translateX(-20px);
-  animation: fadeInRight 0.5s ease forwards;
-  animation-delay: 3.5s;
 }
 
 .experience-card h3 {
@@ -845,20 +627,12 @@ p {
   font-size: 1.5rem;
   font-weight: 600;
   text-align: center;
-  opacity: 0;
-  transform: translateX(-20px);
-  animation: fadeInLeft 0.5s ease forwards;
-  animation-delay: 4s;
   margin-top: 7px;
 }
 
 .company-name {
   color: var(--light-gray);
   font-weight: 500;
-  opacity: 0;
-  transform: translateX(20px);
-  animation: fadeInRight 0.5s ease forwards;
-  animation-delay: 4.5s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -878,10 +652,6 @@ p {
   font-weight: var(--fw-3);
   line-height: 1.6;
   text-align: center;
-  opacity: 0;
-  transform: translateX(-20px);
-  animation: fadeInLeft 0.5s ease forwards;
-  animation-delay: 5s;
   width: 100%;
   margin-top: 10px;
 }
@@ -902,9 +672,6 @@ p {
   padding-bottom: 45px;
   opacity: 0;
   transform: translateY(50px);
-  opacity: 0;
-  animation: fadeInUp 0.5s ease forwards;
-  animation-delay: 1s;
   text-align: center;
 }
 
@@ -916,25 +683,6 @@ p {
   margin-bottom: 2rem;
   text-transform: uppercase;
   overflow: hidden;
-}
-
-.text-part.contact-left {
-  opacity: 0;
-  animation-name: slide-in-left;
-  animation-delay: 1.5s;
-}
-
-.text-part.contact-middle {
-  opacity: 0;
-  animation: fadeIn 0.5s ease forwards;
-  animation-delay: 2s;
-}
-
-.text-part.contact-right {
-  opacity: 0;
-  transform: translateX(200%);
-  animation-name: slide-in-right;
-  animation-delay: 2.5s;
 }
 
 .contact-grid {
@@ -952,9 +700,6 @@ p {
   gap: 6px;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  animation: fadeIn 0.5s ease forwards;
-  animation-delay: 3s;
 }
 
 .contact-info-block {
@@ -981,26 +726,11 @@ p {
 .contact-list i {
   margin-right: 10px;
   color: var(--orange-yellow-crayola);
-  opacity: 0;
-  animation: fadeInLeft 0.5s ease forwards;
-  animation-delay: 3.5s;
-}
-
-.lt {
-  opacity: 0;
-  animation: fadeInRight 0.5s ease forwards;
-  animation-delay: 4s;
 }
 
 form {
   display: flex;
   flex-direction: column;
-}
-
-.anim {
-  opacity: 0;
-  animation: fadeInRight 0.5s ease forwards;
-  animation-delay: 4.5s;
 }
 
 form input,
@@ -1030,9 +760,6 @@ form button {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  opacity: 0;
-  animation: fadeInUp 0.5s ease forwards;
-  animation-delay: 5s;
 }
 
 .popup-notification {
