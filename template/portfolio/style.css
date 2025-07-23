@@ -111,6 +111,32 @@
   }
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Base hidden state for scroll animations */
+.animate-on-scroll {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: transform 1s ease, opacity 1.1s ease;
+}
+
+.animate-on-scroll.animate-active {
+  opacity: 1;
+  animation: fadeInUp 1s ease forwards;
+}
+
+
 body {
   font-family: var(--ff-poppins);
   background: var(--smoky-black);

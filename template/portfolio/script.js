@@ -106,3 +106,23 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-active');
+      } else {
+        entry.target.classList.remove('animate-active'); // retrigger on scroll
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  document.querySelectorAll('.animate-on-scroll').forEach(element => {
+    observer.observe(element);
+  });
+});
