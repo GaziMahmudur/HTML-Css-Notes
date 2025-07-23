@@ -534,6 +534,20 @@ p {
   opacity: 1;
 }
 
+.service-card h4 {
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-3);
+}
+
+.service-card h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 7px;
+}
+
 /* Add animation to service icons */
 .service-icon {
   width: 60px;
