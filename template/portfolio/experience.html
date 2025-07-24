@@ -2,14 +2,18 @@
 <html lang="en">
 
 <head>
-  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shuvo || Portfolio website</title>
+
+  <!-- Lottie Player -->
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"
+    defer></script>
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="style.css" />
-  <!-- boxicon css link -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
 
 <body>
@@ -31,7 +35,7 @@
         </ul>
         <div class="right-header animate-on-scroll">
           <a href="https://m.me/g.mahmudur" class="btn animate-on-scroll"> chat </a>
-          <div class="menu-icon">
+          <div class="menu-icon" role="button" tabindex="0" aria-label="Toggle menu">
             <div class="bar"></div>
           </div>
         </div>
@@ -41,9 +45,7 @@
 
   <section class="experience" id="experience">
     <div class="experience-container">
-      <h2 class="experience-title animate-on-scroll">
-        My Experience
-      </h2>
+      <h2 class="experience-title animate-on-scroll">My Experience</h2>
 
       <div class="experience-intro animate-on-scroll">
         A summary of my experience across various domains including design, development, and digital media. I have
@@ -56,9 +58,11 @@
           <div class="experience-content-box animate-on-scroll">
             <h4 class="animate-on-scroll">2023 - 2024</h4>
             <h3 class="animate-on-scroll">Web Design</h3>
-            <l class="company-name animate-on-scroll"> Aixc Crop</l>
-            <p class="animate-on-scroll">Designed and developed responsive websites using HTML, CSS, and JavaScript. Collaborated with UI/UX teams
-              to enhance user experience.</p>
+            <span class="company-name animate-on-scroll">Aixc Crop</span>
+            <p class="animate-on-scroll">
+              Designed and developed responsive websites using HTML, CSS, and JavaScript. Collaborated with UI/UX teams
+              to enhance user experience.
+            </p>
           </div>
         </div>
 
@@ -66,9 +70,11 @@
           <div class="experience-content-box animate-on-scroll">
             <h4 class="animate-on-scroll">2022 - 2023</h4>
             <h3 class="animate-on-scroll">Web Development</h3>
-            <l class="company-name animate-on-scroll"> Google</l>
-            <p class="animate-on-scroll">Built and maintained scalable web applications using modern JavaScript frameworks. Worked closely with
-              backend teams to integrate APIs.</p>
+            <span class="company-name animate-on-scroll">Google</span>
+            <p class="animate-on-scroll">
+              Built and maintained scalable web applications using modern JavaScript frameworks. Worked closely with
+              backend teams to integrate APIs.
+            </p>
           </div>
         </div>
 
@@ -76,9 +82,11 @@
           <div class="experience-content-box animate-on-scroll">
             <h4 class="animate-on-scroll">2021 - 2022</h4>
             <h3 class="animate-on-scroll">Photography</h3>
-            <l class="company-name animate-on-scroll"> YouTube</l>
-            <p class="animate-on-scroll">Created high-quality visual content for YouTube channels. Edited videos and photos using Adobe Premiere
-              Pro and Lightroom.</p>
+            <span class="company-name animate-on-scroll">YouTube</span>
+            <p class="animate-on-scroll">
+              Created high-quality visual content for YouTube channels. Edited videos and photos using Adobe Premiere
+              Pro and Lightroom.
+            </p>
           </div>
         </div>
 
@@ -86,17 +94,20 @@
           <div class="experience-content-box animate-on-scroll">
             <h4 class="animate-on-scroll">2020 - 2021</h4>
             <h3 class="animate-on-scroll">Graphic Design</h3>
-            <l class="company-name animate-on-scroll"> Facebook</l>
-            <p class="animate-on-scroll">Designed digital marketing assets including banners and social media posts. Ensured brand consistency
-              across all designs.</p>
+            <span class="company-name animate-on-scroll">Facebook</span>
+            <p class="animate-on-scroll">
+              Designed digital marketing assets including banners and social media posts. Ensured brand consistency
+              across all designs.
+            </p>
           </div>
         </div>
 
       </div>
     </div>
   </section>
-  <script src="script.js"></script>
-  <script src="../loader.js"></script>
+
+  <script src="script.js" defer></script>
+  <script src="../loader.js" defer></script>
 </body>
 
 </html>

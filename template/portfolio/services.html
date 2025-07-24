@@ -2,19 +2,24 @@
 <html lang="en">
 
 <head>
-  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shuvo || Portfolio website</title>
+
+  <!-- Lottie Player -->
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"
+    defer></script>
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="style.css" />
-  <!-- boxicon css link -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
 
 <body>
 
   <div class="overlay"></div>
+
   <header class="animate-on-scroll">
     <div class="header-container">
       <div class="nav-container">
@@ -27,7 +32,7 @@
         </ul>
         <div class="right-header animate-on-scroll">
           <a href="https://m.me/g.mahmudur" class="btn animate-on-scroll"> chat </a>
-          <div class="menu-icon">
+          <div class="menu-icon" role="button" tabindex="0" aria-label="Toggle menu">
             <div class="bar"></div>
           </div>
         </div>
@@ -37,14 +42,14 @@
 
   <section class="services" id="services">
     <div class="services-container">
-      <h2 class="services-title animate-on-scroll">
-        My Services
-      </h2>
+      <h2 class="services-title animate-on-scroll">My Services</h2>
 
       <div class="services-grid">
 
         <div class="service-card animate-on-scroll" style="--i:1">
-          <div class="service-icon animate-on-scroll"><img src="./img/icon-design.svg" alt="design icon" width="40"></div>
+          <div class="service-icon animate-on-scroll">
+            <img src="./img/icon-design.svg" alt="design icon" width="40" />
+          </div>
           <div class="service-content-box animate-on-scroll">
             <h3 class="animate-on-scroll">Web Design</h3>
             <p class="animate-on-scroll">The most modern and high-quality design made at a professional level.</p>
@@ -52,7 +57,9 @@
         </div>
 
         <div class="service-card animate-on-scroll" style="--i:2">
-          <div class="service-icon animate-on-scroll"><img src="./img/icon-dev.svg" alt="Web development icon" width="40"></div>
+          <div class="service-icon animate-on-scroll">
+            <img src="./img/icon-dev.svg" alt="Web development icon" width="40" />
+          </div>
           <div class="service-content-box animate-on-scroll">
             <h3 class="animate-on-scroll">Web Development</h3>
             <p class="animate-on-scroll">High-quality development of sites at the professional level.</p>
@@ -60,7 +67,9 @@
         </div>
 
         <div class="service-card animate-on-scroll" style="--i:3">
-          <div class="service-icon animate-on-scroll"><img src="./img/icon-photo.svg" alt="camera icon" width="40"></div>
+          <div class="service-icon animate-on-scroll">
+            <img src="./img/icon-photo.svg" alt="camera icon" width="40" />
+          </div>
           <div class="service-content-box animate-on-scroll">
             <h3 class="animate-on-scroll">Photography</h3>
             <p class="animate-on-scroll">I make high-quality photos of any category at a professional level.</p>
@@ -68,7 +77,9 @@
         </div>
 
         <div class="service-card animate-on-scroll" style="--i:4">
-          <div class="service-icon animate-on-scroll"><img src="./img/icon-app.svg" alt="graphic design icon" width="40"></div>
+          <div class="service-icon animate-on-scroll">
+            <img src="./img/icon-app.svg" alt="graphic design icon" width="40" />
+          </div>
           <div class="service-content-box animate-on-scroll">
             <h3 class="animate-on-scroll">Graphic Design</h3>
             <p class="animate-on-scroll">Professional graphic design with a focus on clarity and creativity.</p>
@@ -78,8 +89,10 @@
       </div>
     </div>
   </section>
-  <script src="script.js"></script>
-  <script src="../loader.js"></script>
+
+  <script src="script.js" defer></script>
+  <script src="../loader.js" defer></script>
+
 </body>
 
 </html>

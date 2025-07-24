@@ -2,14 +2,18 @@
 <html lang="en">
 
 <head>
-  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shuvo || Portfolio website</title>
+
+  <!-- Lottie Player -->
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"
+    defer></script>
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="style.css" />
-  <!-- boxicon css link -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
 
 <body>
@@ -27,7 +31,7 @@
         </ul>
         <div class="right-header animate-on-scroll">
           <a href="https://m.me/g.mahmudur" class="btn animate-on-scroll"> chat </a>
-          <div class="menu-icon">
+          <div class="menu-icon" role="button" tabindex="0" aria-label="Toggle menu">
             <div class="bar"></div>
           </div>
         </div>
@@ -37,59 +41,44 @@
 
   <section class="contact" id="contact">
     <div class="contact-container">
-      <h2 class="contact-title animate-on-scroll">
-        Let's Work Together
-      </h2>
+      <h2 class="contact-title animate-on-scroll">Let's Work Together</h2>
 
       <div class="contact-grid">
 
         <!-- LEFT SIDE: contact info with heading -->
         <div class="contact-info-block">
-          <h2 class="contact-head animate-on-scroll">Contact</h2> <!-- Move this inside -->
+          <h2 class="contact-head animate-on-scroll">Contact</h2>
           <div class="contact-ul">
             <ul class="contact-list">
-              <li class="animate-on-scroll"><i class="fas fa-phone"></i>
-                <n class="lt">+880 1822-474540</n>
-              </li>
-              <li class="animate-on-scroll"><i class="fas fa-envelope"></i>
-                <n class="lt">g.mahmudur.r@gmail.com</n>
-              </li>
-              <li class="animate-on-scroll"><i class="fas fa-map-marker-alt"></i>
-                <n class="lt">Mirpur-2, Dhaka, Bangladesh</n>
-              </li>
-              <li class="animate-on-scroll"><i class="fab fa-facebook"></i>
-                <n class="lt">g.mahmudur</n>
-              </li>
-              <li class="animate-on-scroll"><i class="fab fa-github"></i>
-                <n class="lt">github.com/GaziMahmudur</n>
-              </li>
+              <li class="animate-on-scroll"><i class="fas fa-phone"></i> +880 1822-474540</li>
+              <li class="animate-on-scroll"><i class="fas fa-envelope"></i> g.mahmudur.r@gmail.com</li>
+              <li class="animate-on-scroll"><i class="fas fa-map-marker-alt"></i> Mirpur-2, Dhaka,
+                  Bangladesh</li>
+              <li class="animate-on-scroll"><i class="fab fa-facebook"></i> g.mahmudur</li>
+              <li class="animate-on-scroll"><i class="fab fa-github"></i> github.com/GaziMahmudur</li>
             </ul>
           </div>
         </div>
 
         <!-- RIGHT SIDE: contact form -->
         <form class="animate-on-scroll" id="contact-form" action="https://formspree.io/f/xkgrlyle" method="POST">
-          <input type="text" name="name" placeholder="Full Name" required>
-          <input type="email" name="email" placeholder="Email Address" required>
-          <input type="tel" name="phone" placeholder="Phone Number" required>
-          <input type="text" name="subject" placeholder="Email Subject" required>
+          <input type="text" name="name" placeholder="Full Name" required />
+          <input type="email" name="email" placeholder="Email Address" required />
+          <input type="tel" name="phone" placeholder="Phone Number" required />
+          <input type="text" name="subject" placeholder="Email Subject" required />
           <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
           <button type="submit" class="animate-on-scroll">Send Message</button>
         </form>
 
-
-
         <!-- Popup Notification -->
         <div id="popup" class="popup-notification">Message sent successfully!</div>
 
-
       </div>
-
     </div>
   </section>
 
-  <script src="script.js"></script>
-  <script src="../loader.js"></script>
+  <script src="script.js" defer></script>
+  <script src="../loader.js" defer></script>
 </body>
 
 </html>
