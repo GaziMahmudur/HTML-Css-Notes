@@ -2,22 +2,29 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="fireflies.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal page</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="fireflies.css"> --> <!-- Removed if unused -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- Lottie Player -->
   <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 </head>
 
 <body>
-
+  <!-- Background Animation -->
   <dotlottie-player src="https://lottie.host/73c221ff-11a3-4b85-99a5-f359eeac1367/QHGA3M2tEf.lottie"
-    background="#00041C" speed="1" loop autoplay style="filter: blur(2px) brightness(0.9)"></dotlottie-player>
+    background="#00041C" speed="1" loop autoplay style="filter: blur(2px) brightness(0.9);">
+  </dotlottie-player>
 
+  <!-- Hidden Content Loader -->
   <div id="content" class="content hidden"></div>
 
+  <!-- Header & Navigation -->
   <header>
     <div class="right-header">
       <div class="menu-icon">
@@ -32,7 +39,8 @@
     </ul>
   </header>
 
-  <section class="home" id="home">
+  <!-- Hero Section -->
+  <section class="home">
     <div class="container">
       <h1 class="fade-in">Hi!</h1>
       <h1 class="slide-in">I'm Gazi Mahmudur Rahaman Shuvo.</h1>
@@ -46,6 +54,8 @@
       </div>
     </div>
   </section>
+
+  <!-- Scripts -->
   <script src="script.js"></script>
   <script src="../loader.js"></script>
 </body>

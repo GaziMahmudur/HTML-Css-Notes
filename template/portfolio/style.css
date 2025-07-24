@@ -180,7 +180,6 @@ header {
     overflow: hidden;
     z-index: 2;
     position: relative;
-    backdrop-filter: blur(10px);
   }
 
   .nav-container {
