@@ -14,23 +14,19 @@
 
 <body>
 
-  <div class="background-container" id="bg"></div>
-
-  <div id="content" class="content hidden"></div>
-
   <div class="overlay"></div>
-  <header>
+  <header class="animate-on-scroll">
     <div class="header-container">
       <div class="nav-container">
-        <a href="index.html" class="logo"><span>S</span>huvo</a>
-        <ul class="navlist">
+        <a href="index.html" class="logo animate-on-scroll"><span>S</span>huvo</a>
+        <ul class="navlist animate-on-scroll">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="./services.html">Services</a></li>
           <li><a href="./experience.html">Experience</a></li>
           <li><a href="./contact.html">Contact</a></li>
         </ul>
-        <div class="right-header">
-          <a href="https://m.me/g.mahmudur" class="btn"> chat </a>
+        <div class="right-header animate-on-scroll">
+          <a href="https://m.me/g.mahmudur" class="btn animate-on-scroll"> chat </a>
           <div class="menu-icon">
             <div class="bar"></div>
           </div>
@@ -41,36 +37,44 @@
 
   <section class="contact" id="contact">
     <div class="contact-container">
-      <h2 class="contact-title">
-        <y class="text-part contact-left">Let's</y>
-        <z class="text-part contact-middle">Work</z>
-        <x class="text-part contact-right">Together</x>
+      <h2 class="contact-title animate-on-scroll">
+        Let's Work Together
       </h2>
 
       <div class="contact-grid">
 
         <!-- LEFT SIDE: contact info with heading -->
         <div class="contact-info-block">
-          <h2 class="contact-head">Contact</h2> <!-- Move this inside -->
+          <h2 class="contact-head animate-on-scroll">Contact</h2> <!-- Move this inside -->
           <div class="contact-ul">
             <ul class="contact-list">
-              <li><i class="fas fa-phone"></i><n class="lt">+880 1822-474540</n></li>
-              <li><i class="fas fa-envelope"></i><n class="lt">g.mahmudur.r@gmail.com</n></li>
-              <li><i class="fas fa-map-marker-alt"></i><n class="lt">Mirpur-2, Dhaka, Bangladesh</n></li>
-              <li><i class="fab fa-facebook"></i><n class="lt">g.mahmudur</n></li>
-              <li><i class="fab fa-github"></i><n class="lt">github.com/GaziMahmudur</n></li>
+              <li class="animate-on-scroll"><i class="fas fa-phone"></i>
+                <n class="lt">+880 1822-474540</n>
+              </li>
+              <li class="animate-on-scroll"><i class="fas fa-envelope"></i>
+                <n class="lt">g.mahmudur.r@gmail.com</n>
+              </li>
+              <li class="animate-on-scroll"><i class="fas fa-map-marker-alt"></i>
+                <n class="lt">Mirpur-2, Dhaka, Bangladesh</n>
+              </li>
+              <li class="animate-on-scroll"><i class="fab fa-facebook"></i>
+                <n class="lt">g.mahmudur</n>
+              </li>
+              <li class="animate-on-scroll"><i class="fab fa-github"></i>
+                <n class="lt">github.com/GaziMahmudur</n>
+              </li>
             </ul>
           </div>
         </div>
 
         <!-- RIGHT SIDE: contact form -->
-        <form class="anim" id="contact-form" action="https://formspree.io/f/xkgrlyle" method="POST">
+        <form class="animate-on-scroll" id="contact-form" action="https://formspree.io/f/xkgrlyle" method="POST">
           <input type="text" name="name" placeholder="Full Name" required>
           <input type="email" name="email" placeholder="Email Address" required>
           <input type="tel" name="phone" placeholder="Phone Number" required>
           <input type="text" name="subject" placeholder="Email Subject" required>
           <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
+          <button type="submit" class="animate-on-scroll">Send Message</button>
         </form>
 
 

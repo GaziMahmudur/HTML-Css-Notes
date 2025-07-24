@@ -180,6 +180,7 @@ header {
     overflow: hidden;
     z-index: 2;
     position: relative;
+    backdrop-filter: blur(10px);
   }
 
   .nav-container {
@@ -710,8 +711,6 @@ p {
   padding: 15px;
   border: 1px solid var(--jet);
   padding-bottom: 45px;
-  opacity: 0;
-  transform: translateY(50px);
   text-align: center;
 }
 
