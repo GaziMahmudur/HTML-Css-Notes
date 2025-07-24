@@ -150,7 +150,6 @@ header {
   opacity: 0;
   transform: translateY(-30px);
   animation: menuIconDrop 0.8s ease-out forwards;
-  animation-delay: 0.5s;
 }
 
 .menu-icon .bar,
@@ -192,7 +191,7 @@ ul.navlist.active {
   list-style: none;
   opacity: 0;
   transform: translateY(-20px);
-  animation: navItemSlideIn 0.5s ease-out forwards;
+  animation: navItemSlideIn 0.8s ease-out forwards;
 }
 
 a {
@@ -279,14 +278,14 @@ h3 {
   opacity: 0;
   transform: translateY(-20px);
   animation: fadeInUp 1s ease forwards;
-  animation-delay: 0.5s;
+  animation-delay: 1.5s;
 }
 
 .slide-in {
   opacity: 0;
   transform: translateX(-50px);
   animation: slideInLeft 1s ease forwards;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 
 .typing {
@@ -294,7 +293,7 @@ h3 {
   overflow: hidden;
   white-space: nowrap;
   animation: typing 3s steps(100) forwards;
-  animation-delay: 2s;
+  animation-delay: 2.5s;
   width: 0;
 }
 
@@ -326,7 +325,7 @@ hr::after {
   opacity: 0;
   transform: scale(0.8);
   animation: fadeInScale 1s ease forwards;
-  animation-delay: 3.5s;
+  animation-delay: 4.5s;
 }
 
 .social-icons a {
