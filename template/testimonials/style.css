@@ -21,11 +21,16 @@ body {
     padding: 50px;
     overflow-x: hidden;
     position: relative;
+
+    /* Optimized Background */
     background-image: url(./emmanuel-phaeton--fBaQFX7q8U-unsplash.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
+
+    /* Enable hardware acceleration */
+    will-change: transform;
 }
 
 body::before {
@@ -37,7 +42,7 @@ body::before {
     height: 100vh;
     background: inherit;
     z-index: -1;
-    /* This puts the background behind content */
+    pointer-events: none;
 }
 
 /* ===================================
@@ -48,9 +53,8 @@ body::before {
     padding: 30px;
     border-radius: 10px;
     position: relative;
-    /* Add this */
     z-index: 1;
-    /* Add this to ensure content stays on top */
+    will-change: transform;
 }
 
 .overlay {
@@ -64,7 +68,6 @@ body::before {
     justify-content: center;
     align-items: center;
     z-index: 0;
-    /* Change to 0 or higher */
 }
 
 .typedText {
@@ -78,24 +81,26 @@ body::before {
     display: block;
 }
 
+/* Prevent reflow by fixing line height */
 .line {
     display: block;
     line-height: 1.6;
     min-height: 1em;
-    /* Ensures even blank lines have height */
 }
 
 .cursor {
     display: inline-block;
     width: 10px;
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     margin-left: 2px;
+    will-change: opacity;
 }
 
 /* ===================================
    8. Responsive Design
    =================================== */
-/* For large screens (e.g., desktops) */
+
+/* Desktops & Large Screens */
 @media (max-width: 1440px) {
     .container {
         max-width: 700px;
@@ -111,11 +116,10 @@ body::before {
     }
 }
 
-/* For tablets */
+/* Tablets */
 @media (max-width: 768px) {
     body {
         padding: 20px;
-
     }
 
     .container {
@@ -132,15 +136,15 @@ body::before {
     }
 }
 
-/* For mobile phones */
+/* Mobile Phones */
 @media (max-width: 425px) {
+    body {
+        padding: 10px;
+    }
+
     .container {
         max-width: 100%;
         padding: 15px;
-    }
-
-    body {
-        padding: 10px;
     }
 
     .typedText {
@@ -153,7 +157,7 @@ body::before {
     }
 }
 
-/* For very small screens */
+/* Very Small Screens */
 @media (max-width: 320px) {
     .typedText {
         font-size: 16px;

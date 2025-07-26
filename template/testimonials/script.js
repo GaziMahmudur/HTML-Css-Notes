@@ -1,4 +1,3 @@
-
 function startTyping({
     element,
     lines,
@@ -9,8 +8,9 @@ function startTyping({
     let lineIndex = 0;
     let charIndex = 0;
     let currentSpan = null;
+
     const cursor = document.createElement('span');
-    cursor.classList.add('cursor');
+    cursor.className = 'cursor';
     cursor.textContent = ' | ';
 
     element.textContent = ''; // Clear existing content
@@ -27,11 +27,10 @@ function startTyping({
             const currentLine = lines[lineIndex];
 
             if (charIndex < currentLine.length) {
-                cursor.before(currentLine.charAt(charIndex));
+                cursor.before(document.createTextNode(currentLine.charAt(charIndex)));
                 charIndex++;
                 setTimeout(typeLine, charDelay);
             } else {
-                // Check for the next line or end
                 lineIndex++;
                 charIndex = 0;
                 currentSpan.removeChild(cursor);
@@ -46,21 +45,19 @@ function startTyping({
     typeLine();
 }
 
-// Automatically scan and animate elements with data-typed
+// Initialize typed elements on DOM load
 document.addEventListener("DOMContentLoaded", () => {
+    const brPlaceholder = '[[BR]]';
+
     document.querySelectorAll('[data-typed]').forEach(el => {
-        // Replace <br> with a unique placeholder for empty lines
-        let htmlContent = el.innerHTML;
+        const rawHTML = el.innerHTML;
+        const lines = rawHTML
+            .replace(/<br\s*\/?>/g, brPlaceholder)
+            .split(brPlaceholder)
+            .map(line => line.trim());
 
-        // Replace <br> tags with a unique placeholder string for empty lines
-        const brPlaceholder = '[[BR]]';
-        htmlContent = htmlContent.replace(/<br\s*\/?>/g, brPlaceholder);
-
-        // Split content into lines
-        const lines = htmlContent.split(brPlaceholder).map(line => line.trim());
-
-        const speed = parseInt(el.dataset.speed) || 50;
-        const delay = parseInt(el.dataset.delay) || 500;
+        const speed = parseInt(el.dataset.speed, 10) || 50;
+        const delay = parseInt(el.dataset.delay, 10) || 500;
 
         startTyping({
             element: el,
