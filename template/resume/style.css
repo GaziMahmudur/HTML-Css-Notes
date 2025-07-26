@@ -1,39 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
-@keyframes typing {
-    0% {
-        opacity: 1;
-        width: 0;
-    }
-
-    100% {
-        opacity: 1;
-        width: 100%;
-    }
-}
-
-@keyframes slideIn {
-    0% {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
 @keyframes borderAnimation {
     0% {
         border-color: rgb(0, 255, 0);
@@ -48,27 +14,27 @@
     }
 }
 
-@keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
+@keyframes glowMove {
+    0% {
+        background-position: 0% 50%;
     }
 
-    to {
-        opacity: 1;
-        transform: translateX(0);
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
     }
 }
 
-@keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
     }
 
-    to {
-        opacity: 1;
-        transform: translateX(0);
+    100% {
+        transform: rotate(360deg);
     }
 }
 
@@ -101,10 +67,7 @@ body {
     width: 230px;
     height: 230px;
     border-radius: 50%;
-    margin: 0 auto 20px;
     display: block;
-    border: 3px solid rgb(0, 255, 0);
-    animation: borderAnimation 5s infinite;
     position: relative;
     left: 0;
 }
@@ -113,12 +76,43 @@ body {
     width: 230px;
     height: 230px;
     border-radius: 50%;
-    margin: 0 auto 20px;
     display: block;
-    border: 3px solid rgb(0, 255, 0);
-    animation: borderAnimation 5s infinite;
     position: relative;
     left: 0;
+    z-index: 2;
+    backdrop-filter: blur(10px) brightness(0.5);
+}
+
+.sidebar .profile-wrapper {
+    position: relative;
+    width: 235px;
+    height: 235px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar .profile-wrapper::before {
+    position: absolute;
+    content: "";
+    width: 120%;
+    height: 50%;
+    background: linear-gradient(#00ff00, #00ff00);
+    animation: rotate 4s linear infinite;
+    left: -25px;
+    top: 60px;
+    z-index: 1;
+}
+
+.sidebar .profile-wrapper::after {
+    position: absolute;
+    content: "";
+    inset: 4px;
+    border-radius: 50%;
 }
 
 .desktop {
@@ -154,39 +148,8 @@ body {
     display: none;
 }
 
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 0.5s ease-in forwards;
-    animation-delay: 0.5s;
-}
-
-.slide-in {
-    opacity: 0;
-    transform: translateX(-100px);
-    animation: slideIn 0.5s ease-out forwards;
-    animation-delay: 1s;
-}
-
-.PS {
-    opacity: 0;
-    animation: fadeInRight 0.5s ease forwards;
-    animation-delay: 1.5s;
-}
-
-.typing_1 {
-    opacity: 0;
-    animation: fadeIn 0.5s steps(200) forwards;
-    animation-delay: 2s;
-}
-
 .section-title div.my {
     color: rgb(255, 255, 255);
-}
-
-.my {
-    opacity: 0;
-    animation: fadeIn 0.5s ease forwards;
-    animation-delay: 2.5s;
 }
 
 .section-title div.experience {
@@ -194,87 +157,15 @@ body {
 }
 
 .typing {
-    opacity: 0;
     overflow: hidden;
     white-space: nowrap;
-    animation: typing 6.5s steps(200) forwards;
-    animation-delay: 3s;
     width: 0;
-}
-
-.pm {
-    opacity: 0;
-    animation: fadeInLeft 0.5s ease forwards;
-    animation-delay: 4s;
-}
-
-.li_1 {
-    opacity: 0;
-    animation: fadeInRight 0.5s ease forwards;
-    animation-delay: 4.5s;
-}
-
-.li_2 {
-    opacity: 0;
-    animation: fadeInLeft 0.5s ease forwards;
-    animation-delay: 5s;
-}
-
-.Et {
-    opacity: 0;
-    animation: fadeInRight 0.5s ease forwards;
-    animation-delay: 5.5s;
-}
-
-.SS {
-    opacity: 0;
-    animation: fadeInLeft 0.5s ease forwards;
-    animation-delay: 6s;
 }
 
 .mubc {
-    opacity: 0;
     overflow: hidden;
     white-space: nowrap;
-    animation: typing 6.5s steps(200) forwards;
-    animation-delay: 6.5s;
     width: 0;
-}
-
-.Am {
-    opacity: 0;
-    animation: fadeInRight 0.5s ease forwards;
-    animation-delay: 7s;
-}
-
-.about {
-    opacity: 0;
-    animation: slideIn 0.5s ease forwards;
-    animation-delay: 7.5s;
-}
-
-.ct {
-    opacity: 0;
-    animation: fadeInLeft 0.5s ease forwards;
-    animation-delay: 8s;
-}
-
-.c-l {
-    opacity: 0;
-    animation: fadeInRight 0.5s ease forwards;
-    animation-delay: 8.5s;
-}
-
-.sl {
-    opacity: 0;
-    animation: fadeInLeft 0.5s ease forwards;
-    animation-delay: 9s;
-}
-
-.s-l {
-    opacity: 0;
-    animation: fadeInRight 0.5s ease forwards;
-    animation-delay: 9.5s;
 }
 
 /* Media Queries for Responsive Design */
@@ -301,17 +192,51 @@ body {
         display: none;
     }
 
+    .sidebar .profile-wrapper {
+        display: none;
+    }
+
     /* Show and style profile image in main content */
     .main-content .profile-img {
         display: block;
         width: 180px;
         height: 180px;
-        margin: 0 auto 30px;
         position: relative;
         order: -1;
         border-radius: 50%;
-        border: 3px solid rgb(0, 255, 0);
-        animation: borderAnimation 5s infinite;
+        backdrop-filter: blur(10px) brightness(0.5);
+    }
+
+    .main-content .profile-wrapper {
+        position: relative;
+        width: 185px;
+        height: 185px;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .main-content .profile-wrapper::before {
+        position: absolute;
+        content: "";
+        width: 120%;
+        height: 50%;
+        background: linear-gradient(#00ff00, #00ff00);
+        animation: rotate 4s linear infinite;
+        left: -25px;
+        top: 60px;
+        z-index: 1;
+    }
+
+    .main-content .profile-wrapper::after {
+        position: absolute;
+        content: "";
+        inset: 4px;
+        border-radius: 50%;
     }
 
     .sidebar {
@@ -373,13 +298,17 @@ body {
 
     .skills-list li {
         flex: 0 1 auto;
-        background: rgba(0, 255, 0, 0.1);
         padding: 8px 16px;
         border-radius: 20px;
-        border: 1px solid rgb(0, 255, 0);
         margin: 5px;
         min-width: 80px;
         text-align: center;
+        color: white;
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        background-size: 200% 200%;
+        animation: glowMove 6s ease infinite;
+        border: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
 
     .main-content {
@@ -469,4 +398,18 @@ body {
     .main-content {
         padding: 10px;
     }
+}
+
+
+
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
