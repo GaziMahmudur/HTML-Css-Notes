@@ -1,19 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
-@keyframes borderAnimation {
-    0% {
-        border-color: rgb(0, 255, 0);
-    }
-
-    50% {
-        border-color: rgb(255, 0, 0);
-    }
-
-    100% {
-        border-color: rgb(0, 255, 0);
-    }
-}
-
 @keyframes glowMove {
     0% {
         background-position: 0% 50%;
@@ -46,7 +32,31 @@
     to {
         width: 100%;
     }
-}   
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
 html,
 body {
@@ -171,13 +181,25 @@ body {
     white-space: nowrap;
     width: 0;
     animation: typing 6s steps(500, end) forwards;
-    animation-delay: 1s;
+    animation-delay: 1.5s;
 }
 
 .mubc {
     overflow: hidden;
     white-space: nowrap;
     width: 0;
+}
+
+.slide-in-right {
+    opacity: 0;
+    animation: slideInRight 1s linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%) forwards;
+    animation-delay: 0.5s;
+}
+
+.slide-in-left {
+    opacity: 0;
+    animation: slideInLeft 1s linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%) forwards;
+    animation-delay: 0.5s;
 }
 
 /* Media Queries for Responsive Design */
@@ -412,13 +434,10 @@ body {
     }
 }
 
-
-
-
 .reveal {
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 .reveal.visible {
