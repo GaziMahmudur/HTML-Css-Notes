@@ -255,8 +255,12 @@ a {
   top: 300px;
 }
 
-h1 {
+section.home h1 {
   font-size: 34px;
+}
+
+
+h1 {
   font-weight: bold;
   letter-spacing: -1px;
 }
@@ -438,4 +442,3 @@ hr::after {
     margin: 0 1.5rem;
   }
 }
-
