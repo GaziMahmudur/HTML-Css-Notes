@@ -6,13 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal page</title>
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="style.css">
-  <!-- <link rel="stylesheet" href="fireflies.css"> --> <!-- Removed if unused -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- 🔄 ফন্ট লোডের আগেই কানেকশন তৈরি -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
-  <!-- Lottie Player -->
-  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+  <!-- 🧠 ইনলাইন ক্রিটিক্যাল CSS (বেসিক স্টাইল) -->
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <!-- ✅ Main stylesheet: Preload + Non-blocking -->
+  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="style.css">
+  </noscript>
+
+  <!-- ✅ Font Awesome -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  </noscript>
+
+  <!-- ✅ Lottie Player -->
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"
+    defer></script>
 </head>
 
 <body>
@@ -55,8 +81,8 @@
     </div>
   </section>
 
-  <!-- Scripts -->
-  <script src="script.js"></script>
+  <!-- ✅ Defer JS to prevent blocking -->
+  <script src="script.js" defer></script>
 </body>
 
 </html>
