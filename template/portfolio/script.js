@@ -2,28 +2,25 @@
 =            Portfolio Site Script            =
 =============================================*/
 
-/* 1. Global Selectors */
 const menuIcon = document.querySelector(".menu-icon");
 const navlist = document.querySelector(".navlist");
-const section = document.querySelectorAll("section");
-const navLink = document.querySelectorAll("header ul.navlist a");
-let currentPage = window.location.pathname.split("/").pop() || "index.html";
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("header ul.navlist a");
 const headerContainer = document.querySelector(".header-container");
 const form = document.getElementById("contact-form");
 
-/* 2. Page Load Handler */
+// Get current page filename (default: index.html)
+const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
 document.addEventListener("DOMContentLoaded", () => {
     // Highlight current nav link on load
-    navLink.forEach(link => {
+    navLinks.forEach(link => {
         const href = link.getAttribute("href");
-        if (currentPage === "index.html") {
-            link.classList.toggle("active", href === "index.html");
-        } else {
-            link.classList.toggle("active", href.includes(currentPage));
-        }
+        const isActive = (currentPage === "index.html") ? href === "index.html" : href.includes(currentPage);
+        link.classList.toggle("active", isActive);
     });
 
-    // Contact form handler
+    // Contact form submit handler (if form exists)
     if (form) {
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
@@ -47,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Intersection Observer for animations
+    // IntersectionObserver for scroll animations
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             entry.target.classList.toggle('animate-active', entry.isIntersecting);
@@ -57,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
 });
 
-/* 3. Menu Toggle */
+// Menu toggle (for mobile)
 menuIcon.addEventListener("click", () => {
     const isActive = menuIcon.classList.toggle("active");
     navlist.classList.toggle("active");
@@ -65,7 +62,7 @@ menuIcon.addEventListener("click", () => {
     headerContainer.style.height = isActive ? "400px" : "58px";
 });
 
-/* 4. Remove navlist on nav click (mobile) */
+// Close navlist on nav click (mobile)
 navlist.addEventListener("click", () => {
     navlist.classList.remove("active");
     menuIcon.classList.remove("active");
@@ -73,15 +70,15 @@ navlist.addEventListener("click", () => {
     headerContainer.style.height = "58px";
 });
 
-/* 5. Scroll-based active nav highlight */
+// Scroll-based nav highlight
 window.addEventListener("scroll", () => {
-    const top = window.scrollY;
-    section.forEach(sec => {
-        const offset = sec.offsetTop - 150;
+    const scrollY = window.scrollY;
+    sections.forEach(sec => {
+        const offsetTop = sec.offsetTop - 150;
         const height = sec.offsetHeight;
         const id = sec.getAttribute("id");
-        if (top >= offset && top < offset + height) {
-            navLink.forEach(link => link.classList.remove("active"));
+        if (scrollY >= offsetTop && scrollY < offsetTop + height) {
+            navLinks.forEach(link => link.classList.remove("active"));
             let activeLink;
             if (currentPage === "index.html" && id === "home") {
                 activeLink = document.querySelector('header ul.navlist a[href="index.html"]');
