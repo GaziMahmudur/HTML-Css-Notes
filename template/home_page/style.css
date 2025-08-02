@@ -254,13 +254,8 @@ a {
   top: 300px;
 }
 
-section h1 {
-  font-size: 34px;
-}
-
-
-
 h1 {
+  font: 50px / 1.2em;
   font-weight: bold;
   letter-spacing: -1px;
 }
