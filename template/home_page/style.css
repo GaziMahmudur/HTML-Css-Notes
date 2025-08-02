@@ -128,9 +128,6 @@ header {
   justify-content: end;
   z-index: 100;
   transition: 0.3s;
-  opacity: 0;
-  transform: translateY(-20px);
-  animation: headerFadeIn 0.8s ease-out forwards;
 }
 
 .right-header {
@@ -149,7 +146,7 @@ header {
   z-index: 101;
   opacity: 0;
   transform: translateY(-30px);
-  animation: menuIconDrop 0.8s ease-out forwards;
+  animation: menuIconDrop 0.5s ease-out forwards;
 }
 
 .menu-icon .bar,
@@ -167,7 +164,7 @@ header {
 
 ul.navlist {
   position: fixed;
-  top: -350%;
+  top: -425%;
   left: 0;
   width: 100%;
   padding: 2rem 0;
@@ -191,7 +188,7 @@ ul.navlist.active {
   list-style: none;
   opacity: 0;
   transform: translateY(-20px);
-  animation: navItemSlideIn 0.8s ease-out forwards;
+  animation: navItemSlideIn 0.5s ease-out forwards;
 }
 
 a {
@@ -255,6 +252,7 @@ a {
   justify-content: center;
   opacity: 0;
   animation: containerFadeIn 1s ease forwards;
+  top: 300px;
 }
 
 h1 {
@@ -277,14 +275,14 @@ h3 {
   opacity: 0;
   transform: translateY(-20px);
   animation: fadeInUp 1s ease forwards;
-  animation-delay: 1.5s;
+  animation-delay: 0.5s;
 }
 
 .slide-in {
   opacity: 0;
   transform: translateX(-50px);
   animation: slideInLeft 1s ease forwards;
-  animation-delay: 2s;
+  animation-delay: 0.9s;
 }
 
 .typing {
@@ -292,7 +290,7 @@ h3 {
   overflow: hidden;
   white-space: nowrap;
   animation: typing 3s steps(100) forwards;
-  animation-delay: 2.5s;
+  animation-delay: 1.4s;
   width: 0;
 }
 
@@ -304,6 +302,9 @@ hr {
   width: 80%;
   margin: 20px auto;
   overflow: hidden;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 2.9s;
 }
 
 hr::after {
@@ -324,7 +325,7 @@ hr::after {
   opacity: 0;
   transform: scale(0.8);
   animation: fadeInScale 1s ease forwards;
-  animation-delay: 4.5s;
+  animation-delay: 3.2s;
 }
 
 .social-icons a {
@@ -350,6 +351,7 @@ hr::after {
 @media (min-width: 768px) {
   .container {
     max-width: 406px;
+    top: 300px;
   }
 
   h1 {
@@ -361,6 +363,11 @@ hr::after {
   }
 
   @media (min-width: 1024px) {
+
+    .container {
+      top: 360px;
+    }
+
     .menu-icon {
       display: none;
     }
@@ -387,11 +394,32 @@ hr::after {
     }
   }
 
+  .fade-in {
+    animation-delay: 1.6s;
+  }
+
+  .slide-in {
+    animation-delay: 2s;
+  }
+
+  .typing {
+    animation-delay: 2.5s;
+  }
+
+  hr {
+    animation-delay: 4.8s;
+  }
+
+  .social-icons {
+    animation-delay: 5.2s;
+  }
+
 }
 
 @media (min-width: 1440px) {
   .container {
     max-width: 770px;
+    top: 430px;
   }
 
   h1 {
@@ -410,3 +438,4 @@ hr::after {
     margin: 0 1.5rem;
   }
 }
+
