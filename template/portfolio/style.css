@@ -484,11 +484,10 @@ p {
 
 /* 8. Services Section */
 .services {
-  margin: 15px 12px;
+  margin: 15px 0;
 }
 
 .services-container {
-  max-width: 1200px;
   margin: 0 auto;
   backdrop-filter: blur(10px);
   border-radius: 20px;
@@ -605,11 +604,10 @@ p {
 
 /* 9. Experience Section */
 .experience {
-  margin: 15px 12px;
+  margin: 15px 0;
 }
 
 .experience-container {
-  max-width: 1200px;
   margin: 0 auto;
   backdrop-filter: blur(10px);
   border-radius: 20px;
@@ -727,11 +725,10 @@ p {
 /* 10. Contact Section */
 /* General Section Styling */
 .contact {
-  margin: 15px 12px;
+  margin: 15px 0;
 }
 
 .contact-container {
-  max-width: 1200px;
   margin: 0 auto;
   backdrop-filter: blur(10px);
   border-radius: 20px;
@@ -858,7 +855,7 @@ form button {
 /* Tablet styles */
 @media (min-width: 768px) {
   .align {
-    margin: 0 5%;
+    margin: 0 35px;
   }
 
   .home {
@@ -893,10 +890,6 @@ form button {
     border-radius: 0;
     font-weight: 500;
     transition: all 0.3s ease;
-  }
-
-  section {
-    padding: 72px 10%;
   }
 
   .img-hero {
@@ -961,8 +954,8 @@ form button {
   }
 
   .services {
-    padding: 0px 3%;
-    margin: -27px 12px;
+    padding: 0px 0;
+    margin: -27px 0;
     margin-bottom: 35px;
   }
 
@@ -994,8 +987,7 @@ form button {
   }
 
   .experience {
-    padding: 0px 3%;
-    margin: -27px 12px;
+    margin: -27px 0;
     margin-bottom: 35px;
   }
 
@@ -1027,8 +1019,8 @@ form button {
   }
 
   .contact {
-    padding: 0px 3%;
-    margin: -27px 12px;
+    padding: 0px 0;
+    margin: -27px 0;
     margin-bottom: 35px;
   }
 
@@ -1046,7 +1038,7 @@ form button {
 
 @media (min-width: 1024px) {
   .align {
-    margin: 0 130px;
+    margin: 0 32px;
   }
 
   .home {
@@ -1112,6 +1104,11 @@ form button {
 
 /* Desktop styles */
 @media (min-width: 1440px) {
+  .align {
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
   header {
     padding: 45px 0;
 
@@ -1242,21 +1239,5 @@ form button {
     width: 70px;
     height: 70px;
     font-size: 3rem;
-  }
-
-  section {
-    padding: 90px 10%;
-  }
-
-  .services {
-    padding: 0px 8%;
-  }
-
-  .experience {
-    padding: 0px 8%;
-  }
-
-  .contact {
-    padding: 0px 8%;
   }
 }
