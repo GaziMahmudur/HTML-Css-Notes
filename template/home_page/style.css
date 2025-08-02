@@ -89,7 +89,6 @@
 }
 
 body {
-  font-family: "opensans-regular", sans-serif;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -255,9 +254,10 @@ a {
   top: 300px;
 }
 
-section.home h1 {
+section h1 {
   font-size: 34px;
 }
+
 
 
 h1 {
