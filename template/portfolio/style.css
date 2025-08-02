@@ -130,6 +130,10 @@
   }
 }
 
+.align {
+  margin: 0 12px;
+}
+
 /* Base hidden state for scroll animations */
 .animate-on-scroll {
   opacity: 0;
@@ -173,7 +177,6 @@ header {
   width: 100%;
   transition: var(--transition-2);
   margin: 15px 0;
-  padding: 0 12px;
 
   .header-container {
     height: 58px;
@@ -331,7 +334,6 @@ span {
 
 /* 6. Hero Section */
 .home {
-  min-height: 100vh;
   height: 100%;
   display: flex;
   grid-template-columns: repeat(2, 1fr);
@@ -341,7 +343,7 @@ span {
   backdrop-filter: blur(10px);
   border: 1px solid var(--jet);
   border-radius: 20px;
-  margin: 15px 12px;
+  margin: 15px 0;
   padding: 15px;
 }
 
@@ -855,15 +857,19 @@ form button {
 
 /* Tablet styles */
 @media (min-width: 768px) {
+  .align {
+    margin: 0 5%;
+  }
+
   .home {
     flex-direction: column-reverse;
     padding: 0px 3%;
-    margin: -27px 5%;
+    margin: -27px 0;
     margin-bottom: 35px;
   }
 
   header {
-    padding: 45px 5%;
+    padding: 45px 0;
   }
 
   .logo {
@@ -1039,6 +1045,10 @@ form button {
 
 
 @media (min-width: 1024px) {
+  .align {
+    margin: 0 130px;
+  }
+
   .home {
     margin-bottom: 60px;
   }
@@ -1103,7 +1113,7 @@ form button {
 /* Desktop styles */
 @media (min-width: 1440px) {
   header {
-    padding: 45px 9%;
+    padding: 45px 0;
 
     .header-container {
       padding: 5px 4%;
@@ -1111,7 +1121,7 @@ form button {
   }
 
   .home {
-    margin: 0px 130px;
+    margin: 0px 0;
     margin-bottom: 50px;
   }
 
