@@ -23,7 +23,7 @@ body {
     position: relative;
 
     /* Optimized Background */
-    background-image: url(./emmanuel-phaeton--fBaQFX7q8U-unsplash.jpg);
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -108,11 +108,17 @@ body::before {
     }
 
     .typedText {
-        font-size: 21px;
+        font-size: 24px;
     }
 
     .typedText::before {
         font-size: 84px;
+    }
+}
+
+@media (max-width:1024) {
+    .typedText {
+        font-size: 21px;
     }
 }
 
@@ -165,5 +171,16 @@ body::before {
 
     .typedText::before {
         font-size: 50px;
+    }
+}
+
+@media (min-width: 1441px) {
+
+    .typedText {
+        font-size: 35px;
+    }
+
+    .typedText::before {
+        font-size: 100px;
     }
 }
