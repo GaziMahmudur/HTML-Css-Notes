@@ -58,13 +58,37 @@
     }
 }
 
+:root {
+    --sidebar-bg: #002233;
+    --sidebar-text: #cce7ff;
+    --sidebar-heading: #00aaff;
+    --sidebar-icon: #99ddff;
+
+    --main-bg: #e6f7ff;
+    --main-text: #002233;
+    --main-heading: #0077cc;
+
+    --main-bg-phone: #002233;
+    --main-text-phone: #cce7ff;
+    --main-heading-phone: #00aaff;
+
+    --aside-bg-phone: #cce7ff;
+    --aside-text-phone: #002233;
+    --aside-heading-phone: #0077cc;
+    --aside-icon-phone: #00aaff;
+
+    --profile-glow: #00aaff;
+    --typing-color: #00aaff;
+    --phone-skill-bg: linear-gradient(135deg, #004466, #006699, #0099cc);
+}
+
 html,
 body {
     height: 100%;
     margin: 0;
     padding: 0;
-    color: white;
-    background-color: rgb(34, 32, 32);
+    color: var(--main-text);
+    background-color: var(--main-bg);
     font-family: sans-serif;
     overflow-x: hidden;
 }
@@ -76,8 +100,8 @@ body {
 }
 
 .sidebar {
-    background: #212f3d;
-    color: white;
+    background: var(--sidebar-bg);
+    color: var(--sidebar-text);
     z-index: 1;
     padding: 30px;
     position: relative;
@@ -121,7 +145,7 @@ body {
     content: "";
     width: 120%;
     height: 50%;
-    background: linear-gradient(#00ff00, #00ff00);
+    background: var(--profile-glow);
     animation: rotate 4s linear infinite;
     left: -25px;
     top: 60px;
@@ -141,7 +165,7 @@ body {
 }
 
 .section-title {
-    color: #37ac92;
+    color: var(--sidebar-heading);
     margin: 20px 0;
     text-transform: uppercase;
     font-size: 1.2em;
@@ -151,7 +175,7 @@ body {
 
 .contact-list i {
     margin-right: 10px;
-    color: #00ff00;
+    color: var(--sidebar-icon);
 }
 
 .mobile {
@@ -161,7 +185,7 @@ body {
 
 .main-content {
     padding: 40px;
-    color: white;
+    color: var(--main-text);
 }
 
 .main-content .profile-img {
@@ -169,11 +193,11 @@ body {
 }
 
 .section-title div.my {
-    color: rgb(255, 255, 255);
+    color: var(--sidebar-heading);
 }
 
 .section-title div.experience {
-    color: rgb(0, 255, 0);
+    color: var(--typing-color);
 }
 
 .typing {
@@ -259,7 +283,7 @@ body {
         content: "";
         width: 120%;
         height: 50%;
-        background: linear-gradient(#00ff00, #00ff00);
+        background: var(--profile-glow);
         animation: rotate 4s linear infinite;
         left: -25px;
         top: 60px;
@@ -281,7 +305,8 @@ body {
         align-items: center;
         gap: 30px;
         /* Increased gap between sections */
-        background: #212f3d;
+        background: var(--aside-bg-phone);
+        color: var(--aside-text-phone);
         text-align: start;
     }
 
@@ -319,6 +344,11 @@ body {
         /* Minimum width for contact items */
     }
 
+    .contact-list i {
+        margin-right: 8px;
+        color: var(--aside-icon-phone);
+    }
+
     /* Skills list layout for mobile */
     .skills-list {
         display: flex;
@@ -338,7 +368,7 @@ body {
         min-width: 80px;
         text-align: center;
         color: white;
-        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        background: var(--phone-skill-bg);
         background-size: 200% 200%;
         animation: glowMove 6s ease infinite;
         border: none;
@@ -353,6 +383,8 @@ body {
         /* Center items horizontally */
         text-align: center;
         /* Center text content */
+        background: var(--main-bg-phone);
+        color: var(--main-text-phone);
     }
 
     /* Center all direct children of main-content */
@@ -368,6 +400,7 @@ body {
     .section-title {
         text-align: center;
         width: 100%;
+        color: var(--main-heading-phone);
     }
 
     /* Center any paragraphs or text elements */
