@@ -5,52 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal page</title>
-
-  <!-- 🔄 ফন্ট লোডের আগেই কানেকশন তৈরি -->
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-
-  <!-- 🧠 ইনলাইন ক্রিটিক্যাল CSS (বেসিক স্টাইল) -->
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #000;
-      color: #fff;
-    }
-
-    .hidden {
-      display: none;
-    }
-  </style>
-
-  <!-- ✅ Main stylesheet: Preload + Non-blocking -->
-  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="style.css">
-  </noscript>
-
-  <!-- ✅ Font Awesome -->
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style"
-    onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  </noscript>
-
-  <!-- ✅ Lottie Player -->
-  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"
-    defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
-  <!-- Background Animation -->
-  <dotlottie-player src="https://lottie.host/73c221ff-11a3-4b85-99a5-f359eeac1367/QHGA3M2tEf.lottie"
-    background="#00041C" speed="1" loop autoplay style="filter: blur(2px) brightness(0.9);">
-  </dotlottie-player>
-
-  <!-- Hidden Content Loader -->
-  <div id="content" class="content hidden"></div>
-
-  <!-- Header & Navigation -->
   <header>
     <div class="right-header">
       <div class="menu-icon">
@@ -65,7 +24,6 @@
     </ul>
   </header>
 
-  <!-- Hero Section -->
   <section class="home">
     <div class="container">
       <h1 class="fade-in">Hi!</h1>
@@ -81,7 +39,6 @@
     </div>
   </section>
 
-  <!-- ✅ Defer JS to prevent blocking -->
   <script src="script.js" defer></script>
 </body>
 

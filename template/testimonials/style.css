@@ -23,14 +23,26 @@ body {
     position: relative;
 
     /* Optimized Background */
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
+    background: linear-gradient(333deg, #16697a, #156170, #135967, #11525f, #104a56, #0e434e, #0d3c45, #0b343c, #092d34, #08252b);
+    background-size: 600% 600%;
+    animation: gradient-animation 70s ease infinite;
 
     /* Enable hardware acceleration */
     will-change: transform;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 body::before {
