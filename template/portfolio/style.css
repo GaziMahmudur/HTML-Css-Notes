@@ -150,7 +150,7 @@ header {
 
 header .header-container {
   height: 58px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   padding: 11px 4%;
   border-radius: 20px;
   border: 1px solid var(--jet);
@@ -304,7 +304,7 @@ span {
   align-items: center;
   flex-direction: column-reverse;
   grid-gap: 3em;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   border: 1px solid var(--jet);
   border-radius: 20px;
   margin: 15px 0;
@@ -450,7 +450,7 @@ p {
 
 .services-container {
   margin: 0 auto;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   border-radius: 20px;
   padding: 15px;
   border: 1px solid var(--jet);
@@ -568,7 +568,7 @@ p {
 
 .experience-container {
   margin: 0 auto;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   border-radius: 20px;
   padding: 15px;
   border: 1px solid var(--jet);
@@ -686,7 +686,7 @@ p {
 
 .contact-container {
   margin: 0 auto;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   border-radius: 20px;
   padding: 15px;
   border: 1px solid var(--jet);
