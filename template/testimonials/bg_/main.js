@@ -2,10 +2,10 @@ import LiquidBackground from 'https://cdn.jsdelivr.net/npm/threejs-components@0.
 
 const app = LiquidBackground(document.getElementById('canvas'))
 
-app.loadImage('./bg2.png').then(() => {
+app.loadImage('./bg4.jpg').then(() => {
     app.start()
 })
 app.liquidPlane.material.metalness = 0.75
 app.liquidPlane.material.roughness = 0.9
-app.liquidPlane.uniforms.displacementScale.value = 5
+app.liquidPlane.uniforms.displacementScale.value = 10
 app.setRain(false)
