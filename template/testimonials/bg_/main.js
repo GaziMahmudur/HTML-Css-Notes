@@ -2,7 +2,7 @@ import LiquidBackground from 'https://cdn.jsdelivr.net/npm/threejs-components@0.
 
 const app = LiquidBackground(document.getElementById('canvas'))
 
-app.loadImage('./bg3.png').then(() => {
+app.loadImage('./bg2.png').then(() => {
     app.start()
 })
 app.liquidPlane.material.metalness = 0.75
