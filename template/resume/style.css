@@ -59,27 +59,26 @@
 }
 
 :root {
-    --sidebar-bg: #002233;
-    --sidebar-text: #cce7ff;
-    --sidebar-heading: #00aaff;
-    --sidebar-icon: #99ddff;
+    --sidebar-bg: radial-gradient(122.23% 100% at 0 100%, #5bc5e8 0, #3780bd 24.76%, #103a8b 55.66%, #021847 100%);
+    --sidebar-text: #fff;
+    --sidebar-heading: #2b85f3;
+    --sidebar-icon: #FFD700;
 
-    --main-bg: #e6f7ff;
-    --main-text: #002233;
-    --main-heading: #0077cc;
+    --main-bg: #f2f2f2;
+    --main-text: #000;
+    --main-heading: #2b85f3;
 
-    --main-bg-phone: #002233;
-    --main-text-phone: #cce7ff;
-    --main-heading-phone: #00aaff;
+    --main-bg-phone: radial-gradient(122.23% 100% at 0 100%, #5bc5e8 0, #3780bd 24.76%, #103a8b 55.66%, #021847 100%);
+    --main-text-phone: #fff;
+    --main-heading-phone: #2b85f3;
 
-    --aside-bg-phone: #cce7ff;
-    --aside-text-phone: #002233;
-    --aside-heading-phone: #0077cc;
-    --aside-icon-phone: #00aaff;
+    --aside-bg-phone: #f2f2f2;
+    --aside-text-phone: #000;
+    --aside-icon-phone: #2b85f3;
 
-    --profile-glow: #00aaff;
-    --typing-color: #00aaff;
-    --phone-skill-bg: linear-gradient(135deg, #004466, #006699, #0099cc);
+    --profile-glow: #2b85f3;
+    --typing-color: #2b85f3;
+    --phone-skill-bg: radial-gradient(122.23% 100% at 0 100%, #5bc5e8 0, #3780bd 24.76%, #103a8b 55.66%, #021847 100%);
 }
 
 html,
@@ -370,7 +369,7 @@ body {
         color: white;
         background: var(--phone-skill-bg);
         background-size: 200% 200%;
-        animation: glowMove 6s ease infinite;
+        animation: glowMove 3s ease infinite;
         border: none;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
